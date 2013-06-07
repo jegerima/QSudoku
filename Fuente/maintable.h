@@ -23,8 +23,7 @@ private slots:
 
 private:
     void initGui();
-    void  getMatriz(QGridLayout *layout);
-
+    
     Ui::MainTable *ui;
     QLineEdit *numberField[81];
     int matriz[9][9];

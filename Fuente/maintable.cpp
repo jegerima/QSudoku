@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QString>
 #include <QLayoutItem>
+#include <QDebug>
 
 MainTable::MainTable(QWidget *parent) :
     QMainWindow(parent),
@@ -35,27 +36,17 @@ void MainTable::initGui()
     connect(ui->cmdVerificar, &QPushButton::clicked, this, &MainTable::verify_clicked);
 }
 
-void MainTable::getMatriz(QGridLayout *layout){
+void MainTable::verify_clicked(){
     //int k = 0;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
-            qDebug("%s ", "k ase");
-            QLayoutItem *qli = layout->itemAtPosition(i,j);
-            qDebug("%s ", "k ase");
-            QLineEdit *qle = (QLineEdit*)qli;
-            qDebug("%s ", "k ase");
+            QLayoutItem *qli = ui->tablero->itemAtPosition(i,j);
+            QLineEdit *qle = (QLineEdit*)(qli->widget());
             QString srt = qle->text();
-            qDebug("%s ", "k ase");
-            //QString tmp = QString(((QLineEdit *)(layout->itemAtPosition(i,j)))->text());
-            qDebug("%s ", &srt);
-            //matriz[i][j] = tmp.toInt();
+            qDebug() << srt;
+            matriz[i][j] = srt.toInt();
         }
     }
-}
-
-void MainTable::verify_clicked()
-{
-    getMatriz(ui->tablero);
 }
