@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        maintable.cpp
+        maintable.cpp \
+        casilla.cpp
 
-HEADERS  += maintable.h
+HEADERS  += maintable.h \
+        casilla.h
 
 FORMS    += maintable.ui

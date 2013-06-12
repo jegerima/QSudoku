@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainTable</string>
+   <string>QSudoku 0.0.12</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -29,13 +29,26 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>10</y>
+      <y>30</y>
       <width>81</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
      <string>Verificar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmdGen">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>0</y>
+      <width>81</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generar</string>
     </property>
    </widget>
   </widget>
