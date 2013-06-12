@@ -6,6 +6,7 @@
 #include <QString>
 #include <QLayoutItem>
 #include <QDebug>
+#include <QMessageBox>
 #include <stdio.h>
 
 MainTable::MainTable(QWidget *parent) :
@@ -13,6 +14,7 @@ MainTable::MainTable(QWidget *parent) :
     ui(new Ui::MainTable)
 {
     ui->setupUi(this);
+    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.0.12"));
     initGui();
 }
 
@@ -23,6 +25,7 @@ MainTable::~MainTable()
 
 void MainTable::initGui()
 {
+    ui->cmdVerificar->setEnabled(false);
     int k = 0;
     for(int i = 0; i < 9; i++)
     {
@@ -55,15 +58,15 @@ void MainTable::verify_clicked()
 
             if( !(checkFila(i,j) ) )
             {
-                //return;
+                QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
             }
             if( !(checkColumna(i,j) ) )
             {
-                //return;
+                QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
             }
             if( !(checkCuadro(i,j) ) )
             {
-                //return;
+                QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
             }
 
         }
@@ -150,4 +153,5 @@ void MainTable::setTableroPrevio()
             k++;
         }
     }
+    ui->cmdVerificar->setEnabled(true);
 }
