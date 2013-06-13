@@ -14,7 +14,7 @@ MainTable::MainTable(QWidget *parent) :
     ui(new Ui::MainTable)
 {
     ui->setupUi(this);
-    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.0.12"));
+    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.0.13"));
     initGui();
 }
 
@@ -46,6 +46,7 @@ void MainTable::initGui()
 void MainTable::verify_clicked()
 {
     //int k = 0;
+
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
@@ -55,6 +56,17 @@ void MainTable::verify_clicked()
             QString srt = qle->text();
             qDebug() << srt;
             matriz[i][j] = srt.toInt();
+
+        }
+    }
+
+
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+
+
 
             if( !(checkFila(i,j) ) )
             {
@@ -71,6 +83,8 @@ void MainTable::verify_clicked()
 
         }
     }
+
+
 }
 
 bool MainTable::checkFila(int row, int column)
@@ -84,7 +98,7 @@ bool MainTable::checkFila(int row, int column)
             }
         }
     }
-    qDebug("Fila Correcta");
+    //qDebug("Fila Correcta");
     return true;
 }
 
@@ -100,7 +114,7 @@ bool MainTable::checkColumna(int row, int column)
             }
         }
     }
-    qDebug("Columna Correcta");
+    //qDebug("Columna Correcta");
     return true;
 }
 
@@ -117,13 +131,16 @@ bool MainTable::checkCuadro(int row, int column)
             {
                 if (matriz[ row ][ column ] == matriz[i][j])
                 {
-                    qDebug("Error en el cuadro (%d,%d)",row+1, column+1);
+                    qDebug("Error en el cuadro (%d,%d)",row, column);
+                    qDebug("(%d == %d) - i,j (%d,%d)",matriz[ row ][ column ], matriz[i][j] , i, j);
+
+
                     return false;
                 }
             }
         }
     }
-    qDebug("Cuadro Correcto");
+    //qDebug("Cuadro Correcto");
     return true;
 }
 
