@@ -45,6 +45,7 @@ void MainTable::initGui()
 
 void MainTable::verify_clicked()
 {
+    bool t = true;
     //int k = 0;
 
     for(int i = 0; i < 9; i++)
@@ -66,24 +67,32 @@ void MainTable::verify_clicked()
         for(int j = 0; j < 9; j++)
         {
 
+            ((Casilla*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() )) -> setStyleSheet("QLineEdit { background-color: white; }");//devolver el color a las casillas
 
 
             if( !(checkFila(i,j) ) )
             {
                 QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                ((Casilla*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() )) -> setStyleSheet("QLineEdit { background-color: red; }");//pintar casillas erradas de rojo
+                t = false;
             }
             if( !(checkColumna(i,j) ) )
             {
                 QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                ((Casilla*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() )) -> setStyleSheet("QLineEdit { background-color: red; }");//pintar casillas erradas de rojo
+                t = false;
             }
             if( !(checkCuadro(i,j) ) )
             {
                 QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                ((Casilla*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() )) -> setStyleSheet("QLineEdit { background-color: red; }");//pintar casillas erradas de rojo
+                t = false;
             }
 
         }
     }
-
+    if(t == true) //mensaje de confirmacion de que esta correceto
+        QMessageBox::warning(0,tr("QSudoku Message"),"Sudoku resuelto correctamente.");
 
 }
 
