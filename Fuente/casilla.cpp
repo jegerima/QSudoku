@@ -5,6 +5,11 @@ Casilla::Casilla(int index, int value): QLineEdit(QString::number(value)), id(in
 
 }
 
+Casilla::Casilla(int value): QLineEdit(QString::number(value)), id(0), hayNum(false), revisada(false)
+{
+
+}
+
 int Casilla::getValue()
 {
     return valor;

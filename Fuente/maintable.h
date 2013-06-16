@@ -29,7 +29,9 @@ private:
 
     //Procedimientos
     void initGui();
+    void initGuiCelda();
     void setTableroPrevio();
+    void initGridCasilla();
 
     //Funciones
     Ui::MainTable *ui;

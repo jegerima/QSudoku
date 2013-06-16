@@ -8,14 +8,7 @@ class Casilla : public QLineEdit
 {
     public:
         Casilla(int index, int value);
-
-    private:
-        //Atributos
-        int id;
-        int valor;
-        int posibles[9];
-        bool hayNum;
-        bool revisada;
+        Casilla(int value);
 
         //Procedimientos
         void setValue(int valor);
@@ -28,6 +21,14 @@ class Casilla : public QLineEdit
         int* getPosibilities();
         bool isChecked();
         bool hasNum();
+
+    private:
+        //Atributos
+        int id;
+        int valor;
+        int posibles[9];
+        bool hayNum;
+        bool revisada;
 };
 
 #endif // CASILLA_H

@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <stdio.h>
+#include <celda.h>
+#include <QFrame>
 
 MainTable::MainTable(QWidget *parent) :
     QMainWindow(parent),
@@ -15,12 +17,32 @@ MainTable::MainTable(QWidget *parent) :
 {
     ui->setupUi(this);
     QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.0.13"));
-    initGui();
+
+    //initGui();
+    initGuiCelda();
+
+    //-----------
+    Celda *cd = new Celda(2);
+    ui->gridLayout->addWidget(cd);
+
 }
 
 MainTable::~MainTable()
 {
     delete ui;
+}
+
+void MainTable::initGridCasilla()
+{
+    /*
+    QLineEdit *q1 = new QLineEdit("1",0);
+    QLineEdit *q2 = new QLineEdit("2",0);
+    QLineEdit *q3 = new QLineEdit("3",0);
+
+    ui->GridCasilla->addWidget(q1,0,0,3,3,0);
+    ui->GridCasilla->addWidget(q2,3,0);
+    ui->GridCasilla->addWidget(q3,3,1,1,2,0);
+    */
 }
 
 void MainTable::initGui()
@@ -41,6 +63,28 @@ void MainTable::initGui()
 
     connect(ui->cmdVerificar, &QPushButton::clicked, this, &MainTable::verify_clicked);
     connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroPrevio);
+
+    initGridCasilla();
+}
+
+void MainTable::initGuiCelda()
+{
+    ui->cmdVerificar->setEnabled(false);
+    int k = 0;
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            Celda *cas = new Celda(k);
+            ui->tablero->addWidget(cas,i,j);
+            k++;
+        }
+    }
+
+    connect(ui->cmdVerificar, &QPushButton::clicked, this, &MainTable::verify_clicked);
+    connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroPrevio);
+
+    initGridCasilla();
 }
 
 void MainTable::verify_clicked()
