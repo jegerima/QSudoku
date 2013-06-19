@@ -2,7 +2,7 @@
 #define MAINTABLE_H
 
 #include <QMainWindow>
-#include <casilla.h>
+#include <celda.h>
 
 namespace Ui {
 class MainTable;
@@ -20,7 +20,7 @@ public:
     ~MainTable();
     
 private slots:
-    void verify_clicked();
+    void on_cmdVerificar_clicked();
 
 private:
 
@@ -28,14 +28,11 @@ private:
     int matriz[9][9];
 
     //Procedimientos
-    void initGui();
     void initGuiCelda();
     void setTableroPrevio();
-    void initGridCasilla();
 
     //Funciones
     Ui::MainTable *ui;
-    //QLineEdit *numberField[81];
     bool checkFila(int row, int column);
     bool checkColumna(int row, int column);
     bool checkCuadro(int row, int column);

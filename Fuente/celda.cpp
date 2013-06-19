@@ -5,27 +5,26 @@
 #include <QDebug>
 #include <string.h>
 
-Celda::Celda(int value) : QFrame(0,0)
+Celda::Celda(int value) : QFrame(0,0), valor(value)
 {
-    cas = new Casilla(value);
-    qDebug("%d",value);
-    qDebug("%d",cas->getValue());
-
     QVBoxLayout *qv = new QVBoxLayout(this);
     qv->setMargin(0);
     qv->setSpacing(0);
 
+    //Numero Principal
     QFont f1( "Arial", 16, QFont::Bold);
-    number = new QLabel(QString::number(value));
+    number = new QLineEdit(QString::number(value));
     number->setFont(f1);
     number->setAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
     qv->addWidget(number);
 
+    //Numero potencial
     lite_number = new QLabel("5");
     lite_number->setLineWidth(1);
     lite_number->setAlignment(Qt::AlignCenter);
     lite_number->setFrameShape(QFrame::Box);
 
+    //Sugerencias de Numeros
     QFont f3( "Arial", 8);
     hints = new QLabel("2345");
     hints->setFont(f3);
@@ -41,6 +40,50 @@ Celda::Celda(int value) : QFrame(0,0)
     this->setLayout(qv);
     this->setLineWidth(2);
     this->setFrameShape(QFrame::Box);
+}
 
+int Celda::getValue()
+{
+    return (number->text()).toInt();
+}
 
+int Celda::getIndex()
+{
+   return id;
+}
+
+int* Celda::getPosibilities()
+{
+    return posibles;
+}
+
+bool Celda::isChecked()
+{
+    return revisada;
+}
+
+bool Celda::hasNum()
+{
+    return hayNum;
+}
+
+void Celda::setValue(int valor)
+{
+    this->valor = valor;
+    this->number->setText(QString::number(valor));
+}
+
+void Celda::check()
+{
+    this->revisada = true;
+}
+
+void Celda::unCheck()
+{
+    this->revisada = false;
+}
+
+void Celda::setBackColor(QString color)
+{
+    number->setStyleSheet("QLineEdit { background-color: " + color + "; }");
 }
