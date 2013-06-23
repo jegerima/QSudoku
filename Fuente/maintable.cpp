@@ -1,5 +1,6 @@
 #include "maintable.h"
 #include "ui_maintable.h"
+#include "genmatriz.h"
 #include <QLineEdit>
 #include <QGridLayout>
 #include <QApplication>
@@ -19,6 +20,7 @@ MainTable::MainTable(QWidget *parent) :
     QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.20"));
 
     initGuiCelda();
+    GenMatriz();
 }
 
 MainTable::~MainTable()

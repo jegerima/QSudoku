@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         maintable.cpp \
-    celda.cpp
+    celda.cpp \
+    genmatriz.cpp
 
 HEADERS  += maintable.h \
-    celda.h
+    celda.h \
+    genmatriz.h
 
 FORMS    += maintable.ui
