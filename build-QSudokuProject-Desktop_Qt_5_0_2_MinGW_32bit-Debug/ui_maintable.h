@@ -40,27 +40,27 @@ public:
     {
         if (MainTable->objectName().isEmpty())
             MainTable->setObjectName(QStringLiteral("MainTable"));
-        MainTable->resize(405, 300);
+        MainTable->resize(673, 509);
         centralWidget = new QWidget(MainTable);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 10, 301, 241));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 531, 431));
         tablero = new QGridLayout(gridLayoutWidget);
-        tablero->setSpacing(6);
+        tablero->setSpacing(1);
         tablero->setContentsMargins(11, 11, 11, 11);
         tablero->setObjectName(QStringLiteral("tablero"));
         tablero->setContentsMargins(0, 0, 0, 0);
         cmdVerificar = new QPushButton(centralWidget);
         cmdVerificar->setObjectName(QStringLiteral("cmdVerificar"));
-        cmdVerificar->setGeometry(QRect(320, 40, 81, 27));
+        cmdVerificar->setGeometry(QRect(570, 40, 81, 27));
         cmdGen = new QPushButton(centralWidget);
         cmdGen->setObjectName(QStringLiteral("cmdGen"));
-        cmdGen->setGeometry(QRect(320, 10, 81, 27));
+        cmdGen->setGeometry(QRect(570, 10, 81, 27));
         MainTable->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainTable);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 405, 21));
+        menuBar->setGeometry(QRect(0, 0, 673, 25));
         MainTable->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainTable);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -76,7 +76,7 @@ public:
 
     void retranslateUi(QMainWindow *MainTable)
     {
-        MainTable->setWindowTitle(QApplication::translate("MainTable", "QSudoku 0.0.13", 0));
+        MainTable->setWindowTitle(QApplication::translate("MainTable", "QSudoku 0.1.20", 0));
         cmdVerificar->setText(QApplication::translate("MainTable", "Verificar", 0));
         cmdGen->setText(QApplication::translate("MainTable", "Generar", 0));
     } // retranslateUi

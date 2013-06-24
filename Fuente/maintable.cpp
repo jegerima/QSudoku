@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <QFrame>
 #include <iostream>
+#include <time.h>       /* time */
 
 MainTable::MainTable(QWidget *parent) :
     QMainWindow(parent),
@@ -20,7 +21,8 @@ MainTable::MainTable(QWidget *parent) :
     QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.20"));
 
     initGuiCelda();
-    GenMatriz();
+    srand (time(NULL));
+
 }
 
 MainTable::~MainTable()
@@ -100,15 +102,17 @@ bool MainTable::checkCuadro(int row, int column)
 
 void MainTable::setTableroPrevio()
 {
-    int valores[81] = {8,2,4,7,5,3,6,9,1,7,9,1,8,6,4,5,3,2,6,5,3,9,1,2,7,8,4,9,6,2,4,8,7,1,5,3,3,1,8,5,2,9,4,6,7,5,4,7,1,3,6,9,2,8,1,3,6,2,4,5,8,7,9,4,7,5,3,9,8,2,1,6,2,8,9,6,7,1,3,4,5};
+   GenMatriz *matriz = new GenMatriz();
+    //int valores[81] = {8,2,4,7,5,3,6,9,1,7,9,1,8,6,4,5,3,2,6,5,3,9,1,2,7,8,4,9,6,2,4,8,7,1,5,3,3,1,8,5,2,9,4,6,7,5,4,7,1,3,6,9,2,8,1,3,6,2,4,5,8,7,9,4,7,5,3,9,8,2,1,6,2,8,9,6,7,1,3,4,5};
 
     int k = 0;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
-            ( (Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ) )->setValue(valores[k]);
+            ( (Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ) )->setValue(matriz->arregloDeNumeros(i,j));
             k++;
+
         }
     }
     ui->cmdVerificar->setEnabled(true);
@@ -142,19 +146,19 @@ void MainTable::on_cmdVerificar_clicked()
 
             if( !(checkFila(i,j) ) )
             {
-                QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red"); //pintar casillas erradas de rojo
                 t = false;
             }
             if( !(checkColumna(i,j) ) )
             {
-                QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red");//pintar casillas erradas de rojo
                 t = false;
             }
             if( !(checkCuadro(i,j) ) )
             {
-                QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
+                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red");//pintar casillas erradas de rojo
                 t = false;
             }

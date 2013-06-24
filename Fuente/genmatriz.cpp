@@ -49,8 +49,9 @@ void GenMatriz::generarMatrizSudoku()
 }
 
 
-int *GenMatriz::arregloDeNumeros()
+int GenMatriz::arregloDeNumeros(int i, int j)
 {
+    return matriz[i][j];
 }
 
 void GenMatriz::guardarPosNum(int n, int fila, int columna)

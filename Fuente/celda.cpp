@@ -15,6 +15,7 @@ Celda::Celda(int value) : QFrame(0,0), valor(value)
     QFont f1( "Arial", 16, QFont::Bold);
     number = new QLineEdit(QString::number(value));
     number->setFont(f1);
+    number->setInputMask("0");//+++++
     number->setAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
     qv->addWidget(number);
 

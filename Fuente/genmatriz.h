@@ -11,7 +11,7 @@ public:
     void llenarMatrizSemilla();
     void generarMatrizSudoku();
     void generarArreglos();
-    int *arregloDeNumeros();
+    int arregloDeNumeros(int i, int j);
     void guardarPosNum(int n, int fila, int columna);
     void imprimirMatriz(int matriz[9][9]);
     void colocarNumeros(QList<int> aleatorios);
