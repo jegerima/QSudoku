@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QSudoku 0.1.20</string>
+   <string>QSudoku 0.1.31</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -62,7 +62,7 @@
      <x>0</x>
      <y>0</y>
      <width>673</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

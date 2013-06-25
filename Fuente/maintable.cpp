@@ -18,7 +18,7 @@ MainTable::MainTable(QWidget *parent) :
     ui(new Ui::MainTable)
 {
     ui->setupUi(this);
-    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.20"));
+    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.31"));
 
     initGuiCelda();
     srand (time(NULL));
@@ -33,14 +33,26 @@ MainTable::~MainTable()
 void MainTable::initGuiCelda()
 {
     ui->cmdVerificar->setEnabled(false);
+    ui->tablero->setHorizontalSpacing(8);
+    ui->tablero->setVerticalSpacing(8);
     int k = 0;
-    for(int i = 0; i < 9; i++)
+    for(int i = 0; i < 3; i++)
     {
-        for(int j = 0; j < 9; j++)
+        for(int j = 0; j < 3; j++)
         {
-            Celda *cas = new Celda(k);
-            ui->tablero->addWidget(cas,i,j);
-            k++;
+            QGridLayout *cuadro = new QGridLayout();
+            cuadro->setHorizontalSpacing(1);
+            cuadro->setVerticalSpacing(1);
+            for(int l = 0; l < 3; l++)
+            {
+                for(int m = 0; m < 3; m++)
+                {
+                    Celda *cas = new Celda(((j*3)+m+(i*27)+(l*9)));
+                    cuadro->addWidget(cas,l,m);
+                    k++;
+                }
+            }
+            ui->tablero->addLayout(cuadro,i,j);
         }
     }
 
@@ -110,10 +122,11 @@ void MainTable::setTableroPrevio()
     {
         for(int j = 0; j < 9; j++)
         {
-            ( (Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ) )->setValue(matriz->arregloDeNumeros(i,j));
-            k++;
 
+            ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setValue(matriz->arregloDeNumeros(i,j));
+            k++;
         }
+
     }
     ui->cmdVerificar->setEnabled(true);
 }
@@ -125,41 +138,41 @@ void MainTable::on_cmdVerificar_clicked()
 
     for(int i = 0; i < 9; i++)
     {
-        for(int j = 0; j < 9; j++)
+        for(int j = 0; j <9; j++)
         {
-            QLayoutItem *qli = ui->tablero->itemAtPosition(i,j);
-            Celda *qle = (Celda*)(qli->widget());
-            QString srt = QString::number(qle->getValue());
-            qDebug() << srt;
-            matriz[i][j] = srt.toInt();
+                    QLayoutItem *qli = ((QGridLayout*)(ui->tablero->itemAtPosition(i/3,j/3)))->itemAtPosition(i%3,j%3);
+                    Celda *qle = (Celda*)(qli->widget());
+                    QString srt = QString::number(qle->getValue());
+                    qDebug() << srt;
+                    matriz[(i)][(j)] = srt.toInt();
+
         }
         qDebug(" ");
     }
-
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
 
-            ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("white");
+            ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("white");
 
 
             if( !(checkFila(i,j) ) )
             {
                 //QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
-                ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red"); //pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red"); //pintar casillas erradas de rojo
                 t = false;
             }
             if( !(checkColumna(i,j) ) )
             {
                 //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
-                ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red");//pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red");//pintar casillas erradas de rojo
                 t = false;
             }
             if( !(checkCuadro(i,j) ) )
             {
                 //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
-                ((Celda*)( ( (QLayoutItem*)ui->tablero->itemAtPosition(i,j) )->widget() ))->setBackColor("red");//pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red");//pintar casillas erradas de rojo
                 t = false;
             }
 
@@ -167,6 +180,8 @@ void MainTable::on_cmdVerificar_clicked()
     }
     if(t == true) //mensaje de confirmacion de que esta correceto
         QMessageBox::warning(0,tr("QSudoku Message"),"Sudoku resuelto correctamente.");
+    else
+        QMessageBox::warning(0,tr("QSudoku Message"),"El sudoku se encuentra incorrecto.");
 
 }
 
