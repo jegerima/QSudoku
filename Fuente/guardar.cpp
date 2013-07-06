@@ -81,7 +81,7 @@ void Guardar::leerArchivo(int m[9][9], int sol[9][9])
 
 }
 
-void Guardar::cargarValores(int m[][])
+void Guardar::cargarValores(int m[9][9])
 {
 
 }
