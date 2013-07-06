@@ -19,9 +19,9 @@ MainTable::MainTable(QWidget *parent) :
     ui(new Ui::MainTable)
 {
     ui->setupUi(this);
-    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.31"));
-
+    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.80"));
     initGuiCelda();
+    initMenuBar();
     srand (time(NULL));
 
 }
@@ -33,6 +33,11 @@ MainTable::~MainTable()
 
 void MainTable::initGuiCelda()
 {
+    //Formulario de Niveles
+    level = new nivel(0);
+    level->show();
+
+    //Matriz del Sudoku
     ui->cmdVerificar->setEnabled(false);
     ui->tablero->setHorizontalSpacing(8);
     ui->tablero->setVerticalSpacing(8);
@@ -57,7 +62,16 @@ void MainTable::initGuiCelda()
         }
     }
 
+    //Boton para configurar un tablero previo
     connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroPrevio);
+    connect(level, SIGNAL(appReady(int)), this, SLOT(iniciarJuego(int)));
+}
+
+void MainTable::initMenuBar()
+{
+    connect(ui->actionCargar,SIGNAL(triggered()), this, SLOT(cargarPartida()));
+    connect(ui->actionGuardar,SIGNAL(triggered()), this, SLOT(guardarPartida()));
+    connect(ui->actionSalir,SIGNAL(triggered()), this, SLOT(salirJuego()));
 }
 
 bool MainTable::checkFila(int row, int column)
@@ -172,6 +186,19 @@ void MainTable::setTableroAJugar()
     }
 }
 
+void MainTable::iniciarJuego(int n)
+{
+    level->hide();
+    this->show();
+    qDebug("%d",n);
+
+
+}
+
+void MainTable::salirJuego()
+{
+    QApplication::quit();
+}
 
 void MainTable::on_cmdVerificar_clicked()
 {
@@ -215,7 +242,7 @@ void MainTable::on_cmdVerificar_clicked()
 }
 
 
-void MainTable::on_guardar_clicked()
+void MainTable::guardarPartida()
 {
     Guardar *g = new Guardar();
     setTableroAGuardar();
@@ -225,7 +252,7 @@ void MainTable::on_guardar_clicked()
 }
 
 
-void MainTable::on_cargar_clicked()
+void MainTable::cargarPartida()
 {
     Guardar *g = new Guardar();
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo

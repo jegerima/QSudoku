@@ -17,12 +17,15 @@ SOURCES += main.cpp\
     celda.cpp \
     genmatriz.cpp \
     guardar.cpp \
-    simplecrypt.cpp
+    simplecrypt.cpp \
+    nivel.cpp
 
 HEADERS  += maintable.h \
     celda.h \
     genmatriz.h \
     simplecrypt.h \
-    guardar.h
+    guardar.h \
+    nivel.h
 
-FORMS    += maintable.ui
+FORMS    += maintable.ui \
+    nivel.ui

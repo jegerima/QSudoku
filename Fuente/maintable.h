@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <celda.h>
+#include <nivel.h>
 
 namespace Ui {
 class MainTable;
@@ -20,23 +21,26 @@ public:
     ~MainTable();
     
 private slots:
+    void iniciarJuego(int n);
     void on_cmdVerificar_clicked();
-
-    void on_guardar_clicked();
-
-    void on_cargar_clicked();
+    void guardarPartida();
+    void cargarPartida();
+    void salirJuego();
 
 private:
 
     //Atributos
     int matriz[9][9];
     int tableroActual[9][9];
+    nivel *level;
 
     //Procedimientos
     void initGuiCelda();
+    void initMenuBar();
     void setTableroPrevio();
     void setTableroAGuardar();
     void setTableroAJugar();
+
 
     //Funciones
     Ui::MainTable *ui;
