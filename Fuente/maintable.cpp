@@ -1,6 +1,7 @@
 #include "maintable.h"
 #include "ui_maintable.h"
 #include "genmatriz.h"
+#include "guardar.h"
 #include <QLineEdit>
 #include <QGridLayout>
 #include <QApplication>
@@ -115,27 +116,47 @@ bool MainTable::checkCuadro(int row, int column)
 void MainTable::setTableroPrevio()
 {
    GenMatriz *matriz = new GenMatriz();
-    //int valores[81] = {8,2,4,7,5,3,6,9,1,7,9,1,8,6,4,5,3,2,6,5,3,9,1,2,7,8,4,9,6,2,4,8,7,1,5,3,3,1,8,5,2,9,4,6,7,5,4,7,1,3,6,9,2,8,1,3,6,2,4,5,8,7,9,4,7,5,3,9,8,2,1,6,2,8,9,6,7,1,3,4,5};
-
     int k = 0;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
-
+            //seteo el sudoku completo que me devuelve GenMatriz
             ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setValue(matriz->arregloDeNumeros(i,j));
             k++;
         }
 
     }
     ui->cmdVerificar->setEnabled(true);
+    setTableroAJugar();
 }
 
-
-void MainTable::on_cmdVerificar_clicked()
+//funcion para guardar el tablero en el momento actual del juego
+void MainTable::setTableroAGuardar()
 {
-    bool t = true;
+    int tmp=0;
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            //obtengo los valores que estan en el juego actualmente
+            tmp = ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+             ->itemAtPosition(i%3,j%3))->widget()))->getValue();
+            //si la celda tiene un numero
+            if(tmp!=0){
+                tableroActual[i][j] = tmp;
+                qDebug() << tmp;
+            }else{
+                tableroActual[i][j] = 0;
+            }
 
+        }
+
+    }
+}
+
+void MainTable::setTableroAJugar()
+{
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j <9; j++)
@@ -144,11 +165,19 @@ void MainTable::on_cmdVerificar_clicked()
                     Celda *qle = (Celda*)(qli->widget());
                     QString srt = QString::number(qle->getValue());
                     qDebug() << srt;
-                    matriz[(i)][(j)] = srt.toInt();
+                    matriz[i][j] = srt.toInt();
 
         }
         qDebug(" ");
     }
+}
+
+
+void MainTable::on_cmdVerificar_clicked()
+{
+    bool t = true;
+
+
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
@@ -185,3 +214,20 @@ void MainTable::on_cmdVerificar_clicked()
 
 }
 
+
+void MainTable::on_guardar_clicked()
+{
+    Guardar *g = new Guardar();
+    setTableroAGuardar();
+    //le envio el avance del tablero y el juego resuelto para su posterior solucion
+    g->guardarValores(tableroActual, matriz);
+    g->crearArchivo();
+}
+
+
+void MainTable::on_cargar_clicked()
+{
+    Guardar *g = new Guardar();
+    //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
+    g->leerArchivo(tableroActual, matriz);
+}

@@ -15,10 +15,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         maintable.cpp \
     celda.cpp \
-    genmatriz.cpp
+    genmatriz.cpp \
+    guardar.cpp \
+    simplecrypt.cpp
 
 HEADERS  += maintable.h \
     celda.h \
-    genmatriz.h
+    genmatriz.h \
+    simplecrypt.h \
+    guardar.h
 
 FORMS    += maintable.ui

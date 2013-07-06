@@ -22,14 +22,21 @@ public:
 private slots:
     void on_cmdVerificar_clicked();
 
+    void on_guardar_clicked();
+
+    void on_cargar_clicked();
+
 private:
 
     //Atributos
     int matriz[9][9];
+    int tableroActual[9][9];
 
     //Procedimientos
     void initGuiCelda();
     void setTableroPrevio();
+    void setTableroAGuardar();
+    void setTableroAJugar();
 
     //Funciones
     Ui::MainTable *ui;
