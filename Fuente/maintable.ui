@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>673</width>
+    <width>716</width>
     <height>509</height>
    </rect>
   </property>
@@ -32,8 +32,8 @@
    <widget class="QPushButton" name="cmdVerificar">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>40</y>
+      <x>560</x>
+      <y>290</y>
       <width>81</width>
       <height>27</height>
      </rect>
@@ -45,8 +45,8 @@
    <widget class="QPushButton" name="cmdGen">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>10</y>
+      <x>560</x>
+      <y>260</y>
       <width>81</width>
       <height>27</height>
      </rect>
@@ -55,13 +55,29 @@
      <string>Generar</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>10</y>
+      <width>160</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="Menu">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>673</width>
+     <width>716</width>
      <height>25</height>
     </rect>
    </property>
@@ -89,7 +105,7 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>

@@ -3,6 +3,9 @@
 #include <QPushButton>
 #include <string.h>
 #include <QDebug>
+#include <QPalette>
+#include <QPixmap>
+#include <QDir>
 
 nivel::nivel(QWidget *parent) :
     QDialog(parent),
@@ -14,16 +17,23 @@ nivel::nivel(QWidget *parent) :
 
 void nivel::initGui()
 {
+    //Imagen en Frame
+    setImagen();
+
+    //Botones de eleccion
     levels[0] = new QPushButton(QString("Novato"));
     levels[1] = new QPushButton(QString("Intermedio"));
     levels[2] = new QPushButton(QString("Profesional"));
     levels[3] = new QPushButton(QString("Leyenda"));
 
+    //Conectando eventos
     for(int i = 0; i <4; i++)
     {
         connect(levels[i],&QPushButton::clicked, this, &nivel::emitirNivel);
         ui->lyLevel->addWidget(levels[i]);
     }
+
+    this->setFixedSize(this->size());
 }
 
 void nivel::emitirNivel()
@@ -49,6 +59,13 @@ void nivel::emitirNivel()
         emit appReady(3);
         qDebug("Leyenda");
     }
+}
+
+void nivel::setImagen()
+{
+    QString str = QDir::currentPath();
+    ui->imgFrame->setStyleSheet("background-image: url(/home/jegerima/ReposGit/QSudoku/Recursos/icon.png)");
+    qDebug() << str;
 }
 
 nivel::~nivel()

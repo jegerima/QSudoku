@@ -25,6 +25,7 @@ private:
     //Procedimientos
     void initGui();
     void emitirNivel();
+    void setImagen();
 
     //Atributos
     QPushButton *levels[4];

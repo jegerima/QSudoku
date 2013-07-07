@@ -2,16 +2,23 @@
 <ui version="4.0">
  <class>nivel</class>
  <widget class="QDialog" name="nivel">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>360</width>
-    <height>400</height>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string notr="true">QSudoku - Niveles</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Recursos/i160x130.png</normaloff>../Recursos/i160x130.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -20,12 +27,38 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>180</y>
+     <y>160</y>
      <width>160</width>
      <height>191</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="lyLevel"/>
+  </widget>
+  <widget class="QFrame" name="imgFrame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>320</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>130</y>
+     <width>231</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Seleccione un nivel de dificultad:</string>
+   </property>
   </widget>
  </widget>
  <resources/>
