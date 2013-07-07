@@ -18,17 +18,20 @@ SOURCES += main.cpp\
     genmatriz.cpp \
     guardar.cpp \
     simplecrypt.cpp \
-    nivel.cpp
+    nivel.cpp \
+    about.cpp
 
 HEADERS  += maintable.h \
     celda.h \
     genmatriz.h \
     simplecrypt.h \
     guardar.h \
-    nivel.h
+    nivel.h \
+    about.h
 
 FORMS    += maintable.ui \
-    nivel.ui
+    nivel.ui \
+    about.ui
 
 RESOURCES += \
     images.qrc

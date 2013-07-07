@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include <QGridLayout>
 #include <QDebug>
+#include <QString>
 #include <string.h>
 
 Celda::Celda(int value) : QFrame(0,0), valor(value)
@@ -77,7 +78,7 @@ void Celda::setValue(int valor)
     if(valor==0)
     {
         this->valor=valor;
-        this->number->setText("");
+        this->number->setText(" ");
     }
     else
     {
@@ -86,6 +87,7 @@ void Celda::setValue(int valor)
         this->setPalette(*paleta);
         this->number->setText(QString::number(valor));
     }
+    //number->setText("<font color='Black'>"+ QString::number(valor)+"</font>");
 }
 
 void Celda::check()
@@ -100,7 +102,7 @@ void Celda::unCheck()
 
 void Celda::setBackColor(QString color)
 {
-    number->setStyleSheet("QLineEdit { background-color: " + color + "; }");
+    number->setStyleSheet("QLabel { background-color: " + color + "; }");
 }
 
 void Celda::addHint(int valor)
@@ -128,12 +130,18 @@ QLabel *Celda::getNumber()
 
 void Celda::setEmpty()
 {
-    //this->number->setText("");
     paleta->setColor(QPalette::Foreground,Qt::blue);
     this->setPalette(*paleta);
+    this->setBackColor("white");
 }
 
 void Celda::mouseReleaseEvent(QMouseEvent *)
 {
     emit clicked();
+}
+
+void Celda::setBlackBorder()
+{
+    paleta->setColor(QPalette::Foreground,Qt::black);
+    this->setPalette(*paleta);
 }

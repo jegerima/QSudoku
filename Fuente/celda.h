@@ -21,6 +21,7 @@ class Celda : public QFrame
         void check();
         void unCheck();
         void setBackColor(QString color);
+        void setBlackBorder();
 
         //Funciones
         int getValue();

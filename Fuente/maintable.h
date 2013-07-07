@@ -26,12 +26,14 @@ public:
 private slots:
     void iniciarJuego(int n);
     void on_cmdVerificar_clicked();
+    void nuevaPartida();
     void guardarPartida();
     void cargarPartida();
     void salirJuego();
     void timeRefresh();
     void getCeldaRunTime();
     void numPressed();
+    void acercaDe();
 private:
 
     //Atributos
@@ -57,6 +59,7 @@ private:
     void setTableroActual();
     void setTableroEnPantalla();
     void setTableroInicialSegunNivel(int n);
+    void setCeldasBlanco();
 
     //Funciones
     Ui::MainTable *ui;

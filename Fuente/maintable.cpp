@@ -1,6 +1,7 @@
 #include "maintable.h"
 #include "ui_maintable.h"
 #include "genmatriz.h"
+#include "about.h"
 #include "guardar.h"
 #include <QLineEdit>
 #include <QGridLayout>
@@ -15,16 +16,22 @@
 #include <iostream>
 #include <time.h>
 
-MainTable::MainTable(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainTable)
+MainTable::MainTable(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainTable)
 {
     ui->setupUi(this);
     QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.2.05"));
+
+    //Interfaces
     initGuiCelda();
     initMenuBar();
     initTeclado();
     setIcono();
+    this->setFixedSize(this->size());
+
+    //Formulario de niveles
+    level = new nivel(0);
+    connect(level, SIGNAL(appReady(int)), this, SLOT(iniciarJuego(int)));
+
     srand (time(NULL));
     ui->crono->display("00:00");
 }
@@ -36,10 +43,6 @@ MainTable::~MainTable()
 
 void MainTable::initGuiCelda()
 {
-    //Formulario de Niveles
-    level = new nivel(0);
-    level->show();
-
     //Matriz del Sudoku
     ui->cmdVerificar->setEnabled(false);
     ui->tablero->setHorizontalSpacing(8);
@@ -66,18 +69,17 @@ void MainTable::initGuiCelda()
             ui->tablero->addLayout(cuadro,i,j);
         }
     }
+    //Celda temporal para el tiempo de ejecucion
     celdaRuntime = new Celda(0);
-
-    //Boton para configurar un tablero previo
-    //connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroInicio);
-    connect(level, SIGNAL(appReady(int)), this, SLOT(iniciarJuego(int)));
 }
 
 void MainTable::initMenuBar()
 {
-    connect(ui->actionCargar,SIGNAL(triggered()), this, SLOT(cargarPartida()));
-    connect(ui->actionGuardar,SIGNAL(triggered()), this, SLOT(guardarPartida()));
-    connect(ui->actionSalir,SIGNAL(triggered()), this, SLOT(salirJuego()));
+    connect(ui->actionNueva, SIGNAL(triggered()), this, SLOT(nuevaPartida())); //Menu Partida->Nueva
+    connect(ui->actionCargar, SIGNAL(triggered()), this, SLOT(cargarPartida())); //Menu Partida->Cargar
+    connect(ui->actionGuardar, SIGNAL(triggered()), this, SLOT(guardarPartida())); //Menu Partida->Guardar
+    connect(ui->actionSalir, SIGNAL(triggered()), this, SLOT(salirJuego())); //Menu Partida->Salir
+    connect(ui->actionAcerca_de, SIGNAL(triggered()), this, SLOT(acercaDe())); //Menu AcercaDe
 }
 
 void MainTable::initCrono()
@@ -88,7 +90,6 @@ void MainTable::initCrono()
     tiempoIni = QTime::currentTime();
     QTimer::singleShot(1000, this, SLOT(timeRefresh()));
 }
-
 
 void MainTable::initTeclado()
 {
@@ -140,7 +141,6 @@ void MainTable::setTableroInicio()
 {
     //genera una nueva solucion de tablero para comenzar todo
     GenMatriz *matrizSolucion = new GenMatriz();
-    int k = 0;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
@@ -167,8 +167,7 @@ void MainTable::setTableroActual()
         for(int j = 0; j < 9; j++)
         {
             //obtengo los valores que estan en el juego actualmente
-            tmp = ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
-             ->itemAtPosition(i%3,j%3))->widget()))->getValue();
+            tmp = ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->getValue();
             //si la celda tiene un numero
             if(tmp!=NULL){
                 tableroActual[i][j] = tmp;
@@ -247,18 +246,42 @@ void MainTable::setTableroInicialSegunNivel(int n)
     }
 }
 
+void MainTable::acercaDe()
+{
+    about *ab = new about();
+    ab->setWindowModality(Qt::ApplicationModal);
+    ab->show();
+
+}
+
 void MainTable::setIcono()
 {
     //ui->iconFrame->setStyleSheet("background-image: url(/home/jegerima/ReposGit/QSudoku/Recursos/i160x130.png)");
 }
 
+void MainTable::setCeldasBlanco()
+{
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("white");
+        }
+    }
+}
+
+void MainTable::nuevaPartida()
+{
+    level->show();
+}
+
 void MainTable::iniciarJuego(int n)
 {
+    level->hide();
+    setCeldasBlanco();
     setTableroInicio();
     setTableroInicialSegunNivel(n);
     setTableroEnPantalla();
-    level->hide();
-    this->show();
     qDebug("%d",n);
     do
     {
@@ -315,20 +338,20 @@ void MainTable::on_cmdVerificar_clicked()
 
             if( !(checkFila(i,j) ) )
             {
-                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de fila (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red"); //pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBlackBorder();
                 t = false;
             }
             if( !(checkColumna(i,j) ) )
             {
-                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Columna (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red");//pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBlackBorder();
                 t = false;
             }
             if( !(checkCuadro(i,j) ) )
             {
-                //QMessageBox::warning(0,tr("QSudoku Message"),"Error de Cuadro (" + QString::number(i+1) + "," + QString::number(j+1) + ")");
                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("red");//pintar casillas erradas de rojo
+                ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBlackBorder();
                 t = false;
             }
 
@@ -343,6 +366,11 @@ void MainTable::on_cmdVerificar_clicked()
 
 void MainTable::getCeldaRunTime()
 {
+    //Permite obtener la celda que ha sido clickeada
+    if(celdaRuntime)
+    {
+        celdaRuntime->setBlackBorder();
+    }
     celdaRuntime = (Celda*)(sender());
 }
 
@@ -375,7 +403,7 @@ bool MainTable::checkFila(int row, int column)
 {
     for (int i = 0; i < 9; i++){
         if (i != column){
-            if (matriz[row][i] == matriz[row][column] )
+            if (tableroActual[row][i] == tableroActual[row][column] )
             {
                 qDebug("Error en la fila %d",row+1);
                 return false;
@@ -390,7 +418,7 @@ bool MainTable::checkColumna(int row, int column)
 
     for (int i = 0; i < 9; i++){
         if (i != row){
-            if (matriz[i][column] == matriz[row][column] )
+            if (tableroActual[i][column] == tableroActual[row][column] )
             {
                 qDebug("Error en la columna %d",column+1);
                 return false;
@@ -411,10 +439,10 @@ bool MainTable::checkCuadro(int row, int column)
         {
             if (!(i == row && j == column))
             {
-                if (matriz[ row ][ column ] == matriz[i][j])
+                if (tableroActual[ row ][ column ] == tableroActual[i][j])
                 {
                     qDebug("Error en el cuadro (%d,%d)",row, column);
-                    qDebug("(%d == %d) - i,j (%d,%d)",matriz[ row ][ column ], matriz[i][j] , i, j);
+                    qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
                     return false;
                 }
             }
