@@ -44,14 +44,17 @@ MainTable::~MainTable()
 void MainTable::initGuiCelda()
 {
     //Matriz del Sudoku
+    int i,j;
     ui->cmdVerificar->setEnabled(false);
     ui->tablero->setHorizontalSpacing(8);
     ui->tablero->setVerticalSpacing(8);
-    int k = 0;
-    for(int i = 0; i < 3; i++)
+    int fil = 0, col=0;
+    for(i = 0; i < 3; i++)
     {
-        for(int j = 0; j < 3; j++)
+        fil = i*3;
+        for(j = 0; j < 3; j++)
         {
+            col = j*3;
             QGridLayout *cuadro = new QGridLayout();
             cuadro->setHorizontalSpacing(1);
             cuadro->setVerticalSpacing(1);
@@ -59,19 +62,28 @@ void MainTable::initGuiCelda()
             {
                 for(int m = 0; m < 3; m++)
                 {
-                    Celda *cas = new Celda(0); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
+                    Celda *cas = new Celda(0, QPoint(fil, col)); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
                     connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
                     cuadro->addWidget(cas,l,m);
-                    k++;
+                    //qDebug()<< fil<< col;
+                    col++;
                 }
+            fil++;
+            col = j*3;
             }
+
             ui->tablero->addLayout(cuadro,i,j);
+            fil = i*3;
         }
+
+
     }
     //Celda temporal para el tiempo de ejecucion
-    celdaRuntime = new Celda(0);
+    celdaRuntime = new Celda(0, QPoint(0,0));
     tm = new QTime(0,0,0,0);
+    avanceMin = 0;
+    avanceSeg = 0;
 }
 
 void MainTable::initMenuBar()
@@ -138,7 +150,6 @@ void MainTable::timeRefresh()
     //actualizo el tiempo
 
     tm->setHMS(0, m, s, ms);
-    qDebug()<<tm->toString();
     ui->crono->display(tm->toString("mm:ss"));
 }
 
@@ -158,7 +169,6 @@ void MainTable::setTableroInicio()
 
     }
     ui->cmdVerificar->setEnabled(true);
-    //setTableroAJugar();
 }
 
 
@@ -219,33 +229,32 @@ void MainTable::setTableroInicialSegunNivel(int n)
     if(n==0){
         qDebug("Seteando nivel 1");
         for(int i=0; i<51; i++){
-            qDebug()<<"entro al for";
-            fila = 1+rand()%8;
-            col = 1+rand()%8;
+            fila = rand()%8;
+            col = rand()%8;
             tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==1){
         qDebug("Seteando nivel 2");
         for(int i=0; i<43; i++){
-            fila = 1+rand()%8;
-            col = 1+rand()%8;
+            fila = rand()%8;
+            col = rand()%8;
             tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==2){
         qDebug("Seteando nivel 3");
         for(int i=0; i<35; i++){
-            fila = 1+rand()%8;
-            col = 1+rand()%8;
+            fila = rand()%8;
+            col = rand()%8;
              tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==3){
         qDebug("Seteando nivel Dios");
         for(int i=0; i<27; i++){
-            fila = 1+rand()%8;
-            col = 1+rand()%8;
+            fila = rand()%8;
+            col = rand()%8;
              tableroActual[fila][col] = matriz[fila][col];
         }
     }
@@ -273,7 +282,9 @@ void MainTable::setCeldasBlanco()
             ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setBackColor("white");
         }
     }
+
 }
+
 
 void MainTable::nuevaPartida()
 {
@@ -374,10 +385,47 @@ void MainTable::getCeldaRunTime()
     //Permite obtener la celda que ha sido clickeada
     if(celdaRuntime)
     {
+        celdaRuntime->reset();
         celdaRuntime->setBlackBorder();
     }
     celdaRuntime = (Celda*)(sender());
+    setTableroActual();
+    setPistas();
+
 }
+
+void MainTable::setPistas()
+{
+    pistas.clear();
+    pistas <<"1"<<"2"<<"3"<<"4"<<"5"<<"6"<<"7"<<"8"<<"9";
+    int fila = celdaRuntime->pos.x();
+    int col = celdaRuntime->pos.y();
+    int tmp=0;
+    for(int i=0; i<9; i++){
+        tmp = tableroActual[fila][i];
+        if(tmp!=0){
+            pistas[tmp-1] = QString("0");
+        }
+    }
+    for(int j=0; j<9; j++){
+        tmp = tableroActual[j][col];
+        if(tmp!=0){
+            pistas[tmp-1] = QString("0");
+        }
+    }
+    //le estamos dando maximo 5 pistas para que pueda colocar
+    int k=0;
+    for(int j=0; j<9; j++){
+
+        tmp = pistas[j].toInt();
+        if(tmp!=0 && k<5){
+            celdaRuntime->addHint(tmp);
+            k++;
+        }
+    }
+
+}
+
 
 void MainTable::numPressed()
 {

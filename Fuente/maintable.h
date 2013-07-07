@@ -48,6 +48,7 @@ private:
     QTime *tm;
     QPushButton *teclado[9];
     Celda *celdaRuntime;
+    QStringList pistas;
 
     //Procedimientos
     void initGuiCelda();
@@ -63,6 +64,7 @@ private:
     void setTableroEnPantalla();
     void setTableroInicialSegunNivel(int n);
     void setCeldasBlanco();
+    void setPistas();
 
     //Funciones
     Ui::MainTable *ui;

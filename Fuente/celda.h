@@ -5,13 +5,14 @@
 #include <QLabel>
 #include <QPalette>
 #include <QFrame>
+#include <QPoint>
 
 class Celda : public QFrame
 {
     Q_OBJECT
 
     public:
-        explicit Celda(int value);
+        explicit Celda(int value, QPoint poscicion);
 
         //Procedimientos
         void setValue(int valor);
@@ -30,6 +31,7 @@ class Celda : public QFrame
         bool isChecked();
         bool hasNum();
         QLabel *getNumber();
+        QPoint pos;
 
     signals:
         void clicked();
@@ -43,6 +45,7 @@ class Celda : public QFrame
         QLabel *lite_number;
         QLabel *hints;
         QPalette *paleta;
+
 
         int id;
         int valor;

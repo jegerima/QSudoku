@@ -6,7 +6,7 @@
 #include <QString>
 #include <string.h>
 
-Celda::Celda(int value) : QFrame(0,0), valor(value)
+Celda::Celda(int value, QPoint poscicion) : QFrame(0,0), valor(value), pos(poscicion)
 {
     QVBoxLayout *qv = new QVBoxLayout(this);
     qv->setMargin(0);
@@ -17,7 +17,7 @@ Celda::Celda(int value) : QFrame(0,0), valor(value)
     number = new QLabel(QString::number(value));
     number->setFont(f1);
 
-    //number->setInputMask("0");//+++++
+    //number->setInputMask("0");
     number->setAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
     qv->addWidget(number);
 
@@ -46,6 +46,7 @@ Celda::Celda(int value) : QFrame(0,0), valor(value)
     this->paleta = new QPalette();
     paleta->setColor(QPalette::Foreground,Qt::black);
     this->setPalette(*paleta);
+    //qDebug() << pos;
 }
 
 int Celda::getValue()
@@ -118,9 +119,9 @@ void Celda::setLite(int valor)
 
 void Celda::reset()
 {
-    number->setText("0");
-    lite_number->setText("0");
-    hints->setText("0");
+    //number->setText("0");
+    lite_number->setText("");
+    hints->setText("");
 }
 
 QLabel *Celda::getNumber()
