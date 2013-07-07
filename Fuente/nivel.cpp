@@ -63,9 +63,11 @@ void nivel::emitirNivel()
 
 void nivel::setImagen()
 {
+/*
     QString str = QDir::currentPath();
     ui->imgFrame->setStyleSheet("background-image: url(/home/jegerima/ReposGit/QSudoku/Recursos/icon.png)");
     qDebug() << str;
+*/
 }
 
 nivel::~nivel()

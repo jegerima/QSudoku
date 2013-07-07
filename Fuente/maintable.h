@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <celda.h>
 #include <nivel.h>
+#include <QTime>
+#include <QTimer>
+#include <QPushButton>
 
 namespace Ui {
 class MainTable;
@@ -26,21 +29,30 @@ private slots:
     void guardarPartida();
     void cargarPartida();
     void salirJuego();
-
+    void timeRefresh();
+    void getCeldaRunTime();
+    void numPressed();
 private:
 
     //Atributos
     int matriz[9][9];
     int tableroActual[9][9];
     nivel *level;
+    QString jugador;
+    QTimer *tiempo;
+    QTime tiempoIni;
+    QPushButton *teclado[9];
+    Celda *celdaRuntime;
 
     //Procedimientos
     void initGuiCelda();
     void initMenuBar();
+    void initCrono();
+    void initTeclado();
     void setTableroPrevio();
     void setTableroAGuardar();
     void setTableroAJugar();
-
+    void setIcono();
 
     //Funciones
     Ui::MainTable *ui;

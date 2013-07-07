@@ -3,16 +3,21 @@
 
 #include <QVBoxLayout>
 #include <QLabel>
-#include <QLineEdit>
+#include <QPalette>
 #include <QFrame>
 
 class Celda : public QFrame
 {
+    Q_OBJECT
+
     public:
         explicit Celda(int value);
 
         //Procedimientos
         void setValue(int valor);
+        void addHint(int valor);
+        void setLite(int valor);
+        void reset();
         void check();
         void unCheck();
         void setBackColor(QString color);
@@ -23,22 +28,30 @@ class Celda : public QFrame
         int* getPosibilities();
         bool isChecked();
         bool hasNum();
+        QLabel *getNumber();
+
+    signals:
+        void clicked();
+
+    private slots:
+        void setEmpty();
 
     private:
         //Atributos
-        QLineEdit *number;
+        QLabel *number;
         QLabel *lite_number;
         QLabel *hints;
-
-        QFrame *fr_number;
-        QFrame *fr_lite_number;
-        QFrame *fr_hints;
+        QPalette *paleta;
 
         int id;
         int valor;
+        int lite;
         int posibles[9];
         bool hayNum;
         bool revisada;
+
+    protected:
+        void mouseReleaseEvent(QMouseEvent *);
 };
 
 #endif // CELDA_H

@@ -29,3 +29,6 @@ HEADERS  += maintable.h \
 
 FORMS    += maintable.ui \
     nivel.ui
+
+RESOURCES += \
+    images.qrc
