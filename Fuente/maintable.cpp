@@ -19,6 +19,7 @@
 MainTable::MainTable(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainTable)
 {
     ui->setupUi(this);
+    hints = 0;
     QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.2.05"));
 
     //Interfaces
@@ -45,6 +46,7 @@ void MainTable::initGuiCelda()
 {
     //Matriz del Sudoku
     ui->cmdVerificar->setEnabled(false);
+    ui->cmdHint->setEnabled(false);
     ui->tablero->setHorizontalSpacing(8);
     ui->tablero->setVerticalSpacing(8);
     int k = 0;
@@ -60,6 +62,7 @@ void MainTable::initGuiCelda()
                 for(int m = 0; m < 3; m++)
                 {
                     Celda *cas = new Celda(0); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
+                    cas->setValue(0);
                     connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
                     cuadro->addWidget(cas,l,m);
@@ -98,12 +101,19 @@ void MainTable::initTeclado()
     {
         for(int j = 0; j<3 ; j++)
         {
-            this->teclado[z] = new QPushButton(QString("%1").arg(z+1));
+            QPushButton *cmd = new QPushButton(QString("%1").arg(z+1));
+            cmd->setEnabled(false);
+            this->teclado[z] = cmd;
             connect(teclado[z], SIGNAL(clicked()), this, SLOT(numPressed()));
             ui->tecladoNum->addWidget(teclado[z],i,j);
             z++;
         }
     }
+    QPushButton *cmd = new QPushButton(QString("0"));
+    cmd->setEnabled(false);
+    this->teclado[z] = cmd;
+    connect(teclado[z], SIGNAL(clicked()), this, SLOT(numPressed()));
+    ui->tecladoNum->addWidget(teclado[z],4,1);
 }
 
 void MainTable::timeRefresh()
@@ -153,6 +163,7 @@ void MainTable::setTableroInicio()
 
     }
     ui->cmdVerificar->setEnabled(true);
+    ui->cmdHint->setEnabled(true);
     //setTableroAJugar();
 }
 
@@ -278,6 +289,7 @@ void MainTable::nuevaPartida()
 void MainTable::iniciarJuego(int n)
 {
     level->hide();
+    activarTeclado();
     setCeldasBlanco();
     setTableroInicio();
     setTableroInicialSegunNivel(n);
@@ -297,25 +309,30 @@ void MainTable::iniciarJuego(int n)
         case 0:
         {
             ui->lbl_level->setText("Novato");
+            hints = 12;
             break;
         }
         case 1:
         {
             ui->lbl_level->setText("Intermedio");
+            hints = 8;
             break;
         }
         case 2:
         {
             ui->lbl_level->setText("Profesional");
+            hints = 4;
             break;
         }
         default:
         {
             ui->lbl_level->setText("Leyenda");
+            hints = 2;
             break;
         }
     }
     initCrono();
+    ui->cmdHint->setText(QString("Hints("+QString::number(hints)+")"));
 }
 
 void MainTable::salirJuego()
@@ -397,6 +414,8 @@ void MainTable::cargarPartida()
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
     g->leerArchivo(tableroActual, matriz);
     setTableroEnPantalla();
+    activarTeclado();
+
 }
 
 bool MainTable::checkFila(int row, int column)
@@ -449,4 +468,35 @@ bool MainTable::checkCuadro(int row, int column)
         }
     }
     return true;
+}
+
+void MainTable::on_cmdHint_clicked()
+{
+    int irnd, jrnd = 0;
+
+    if(hints>0)
+    {
+        hints = hints - 1;
+        ((QPushButton*)sender())->setText(QString("Hints("+QString::number(hints)+")"));
+        setTableroActual();
+        do
+        {
+            irnd = rand()%8 + 1;
+            jrnd = rand()%8 + 1;
+        }
+        while(tableroActual[irnd][jrnd]!=0);
+        tableroActual[irnd][jrnd] = matriz[irnd][jrnd];
+        ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(irnd/3,jrnd/3))
+                   ->itemAtPosition(irnd%3,jrnd%3))->widget()))->setValue(tableroActual[irnd][jrnd]);
+    }
+    else
+    {
+        QMessageBox::warning(this,tr("QSudoku Message"),tr("No le quedan ayudas disponibles"));
+    }
+}
+
+void MainTable::activarTeclado()
+{
+    for(int i = 0; i<10; i++)
+        teclado[i]->setEnabled(true);
 }

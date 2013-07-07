@@ -34,19 +34,23 @@ private slots:
     void getCeldaRunTime();
     void numPressed();
     void acercaDe();
+    void on_cmdHint_clicked();
+
 private:
 
     //Atributos
     int matriz[9][9];
     int tableroActual[9][9];
+    int hints;
     nivel *level;
     QString jugador;
     QTimer *tiempo;
     QTime tiempoIni;
-    QPushButton *teclado[9];
+    QPushButton *teclado[10];
     Celda *celdaRuntime;
 
     //Procedimientos
+    void activarTeclado();
     void initGuiCelda();
     void initMenuBar();
     void initCrono();
