@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QSudoku 0.1.80</string>
+   <string>QSudoku 0.2.05</string>
   </property>
   <property name="windowIcon">
    <iconset resource="images.qrc">
@@ -36,27 +36,14 @@
    <widget class="QPushButton" name="cmdVerificar">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>570</x>
       <y>360</y>
-      <width>71</width>
+      <width>131</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
      <string>Verificar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cmdGen">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>360</y>
-      <width>71</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Generar</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -82,7 +69,7 @@
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>180</y>
+      <y>170</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -114,7 +101,7 @@
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>210</y>
+      <y>200</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -133,7 +120,7 @@
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>240</y>
+      <y>220</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -174,9 +161,9 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>270</y>
+      <y>249</y>
       <width>131</width>
-      <height>80</height>
+      <height>101</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="tecladoNum"/>

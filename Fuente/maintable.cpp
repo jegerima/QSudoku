@@ -20,7 +20,7 @@ MainTable::MainTable(QWidget *parent) :
     ui(new Ui::MainTable)
 {
     ui->setupUi(this);
-    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.1.80"));
+    QMessageBox::information(0,tr("QSudoku Message"),tr("Bienvenido a QSudoku. Version 0.2.05"));
     initGuiCelda();
     initMenuBar();
     initTeclado();
@@ -56,7 +56,7 @@ void MainTable::initGuiCelda()
             {
                 for(int m = 0; m < 3; m++)
                 {
-                    Celda *cas = new Celda(NULL); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
+                    Celda *cas = new Celda(0); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
                     connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
                     cuadro->addWidget(cas,l,m);
@@ -89,50 +89,6 @@ void MainTable::initCrono()
     QTimer::singleShot(1000, this, SLOT(timeRefresh()));
 }
 
-void Maintable::checkFila()
-{
-    for (int i = 0; i < 9; i++){
-        if (i != column){
-            if (tableroActual[row][i] == tableroActual[row][column] )
-            {
-                qDebug("Error en la fila %d",row+1);
-                return false;
-            }
-        }
-    }
-    return true;
-}
-
-void Maintable::checkColumna()
-{
-    for (int i = 0; i < 9; i++){
-        if (i != row){
-            if (tableroActual[i][column] == tableroActual[row][column] )
-            {
-                qDebug("Error en la columna %d",column+1);
-                return false;
-            }
-        }
-    }
-	return true;
-}
-
-void Maintable::checkCuadro()
-{
-    for (int j = hsquare * 3; j < (hsquare*3 + 3); j++)
-    {
-        if (!(i == row && j == column))
-        {
-            if (tableroActual[ row ][ column ] == tableroActual[i][j])
-            {
-                qDebug("Error en el cuadro (%d,%d)",row, column);
-                qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
-                return false;
-            }
-        }
-    }
-    return true;
-}
 
 void MainTable::initTeclado()
 {
@@ -145,6 +101,8 @@ void MainTable::initTeclado()
             connect(teclado[z], SIGNAL(clicked()), this, SLOT(numPressed()));
             ui->tecladoNum->addWidget(teclado[z],i,j);
             z++;
+        }
+    }
 }
 
 void MainTable::timeRefresh()
@@ -180,8 +138,8 @@ void MainTable::timeRefresh()
 
 void MainTable::setTableroInicio()
 {
-   //genera una nueva solucion de tablero para comenzar todo
-   GenMatriz *matrizSolucion = new GenMatriz();
+    //genera una nueva solucion de tablero para comenzar todo
+    GenMatriz *matrizSolucion = new GenMatriz();
     int k = 0;
     for(int i = 0; i < 9; i++)
     {
