@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.17)  7 JUL 2013 13:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.17)  7 JUL 2013 15:28
 entering extended mode
 **main.tex
-("C:\Users\Cesar Madrid\Desktop\laatex\main.tex"
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -631,7 +631,7 @@ Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 \@indexfile=\write4
 
 Writing index file main.idx
-("C:\Users\Cesar Madrid\Desktop\laatex\structure.tex"
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\structure.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box28
@@ -1394,7 +1394,7 @@ Package biblatex Warning: 'babel' detected but 'csquotes' missing.
 
 \@quotelevel=\count340
 \@quotereset=\count341
-("C:\Users\Cesar Madrid\Desktop\laatex\main.aux")
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
@@ -1483,7 +1483,7 @@ Package biblatex Warning: File 'main.bbl' is wrong format version - expected 2.
 2.
 
 Package biblatex Info: ... file 'main.bbl' found.
-("C:\Users\Cesar Madrid\Desktop\laatex\main.bbl")
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.bbl")
 Package biblatex Info: Reference section=0 on input line 71.
 Package biblatex Info: Reference segment=0 on input line 71.
 
@@ -1499,38 +1499,54 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<background.png, id=4, 1204.5pt x 903.375pt>
+<./Pictures/icon640.png, id=4, 642.4pt x 240.9pt>
+File: ./Pictures/icon640.png Graphic file (type png)
+ <use ./Pictures/icon640.png>
+Package pdftex.def Info: ./Pictures/icon640.png used on input line 83.
+(pdftex.def)             Requested size: 321.19922pt x 120.44969pt.
+
+<./Pictures/i160x130.png, id=6, 120.45pt x 97.86563pt>
+File: ./Pictures/i160x130.png Graphic file (type png)
+
+<use ./Pictures/i160x130.png>
+Package pdftex.def Info: ./Pictures/i160x130.png used on input line 85.
+(pdftex.def)             Requested size: 120.44969pt x 97.86537pt.
+ <background.png, id=7, 1204.5pt x 903.375pt>
 File: background.png Graphic file (type png)
- <use background.png>
-Package pdftex.def Info: background.png used on input line 94.
+
+<use background.png>
+Package pdftex.def Info: background.png used on input line 98.
 (pdftex.def)             Requested size: 1204.49707pt x 903.3728pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Program Files (x86)/Mi
-KTeX 2.9/tex/plain/present/background.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 98.
+KTeX 2.9/tex/plain/present/background.png> <C:/Users/Cesar Madrid/Documents/Git
+Hub/QSudoku/Latex/Pictures/icon640.png> <C:/Users/Cesar Madrid/Documents/GitHub
+/QSudoku/Latex/Pictures/i160x130.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 102.
+
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 104.
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 108.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1540,7 +1556,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 10
-4.
+8.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -1550,35 +1566,35 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 10
-4.
+8.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 10
-4.
+8.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 10
-4.
+8.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 104.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 108.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1586,24 +1602,24 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 [2]
 \c@ttl@toc@default=\count348
- <./Pictures/chapter_head_1.pdf, id=17, 597.432pt x 298.716pt>
+ <./Pictures/chapter_head_1.pdf, id=22, 597.432pt x 298.716pt>
 File: ./Pictures/chapter_head_1.pdf Graphic file (type pdf)
 
 <use ./Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_1.pdf used on input line 116.
+Package pdftex.def Info: ./Pictures/chapter_head_1.pdf used on input line 120.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 116.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 120.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 116.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 120.
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.toc"
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.toc"
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
@@ -1618,18 +1634,20 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
  [3
 
- <C:/Users/Cesar Madrid/Desktop/laatex/Pictures/chapter_head_1.pdf>])
+ <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/chapter_head_1.
+pdf>])
 \tf@toc=\write6
- [4]
+
+[4]
 Chapter 1.
-<./Pictures/chapter_head_2.pdf, id=29, 3581.38pt x 1790.69pt>
+<./Pictures/chapter_head_2.pdf, id=34, 3581.38pt x 1790.69pt>
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 128.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 132.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.ptc"
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc"
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <9> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <9> not available
@@ -1637,21 +1655,21 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <9> not available
 )
 
 LaTeX Warning: Citation 'http://es.wikipedia.org/wiki/Sudoku' on page 5 undefin
-ed on input line 139.
+ed on input line 143.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 139.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
-<./Pictures/ejfila1.png, id=30, 400.49625pt x 74.52844pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
+<./Pictures/ejfila1.png, id=35, 400.49625pt x 74.52844pt>
 File: ./Pictures/ejfila1.png Graphic file (type png)
 
 <use ./Pictures/ejfila1.png>
-Package pdftex.def Info: ./Pictures/ejfila1.png used on input line 153.
+Package pdftex.def Info: ./Pictures/ejfila1.png used on input line 157.
 (pdftex.def)             Requested size: 200.24763pt x 37.26411pt.
 
 Underfull \vbox (badness 4621) has occurred while \output is active []
@@ -1659,163 +1677,82 @@ Underfull \vbox (badness 4621) has occurred while \output is active []
  [5
 
 
- <C:/Users/Cesar Madrid/Desktop/laatex/Pictures/chapter_head_2.pdf>]
-<./Pictures/ejfila.png, id=39, 400.49625pt x 74.52844pt>
+ <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/chapter_head_2.
+pdf>]
+<./Pictures/ejfila.png, id=44, 400.49625pt x 74.52844pt>
 File: ./Pictures/ejfila.png Graphic file (type png)
 
 <use ./Pictures/ejfila.png>
-Package pdftex.def Info: ./Pictures/ejfila.png used on input line 160.
+Package pdftex.def Info: ./Pictures/ejfila.png used on input line 164.
 (pdftex.def)             Requested size: 200.24763pt x 37.26411pt.
 
-<./Pictures/ejcol.png, id=40, 399.74344pt x 341.77687pt>
+<./Pictures/ejcol.png, id=45, 399.74344pt x 341.77687pt>
 File: ./Pictures/ejcol.png Graphic file (type png)
 
 <use ./Pictures/ejcol.png>
-Package pdftex.def Info: ./Pictures/ejcol.png used on input line 167.
+Package pdftex.def Info: ./Pictures/ejcol.png used on input line 171.
 (pdftex.def)             Requested size: 199.87122pt x 170.88802pt.
 
-<./Pictures/ejsub.png, id=42, 402.00188pt x 325.215pt>
+<./Pictures/ejsub.png, id=46, 402.00188pt x 325.215pt>
 File: ./Pictures/ejsub.png Graphic file (type png)
 
 <use ./Pictures/ejsub.png>
-Package pdftex.def Info: ./Pictures/ejsub.png used on input line 176.
+Package pdftex.def Info: ./Pictures/ejsub.png used on input line 180.
 (pdftex.def)             Requested size: 201.00044pt x 162.6071pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <C:/Users/Cesar Madrid/Desktop/laatex/Pictures/ejfila1.png> <C:/Users/Cesar
- Madrid/Desktop/laatex/Pictures/ejfila.png> <C:/Users/Cesar Madrid/Desktop/laat
-ex/Pictures/ejcol.png>] <./Pictures/ejsub1.png, id=47, 402.00188pt x 325.215pt>
+ [6 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ejfila1.png>
+ <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ejfila.png> <C:
+/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ejcol.png>]
+<./Pictures/ejsub1.png, id=51, 402.00188pt x 325.215pt>
 File: ./Pictures/ejsub1.png Graphic file (type png)
 
 <use ./Pictures/ejsub1.png>
-Package pdftex.def Info: ./Pictures/ejsub1.png used on input line 183.
+Package pdftex.def Info: ./Pictures/ejsub1.png used on input line 187.
 (pdftex.def)             Requested size: 201.00044pt x 162.6071pt.
- [7 <C:/Users/Cesar Madrid/Desktop/laatex/Pictures/ejsub.png> <C:/Users/Cesar M
-adrid/Desktop/laatex/Pictures/ejsub1.png>] [8
+ [7 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ejsub.png> <
+C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ejsub1.png>] [8
 
 ]
 Chapter 2.
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 194.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 198.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.ptc") [9] [10
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc") [9] [10
 
 ]
 Chapter 3.
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 221.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 225.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.ptc")
-
-LaTeX Warning: Citation 'http://es.wikipedia.org/wiki/Sudoku' on page 11 undefi
-ned on input line 240.
-
-[11]
-File: ./Pictures/ejfila1.png Graphic file (type png)
- <use ./Pictures/ejfila1.png>
-Package pdftex.def Info: ./Pictures/ejfila1.png used on input line 254.
-(pdftex.def)             Requested size: 200.24763pt x 37.26411pt.
-File: ./Pictures/ejfila.png Graphic file (type png)
- <use ./Pictures/ejfila.png>
-Package pdftex.def Info: ./Pictures/ejfila.png used on input line 261.
-(pdftex.def)             Requested size: 200.24763pt x 37.26411pt.
-File: ./Pictures/ejcol.png Graphic file (type png)
-
-<use ./Pictures/ejcol.png>
-Package pdftex.def Info: ./Pictures/ejcol.png used on input line 268.
-(pdftex.def)             Requested size: 199.87122pt x 170.88802pt.
-File: ./Pictures/ejsub.png Graphic file (type png)
- <use ./Pictures/ejsub.png>
-Package pdftex.def Info: ./Pictures/ejsub.png used on input line 277.
-(pdftex.def)             Requested size: 201.00044pt x 162.6071pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-File: ./Pictures/ejsub1.png Graphic file (type png)
-
-<use ./Pictures/ejsub1.png>
-Package pdftex.def Info: ./Pictures/ejsub1.png used on input line 284.
-(pdftex.def)             Requested size: 201.00044pt x 162.6071pt.
- [13] [14
-
-]
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc") [11] [12]
 Chapter 4.
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 293.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 290.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.ptc")
-Package mdframed Info: mdframed works in twoside mode on input line 301.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 301.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 302.
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 302.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 302.
-Package mdframed Info: mdframed works in twoside mode on input line 311.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 311.
-Package mdframed Info: mdframed works in twoside mode on input line 321.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 321.
- [15]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 350.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 350.
-Package mdframed Info: mdframed works in twoside mode on input line 359.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 359.
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <6> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 394.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 394.
- [16]
-Package mdframed Info: mdframed works in twoside mode on input line 414.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 414.
- [17] [18
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc") [13
+
+] [14
 
 ]
-Chapter 5.
-File: ./Pictures/chapter_head_1.pdf Graphic file (type pdf)
-<use ./Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_1.pdf used on input line 442.
-(pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
+File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 
-("C:\Users\Cesar Madrid\Desktop\laatex\main.ptc")
-File: ./Pictures/ejsub.png Graphic file (type png)
- <use ./Pictures/ejsub.png>
-Package pdftex.def Info: ./Pictures/ejsub.png used on input line 465.
-(pdftex.def)             Requested size: 201.00044pt x 162.6071pt.
-
-[19] [20
-
-]
-File: ./Pictures/chapter_head_1.pdf Graphic file (type pdf)
- <use ./Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_1.pdf used on input line 473.
-(pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [21] [22
+<use ./Pictures/chapter_head_2.pdf>
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 315.
+(pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
+ [15] [16
 
 ]
 No file main.ind.
 \tf@ptc=\write7
-("C:\Users\Cesar Madrid\Desktop\laatex\main.aux")
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -1827,32 +1764,24 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 26302 strings out of 493921
- 472961 string characters out of 3144855
- 968009 words of memory out of 3000000
- 28898 multiletter control sequences out of 15000+200000
- 111580 words of font info for 217 fonts, out of 3000000 for 9000
+ 26202 strings out of 493921
+ 471747 string characters out of 3144855
+ 964844 words of memory out of 3000000
+ 28830 multiletter control sequences out of 15000+200000
+ 88729 words of font info for 171 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 58i,15n,57p,1108b,2494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,12n,55p,1108b,2494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users
 \Cesar Madrid\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1
-095.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on main.pdf (22 pages, 690556 bytes).
+095.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (16 pages, 691406 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 62517 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 51775 words of extra memory for PDF output out of 61914 (max. 10000000)
 
