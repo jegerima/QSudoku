@@ -3,14 +3,15 @@
 #include <QTextStream>
 #include <QFile>
 #include <QString>
+#include <QTime>
 
 class Guardar
 {
 public:
     Guardar();
     void crearArchivo();
-    void guardarValores(int m[9][9], int sol[9][9]);
-    void leerArchivo(int m[9][9], int sol[9][9]);
+    void guardarValores(int m[9][9], int sol[9][9], QString jugador, QString tiempo);
+    void leerArchivo(int m[9][9], int sol[9][9], QString *name, QTime *t);
 
 private:
     QString cadenaAGuardar;

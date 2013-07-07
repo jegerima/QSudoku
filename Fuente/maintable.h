@@ -37,10 +37,13 @@ private:
     //Atributos
     int matriz[9][9];
     int tableroActual[9][9];
+    int avanceSeg;
+    int avanceMin;
     nivel *level;
     QString jugador;
     QTimer *tiempo;
     QTime tiempoIni;
+    QTime *tm;
     QPushButton *teclado[9];
     Celda *celdaRuntime;
 

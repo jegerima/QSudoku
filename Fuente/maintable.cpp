@@ -87,6 +87,8 @@ void MainTable::initCrono()
     tiempo->start(1000);
     tiempoIni = QTime::currentTime();
     QTimer::singleShot(1000, this, SLOT(timeRefresh()));
+    tm = new QTime(0,0,0,0);
+
 }
 
 
@@ -128,11 +130,13 @@ void MainTable::timeRefresh()
 	m_act = m_act -1;
     }
 
-    m = m_act - m_ini;
-    s = s_act - s_ini;
+    m = m_act - m_ini +avanceMin;
+    s = s_act - s_ini +avanceSeg;
     ms = ms_act - ms_ini;
+    //actualizo el tiempo
 
-    QTime *tm = new QTime(0,m,s,ms);
+    tm->setHMS(0, m, s, ms);
+    qDebug()<<tm->toString();
     ui->crono->display(tm->toString("mm:ss"));
 }
 
@@ -198,7 +202,7 @@ void MainTable::setTableroEnPantalla()
              ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                         ->itemAtPosition(i%3,j%3))->widget()))->setValue(tmp);
              }else{
-                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+             ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                             ->itemAtPosition(i%3,j%3))->widget()))->setValue(0);
              }
              k++;
@@ -358,7 +362,8 @@ void MainTable::guardarPartida()
     Guardar *g = new Guardar();
     setTableroActual();
     //le envio el avance del tablero y el juego resuelto para su posterior solucion
-    g->guardarValores(tableroActual, matriz);
+    //el nombre del jugador y el tiempo que llevaba jugando
+    g->guardarValores(tableroActual, matriz, jugador, tm->toString());
     g->crearArchivo();
 }
 
@@ -367,15 +372,20 @@ void MainTable::cargarPartida()
 {
     Guardar *g = new Guardar();
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
-    g->leerArchivo(tableroActual, matriz);
+    g->leerArchivo(tableroActual, matriz, &jugador, tm);
+    avanceMin = tm->minute();
+    avanceSeg = tm->second();
+    //ui->crono->display(tm->toString("mm:ss"));
+    ui->lbl_jugador->setText(jugador);
     setTableroEnPantalla();
+
 }
 
 bool MainTable::checkFila(int row, int column)
 {
     for (int i = 0; i < 9; i++){
         if (i != column){
-            if (matriz[row][i] == matriz[row][column] )
+            if (tableroActual[row][i] == tableroActual[row][column] )
             {
                 qDebug("Error en la fila %d",row+1);
                 return false;
@@ -390,7 +400,7 @@ bool MainTable::checkColumna(int row, int column)
 
     for (int i = 0; i < 9; i++){
         if (i != row){
-            if (matriz[i][column] == matriz[row][column] )
+            if (tableroActual[i][column] == tableroActual[row][column] )
             {
                 qDebug("Error en la columna %d",column+1);
                 return false;
@@ -411,10 +421,10 @@ bool MainTable::checkCuadro(int row, int column)
         {
             if (!(i == row && j == column))
             {
-                if (matriz[ row ][ column ] == matriz[i][j])
+                if (tableroActual[ row ][ column ] == tableroActual[i][j])
                 {
                     qDebug("Error en el cuadro (%d,%d)",row, column);
-                    qDebug("(%d == %d) - i,j (%d,%d)",matriz[ row ][ column ], matriz[i][j] , i, j);
+                    qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
                     return false;
                 }
             }
