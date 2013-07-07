@@ -38,7 +38,7 @@ void Guardar::crearArchivo()
 }
 
 //guardo los valores como String, para su posterior encriptacion
-void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QString tiempo)
+void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo)
 {int tmp=0;
     //guardo el avance
     for(int i = 0; i < 9; i++)
@@ -59,9 +59,13 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QStrin
             cadenaAGuardar = cadenaAGuardar + QString::number(tmp);
         }
     }
-    cadenaAGuardar.append("-");
     //concateno el nombre del jugador
+    cadenaAGuardar.append("-");
     cadenaAGuardar = cadenaAGuardar + jugador;
+    //concateno el nivel del jugador
+    cadenaAGuardar.append("-");
+    cadenaAGuardar = cadenaAGuardar + nivel;
+    //concateno el tiempo de juego
     cadenaAGuardar.append("-");
     cadenaAGuardar = cadenaAGuardar + tiempo;
     qDebug() << cadenaAGuardar;
@@ -69,7 +73,7 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QStrin
 
 
 //m es el tablero actual y sol es la solucion
-void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QTime *t)
+void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QString *level, QTime *t)
 {
     int k=0;
     QString nombreArchivo = QFileDialog::getOpenFileName(NULL, "Carga archivo", QDir::homePath(), "*.su");
@@ -89,9 +93,11 @@ void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QTime 
     QString actual = actualYsolucion[0];
     QString solucion = actualYsolucion[1];
     QString nombre = actualYsolucion[2];
+    QString nivel = actualYsolucion[3];
+    *level = nivel;
     *name = nombre;
     QRegExp rxh(":");
-    QString tiempo = actualYsolucion[3];
+    QString tiempo = actualYsolucion[4];
     QStringList HMS = tiempo.split(rxh);
     QString h = HMS[0];
     QString m = HMS[1];

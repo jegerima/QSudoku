@@ -10,8 +10,8 @@ class Guardar
 public:
     Guardar();
     void crearArchivo();
-    void guardarValores(int m[9][9], int sol[9][9], QString jugador, QString tiempo);
-    void leerArchivo(int m[9][9], int sol[9][9], QString *name, QTime *t);
+    void guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo);
+    void leerArchivo(int m[9][9], int sol[9][9], QString *name, QString *level, QTime *t);
 
 private:
     QString cadenaAGuardar;

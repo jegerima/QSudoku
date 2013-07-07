@@ -71,6 +71,7 @@ void MainTable::initGuiCelda()
     }
     //Celda temporal para el tiempo de ejecucion
     celdaRuntime = new Celda(0);
+    tm = new QTime(0,0,0,0);
 }
 
 void MainTable::initMenuBar()
@@ -89,7 +90,7 @@ void MainTable::initCrono()
     tiempo->start(1000);
     tiempoIni = QTime::currentTime();
     QTimer::singleShot(1000, this, SLOT(timeRefresh()));
-    tm = new QTime(0,0,0,0);
+
 
 }
 
@@ -391,7 +392,7 @@ void MainTable::guardarPartida()
     setTableroActual();
     //le envio el avance del tablero y el juego resuelto para su posterior solucion
     //el nombre del jugador y el tiempo que llevaba jugando
-    g->guardarValores(tableroActual, matriz, jugador, tm->toString());
+    g->guardarValores(tableroActual, matriz, jugador, ui->lbl_level->text(), tm->toString());
     g->crearArchivo();
 }
 
@@ -399,13 +400,16 @@ void MainTable::guardarPartida()
 void MainTable::cargarPartida()
 {
     Guardar *g = new Guardar();
+    QString nivel;
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
-    g->leerArchivo(tableroActual, matriz, &jugador, tm);
+    g->leerArchivo(tableroActual, matriz, &jugador, &nivel, tm);
     avanceMin = tm->minute();
     avanceSeg = tm->second();
     //ui->crono->display(tm->toString("mm:ss"));
     ui->lbl_jugador->setText(jugador);
+    ui->lbl_level->setText(nivel);
     setTableroEnPantalla();
+    initCrono();
 
 }
 
