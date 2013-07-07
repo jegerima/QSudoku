@@ -26,41 +26,54 @@ public:
 private slots:
     void iniciarJuego(int n);
     void on_cmdVerificar_clicked();
+    void nuevaPartida();
     void guardarPartida();
     void cargarPartida();
     void salirJuego();
     void timeRefresh();
     void getCeldaRunTime();
     void numPressed();
+    void acercaDe();
+    void on_cmdHint_clicked();
+
 private:
 
     //Atributos
     int matriz[9][9];
     int tableroActual[9][9];
+<<<<<<< HEAD
+    int hints;
+=======
+    int avanceSeg;
+    int avanceMin;
+>>>>>>> 2cf987669cb65b2b7ba175938518400c8bc2f02c
     nivel *level;
     QString jugador;
     QTimer *tiempo;
     QTime tiempoIni;
+<<<<<<< HEAD
+    QPushButton *teclado[10];
+=======
+    QTime *tm;
     QPushButton *teclado[9];
+>>>>>>> 2cf987669cb65b2b7ba175938518400c8bc2f02c
     Celda *celdaRuntime;
 
     //Procedimientos
+    void activarTeclado();
     void initGuiCelda();
     void initMenuBar();
-<<<<<<< HEAD
     void initCrono();
     void initTeclado();
     void setTableroPrevio();
     void setTableroAGuardar();
     void setTableroAJugar();
     void setIcono();
-=======
     void setTableroInicio();
     void setTableroActual();
     void setTableroEnPantalla();
     void setTableroInicialSegunNivel(int n);
-
->>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
+    void setCeldasBlanco();
 
     //Funciones
     Ui::MainTable *ui;

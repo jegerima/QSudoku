@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>509</height>
+    <height>519</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,9 +36,9 @@
    <widget class="QPushButton" name="cmdVerificar">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>360</y>
-      <width>131</width>
+      <x>640</x>
+      <y>350</y>
+      <width>71</width>
       <height>27</height>
      </rect>
     </property>
@@ -49,8 +49,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>150</y>
+      <x>560</x>
+      <y>130</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -68,9 +68,9 @@
    <widget class="QLabel" name="lbl_jugador">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>170</y>
-      <width>161</width>
+      <x>560</x>
+      <y>150</y>
+      <width>151</width>
       <height>20</height>
      </rect>
     </property>
@@ -100,8 +100,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>200</y>
+      <x>560</x>
+      <y>180</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -119,9 +119,9 @@
    <widget class="QLabel" name="lbl_level">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>220</y>
-      <width>161</width>
+      <x>560</x>
+      <y>200</y>
+      <width>151</width>
       <height>20</height>
      </rect>
     </property>
@@ -135,10 +135,10 @@
    <widget class="QLabel" name="lbl_icon">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>570</x>
       <y>10</y>
-      <width>141</width>
-      <height>131</height>
+      <width>131</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -160,13 +160,26 @@
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>249</y>
-      <width>131</width>
-      <height>101</height>
+      <x>560</x>
+      <y>230</y>
+      <width>151</width>
+      <height>111</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="tecladoNum"/>
+   </widget>
+   <widget class="QPushButton" name="cmdHint">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>350</y>
+      <width>71</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hints(0)</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="Menu">
