@@ -11,6 +11,7 @@
 *.dylib
 *.cpp~
 *.h~
+*.ui~
 
 # Qt-es
 
