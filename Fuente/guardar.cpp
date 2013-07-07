@@ -3,6 +3,8 @@
 #include <QDebug>
 #include <QRegExp>
 #include <QStringList>
+#include <QFileDialog>
+#include <QTranslator>
 
 
 Guardar::Guardar()
@@ -11,18 +13,24 @@ Guardar::Guardar()
 
 void Guardar::crearArchivo()
 {
-    QFile file("/home/ruben/Documentos/out.su");
+    QFileDialog dialog(NULL);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setDefaultSuffix("su");
+    QFile file(dialog.getSaveFileName(NULL, "Guardar", QDir::homePath()+".su","Any Files (*.su)" ));
+
     if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
     QTextStream out(&file);
     //out << (qint16)1;
 
-     SimpleCrypt crypto(Q_UINT64_C(0x0c2ad4a4acb9f023)); //some random number
+
+    //qDebug()<<dialog.getSaveFileName(NULL, QDir::homePath(),"(nombre)*.su");
+
+    SimpleCrypt crypto(Q_UINT64_C(0x0c2ad4a4acb9f023)); //some random number
      QString result = crypto.encryptToString(cadenaAGuardar);
      out << result;
-     QString decrypted = crypto.decryptToString(cadenaAGuardar);
-     qDebug() << cadenaAGuardar << endl << result << endl << decrypted;
-   // optional, as QFile destructor will already do it:
-    file.close();
+     QString decrypted = crypto.decryptToString(result);
+     qDebug() << "cadena a guardar"+cadenaAGuardar << endl << "resul"+result << endl << "decriptado:"+decrypted;
+     file.close();
     }
     else{
         qDebug("no se abrio el archivo");
@@ -55,9 +63,13 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9])
 }
 
 
+//m es el tablero actual y sol es la solucion
 void Guardar::leerArchivo(int m[9][9], int sol[9][9])
 {
-    QFile file("/home/ruben/Documentos/out.su");
+    int k=0;
+    QString nombreArchivo = QFileDialog::getOpenFileName(NULL, "Carga archivo", QDir::homePath(), "*.su");
+
+    QFile file(nombreArchivo);
     if(file.open(QIODevice::ReadOnly))
     {
     QTextStream in(&file);
@@ -66,12 +78,25 @@ void Guardar::leerArchivo(int m[9][9], int sol[9][9])
     QString decrypted = crypto.decryptToString(c);
     qDebug() << c << decrypted;
     //sacar el tablero guardado y los ultimos que jugo
-    QRegExp rx("[0-9]-[0-9]");
+    QRegExp rx("\\D");
     QStringList actualYsolucion = decrypted.split(rx);
     qDebug() << actualYsolucion;
+    QString actual = actualYsolucion[0];
+    QString solucion = actualYsolucion[1];
+    QChar tmp, tmp1;
 
-    //QString actual = actualYsolucion[0];
-    //QString solucion = actualYsolucion[1];
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            tmp = actual[k];
+            tmp1 = solucion[k];
+            m[i][j] = tmp.digitValue();
+            sol[i][j] = tmp1.digitValue();
+            k++;
+        }
+    }
+
     qDebug() <<"actual: "<< actualYsolucion[0] <<"solucion: "<< actualYsolucion[1];
     file.close();
     }
@@ -81,9 +106,6 @@ void Guardar::leerArchivo(int m[9][9], int sol[9][9])
 
 }
 
-void Guardar::cargarValores(int m[9][9])
-{
 
-}
 
 

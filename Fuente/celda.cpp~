@@ -74,17 +74,14 @@ bool Celda::hasNum()
 
 void Celda::setValue(int valor)
 {
-    if(valor==0)
-    {
+    if(valor==0){
         this->valor=valor;
         this->number->setText("");
-    }
-    else
-    {
-        this->valor = valor;
-        paleta->setColor(QPalette::Foreground,Qt::black);
-        this->setPalette(*paleta);
-        this->number->setText(QString::number(valor));
+    }else{
+    this->valor = valor;
+    paleta->setColor(QPalette::Foreground,Qt::black);
+    this->setPalette(*paleta);
+    this->number->setText(QString::number(valor));
     }
 }
 

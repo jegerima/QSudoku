@@ -56,9 +56,13 @@ void MainTable::initGuiCelda()
             {
                 for(int m = 0; m < 3; m++)
                 {
-                    Celda *cas = new Celda(NULL); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
+<<<<<<< HEAD
+                    Celda *cas = new Celda(0); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
                     connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
+=======
+                    Celda *cas = new Celda(NULL);
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
                     cuadro->addWidget(cas,l,m);
                     k++;
                 }
@@ -82,15 +86,13 @@ void MainTable::initMenuBar()
 
 void MainTable::initCrono()
 {
+<<<<<<< HEAD
     tiempo = new QTimer(this);
     connect(tiempo, SIGNAL(timeout()), this, SLOT(timeRefresh()));
     tiempo->start(1000);
     tiempoIni = QTime::currentTime();
     QTimer::singleShot(1000, this, SLOT(timeRefresh()));
-}
-
-void Maintable::checkFila()
-{
+=======
     for (int i = 0; i < 9; i++){
         if (i != column){
             if (tableroActual[row][i] == tableroActual[row][column] )
@@ -101,41 +103,12 @@ void Maintable::checkFila()
         }
     }
     return true;
-}
-
-void Maintable::checkColumna()
-{
-    for (int i = 0; i < 9; i++){
-        if (i != row){
-            if (tableroActual[i][column] == tableroActual[row][column] )
-            {
-                qDebug("Error en la columna %d",column+1);
-                return false;
-            }
-        }
-    }
-	return true;
-}
-
-void Maintable::checkCuadro()
-{
-    for (int j = hsquare * 3; j < (hsquare*3 + 3); j++)
-    {
-        if (!(i == row && j == column))
-        {
-            if (tableroActual[ row ][ column ] == tableroActual[i][j])
-            {
-                qDebug("Error en el cuadro (%d,%d)",row, column);
-                qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
-                return false;
-            }
-        }
-    }
-    return true;
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
 }
 
 void MainTable::initTeclado()
 {
+<<<<<<< HEAD
     int z = 0;
     for(int i = 0; i<3; i++)
     {
@@ -145,6 +118,18 @@ void MainTable::initTeclado()
             connect(teclado[z], SIGNAL(clicked()), this, SLOT(numPressed()));
             ui->tecladoNum->addWidget(teclado[z],i,j);
             z++;
+=======
+
+    for (int i = 0; i < 9; i++){
+        if (i != row){
+            if (tableroActual[i][column] == tableroActual[row][column] )
+            {
+                qDebug("Error en la columna %d",column+1);
+                return false;
+            }
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
+        }
+    }
 }
 
 void MainTable::timeRefresh()
@@ -166,8 +151,23 @@ void MainTable::timeRefresh()
 
     if (s_act < s_ini)
     {
-    	s_act = 60 + s_act;
-	m_act = m_act -1;
+<<<<<<< HEAD
+    s_act = 60 + s_act;
+    m_act = m_act -1;
+=======
+        for (int j = hsquare * 3; j < (hsquare*3 + 3); j++)
+        {
+            if (!(i == row && j == column))
+            {
+                if (tableroActual[ row ][ column ] == tableroActual[i][j])
+                {
+                    qDebug("Error en el cuadro (%d,%d)",row, column);
+                    qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
+                    return false;
+                }
+            }
+        }
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
     }
 
     m = m_act - m_ini;
@@ -302,6 +302,7 @@ void MainTable::iniciarJuego(int n)
     level->hide();
     this->show();
     qDebug("%d",n);
+<<<<<<< HEAD
     do
     {
         jugador = QInputDialog::getText(this, tr("QSudoku Request"),tr("Ingrese su nombre:"));
@@ -335,6 +336,9 @@ void MainTable::iniciarJuego(int n)
         }
     }
     initCrono();
+=======
+
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
 }
 
 void MainTable::salirJuego()

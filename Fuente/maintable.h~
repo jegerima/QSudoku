@@ -47,16 +47,20 @@ private:
     //Procedimientos
     void initGuiCelda();
     void initMenuBar();
+<<<<<<< HEAD
     void initCrono();
     void initTeclado();
     void setTableroPrevio();
     void setTableroAGuardar();
     void setTableroAJugar();
     void setIcono();
+=======
     void setTableroInicio();
     void setTableroActual();
     void setTableroEnPantalla();
     void setTableroInicialSegunNivel(int n);
+
+>>>>>>> 592b38bf50059b27a5550388ab1aee715c6879e3
 
     //Funciones
     Ui::MainTable *ui;
