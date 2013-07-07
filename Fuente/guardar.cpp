@@ -4,6 +4,7 @@
 #include <QRegExp>
 #include <QStringList>
 #include <QFileDialog>
+#include <QTranslator>
 
 
 Guardar::Guardar()
@@ -12,13 +13,19 @@ Guardar::Guardar()
 
 void Guardar::crearArchivo()
 {
-    QFile file("/home/ruben/Documentos/out.su");
+    QFileDialog dialog(NULL);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setDefaultSuffix("su");
+    QFile file(dialog.getSaveFileName(NULL, "Guardar", QDir::homePath()+".su","Any Files (*.su)" ));
 
     if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
     QTextStream out(&file);
     //out << (qint16)1;
 
-     SimpleCrypt crypto(Q_UINT64_C(0x0c2ad4a4acb9f023)); //some random number
+
+    //qDebug()<<dialog.getSaveFileName(NULL, QDir::homePath(),"(nombre)*.su");
+
+    SimpleCrypt crypto(Q_UINT64_C(0x0c2ad4a4acb9f023)); //some random number
      QString result = crypto.encryptToString(cadenaAGuardar);
      out << result;
      QString decrypted = crypto.decryptToString(result);
@@ -60,7 +67,9 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9])
 void Guardar::leerArchivo(int m[9][9], int sol[9][9])
 {
     int k=0;
-    QFile file("/home/ruben/Documentos/out.su");
+    QString nombreArchivo = QFileDialog::getOpenFileName(NULL, "Carga archivo", QDir::homePath(), "*.su");
+
+    QFile file(nombreArchivo);
     if(file.open(QIODevice::ReadOnly))
     {
     QTextStream in(&file);
@@ -97,9 +106,6 @@ void Guardar::leerArchivo(int m[9][9], int sol[9][9])
 
 }
 
-void Guardar::cargarValores(int m[9][9])
-{
 
-}
 
 
