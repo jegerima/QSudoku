@@ -70,8 +70,13 @@ bool Celda::hasNum()
 
 void Celda::setValue(int valor)
 {
+    if(valor==0){
+        this->valor=valor;
+        this->number->setText("");
+    }else{
     this->valor = valor;
     this->number->setText(QString::number(valor));
+    }
 }
 
 void Celda::check()

@@ -53,7 +53,7 @@ void MainTable::initGuiCelda()
             {
                 for(int m = 0; m < 3; m++)
                 {
-                    Celda *cas = new Celda(((j*3)+m+(i*27)+(l*9)));
+                    Celda *cas = new Celda(NULL);
                     cuadro->addWidget(cas,l,m);
                     k++;
                 }
@@ -63,7 +63,7 @@ void MainTable::initGuiCelda()
     }
 
     //Boton para configurar un tablero previo
-    connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroPrevio);
+    //connect(ui->cmdGen, &QPushButton::clicked, this, &MainTable::setTableroInicio);
     connect(level, SIGNAL(appReady(int)), this, SLOT(iniciarJuego(int)));
 }
 
@@ -78,7 +78,7 @@ bool MainTable::checkFila(int row, int column)
 {
     for (int i = 0; i < 9; i++){
         if (i != column){
-            if (matriz[row][i] == matriz[row][column] )
+            if (tableroActual[row][i] == tableroActual[row][column] )
             {
                 qDebug("Error en la fila %d",row+1);
                 return false;
@@ -93,7 +93,7 @@ bool MainTable::checkColumna(int row, int column)
 
     for (int i = 0; i < 9; i++){
         if (i != row){
-            if (matriz[i][column] == matriz[row][column] )
+            if (tableroActual[i][column] == tableroActual[row][column] )
             {
                 qDebug("Error en la columna %d",column+1);
                 return false;
@@ -114,10 +114,10 @@ bool MainTable::checkCuadro(int row, int column)
         {
             if (!(i == row && j == column))
             {
-                if (matriz[ row ][ column ] == matriz[i][j])
+                if (tableroActual[ row ][ column ] == tableroActual[i][j])
                 {
                     qDebug("Error en el cuadro (%d,%d)",row, column);
-                    qDebug("(%d == %d) - i,j (%d,%d)",matriz[ row ][ column ], matriz[i][j] , i, j);
+                    qDebug("(%d == %d) - i,j (%d,%d)",tableroActual[ row ][ column ], tableroActual[i][j] , i, j);
                     return false;
                 }
             }
@@ -127,26 +127,30 @@ bool MainTable::checkCuadro(int row, int column)
 }
 
 
-void MainTable::setTableroPrevio()
+void MainTable::setTableroInicio()
 {
-   GenMatriz *matriz = new GenMatriz();
+   //genera una nueva solucion de tablero para comenzar todo
+   GenMatriz *matrizSolucion = new GenMatriz();
     int k = 0;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
-            //seteo el sudoku completo que me devuelve GenMatriz
-            ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))->itemAtPosition(i%3,j%3))->widget()))->setValue(matriz->arregloDeNumeros(i,j));
-            k++;
+            //copio la nueva solucion para el juego en matriz
+            matriz[i][j] = matrizSolucion->arregloDeNumeros(i,j);
+            //seteo todo a 0 en tablero actual
+            tableroActual[i][j] =0;
         }
 
     }
     ui->cmdVerificar->setEnabled(true);
-    setTableroAJugar();
+    //setTableroAJugar();
 }
 
+
+
 //funcion para guardar el tablero en el momento actual del juego
-void MainTable::setTableroAGuardar()
+void MainTable::setTableroActual()
 {
     int tmp=0;
     for(int i = 0; i < 9; i++)
@@ -157,7 +161,7 @@ void MainTable::setTableroAGuardar()
             tmp = ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
              ->itemAtPosition(i%3,j%3))->widget()))->getValue();
             //si la celda tiene un numero
-            if(tmp!=0){
+            if(tmp!=NULL){
                 tableroActual[i][j] = tmp;
                 qDebug() << tmp;
             }else{
@@ -169,29 +173,79 @@ void MainTable::setTableroAGuardar()
     }
 }
 
-void MainTable::setTableroAJugar()
-{
-    for(int i = 0; i < 9; i++)
-    {
-        for(int j = 0; j <9; j++)
-        {
-                    QLayoutItem *qli = ((QGridLayout*)(ui->tablero->itemAtPosition(i/3,j/3)))->itemAtPosition(i%3,j%3);
-                    Celda *qle = (Celda*)(qli->widget());
-                    QString srt = QString::number(qle->getValue());
-                    qDebug() << srt;
-                    matriz[i][j] = srt.toInt();
 
+
+//setea en pantalla lo que ve el jugador final
+void MainTable::setTableroEnPantalla()
+{
+     int k = 0, tmp=0;
+     for(int i = 0; i < 9; i++)
+     {
+         for(int j = 0; j < 9; j++)
+         {
+             //muestro en pantalla solo las casillas que no contengan cero
+             tmp = tableroActual[i][j];
+             if(tmp!=0){
+             ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+                        ->itemAtPosition(i%3,j%3))->widget()))->setValue(tmp);
+             }else{
+                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+                            ->itemAtPosition(i%3,j%3))->widget()))->setValue(0);
+             }
+             k++;
+         }
+
+     }
+     ui->cmdVerificar->setEnabled(true);
+}
+
+void MainTable::setTableroInicialSegunNivel(int n)
+{
+    int fila=0, col=0;
+
+    if(n==0){
+        qDebug("Seteando nivel 1");
+        for(int i=0; i<51; i++){
+            qDebug()<<"entro al for";
+            fila = 1+rand()%8;
+            col = 1+rand()%8;
+            tableroActual[fila][col] = matriz[fila][col];
         }
-        qDebug(" ");
+    }
+    if(n==1){
+        qDebug("Seteando nivel 2");
+        for(int i=0; i<43; i++){
+            fila = 1+rand()%8;
+            col = 1+rand()%8;
+            tableroActual[fila][col] = matriz[fila][col];
+        }
+    }
+    if(n==2){
+        qDebug("Seteando nivel 3");
+        for(int i=0; i<35; i++){
+            fila = 1+rand()%8;
+            col = 1+rand()%8;
+             tableroActual[fila][col] = matriz[fila][col];
+        }
+    }
+    if(n==3){
+        qDebug("Seteando nivel Dios");
+        for(int i=0; i<27; i++){
+            fila = 1+rand()%8;
+            col = 1+rand()%8;
+             tableroActual[fila][col] = matriz[fila][col];
+        }
     }
 }
 
 void MainTable::iniciarJuego(int n)
 {
+    setTableroInicio();
+    setTableroInicialSegunNivel(n);
+    setTableroEnPantalla();
     level->hide();
     this->show();
     qDebug("%d",n);
-
 
 }
 
@@ -203,7 +257,7 @@ void MainTable::salirJuego()
 void MainTable::on_cmdVerificar_clicked()
 {
     bool t = true;
-
+    setTableroActual();
 
     for(int i = 0; i < 9; i++)
     {
@@ -245,7 +299,7 @@ void MainTable::on_cmdVerificar_clicked()
 void MainTable::guardarPartida()
 {
     Guardar *g = new Guardar();
-    setTableroAGuardar();
+    setTableroActual();
     //le envio el avance del tablero y el juego resuelto para su posterior solucion
     g->guardarValores(tableroActual, matriz);
     g->crearArchivo();
@@ -257,4 +311,5 @@ void MainTable::cargarPartida()
     Guardar *g = new Guardar();
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
     g->leerArchivo(tableroActual, matriz);
+    setTableroEnPantalla();
 }

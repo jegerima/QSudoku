@@ -37,9 +37,10 @@ private:
     //Procedimientos
     void initGuiCelda();
     void initMenuBar();
-    void setTableroPrevio();
-    void setTableroAGuardar();
-    void setTableroAJugar();
+    void setTableroInicio();
+    void setTableroActual();
+    void setTableroEnPantalla();
+    void setTableroInicialSegunNivel(int n);
 
 
     //Funciones
