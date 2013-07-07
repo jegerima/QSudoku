@@ -42,11 +42,14 @@ private:
     int matriz[9][9];
     int tableroActual[9][9];
     int hints;
+    int avanceSeg;
+    int avanceMin;
     nivel *level;
     QString jugador;
     QTimer *tiempo;
     QTime tiempoIni;
     QPushButton *teclado[10];
+    QTime *tm;
     Celda *celdaRuntime;
 
     //Procedimientos

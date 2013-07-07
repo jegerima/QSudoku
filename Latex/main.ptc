@@ -35,65 +35,31 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Seleccion de niveles}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Que es Sudoku?}{11}
+\contentsline {section}{\numberline {3.2}Inicio del juego y Nombre del Jugador}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Reglas de Juego}{11}
+\contentsline {section}{\numberline {3.3}Jugando}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Filas}{12}
+\contentsline {section}{\numberline {3.4}Verificar Tablero}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Columnas}{12}
+\contentsline {section}{\numberline {3.5}Guardar y Cargar partidas}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Subcuadriculas}{13}
+\contentsline {subsection}{\numberline {3.5.1}Guardar partidas}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}In-text Elements}{15}
+\contentsline {subsection}{\numberline {3.5.2}Cargar partidas}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Salir del juego}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Estructura de la pantalla de un juego}{13}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Theorems}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Several equations}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Single Line}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Definitions}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Notations}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Remarks}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Corollaries}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Propositions}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Several equations}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Single Line}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Examples}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7.1}Equation and Text}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7.2}Paragraph of Text}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Exercises}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Problems}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.10}Vocabulary}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Presenting Information}{19}
+\contentsline {section}{\numberline {4.1}Partes de la pantallade juego}{13}
 \ttl@stoptoc {default@5}
 \ttl@starttoc {default@6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Table}{19}
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Figure}{19}
-\ttl@stoptoc {default@6}
-\ttl@starttoc {default@7}
+\contentsline {section}{Books}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{21}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{21}
+\contentsline {section}{Articles}{15}
 \contentsfinish 

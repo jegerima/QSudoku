@@ -74,6 +74,9 @@ void MainTable::initGuiCelda()
     }
     //Celda temporal para el tiempo de ejecucion
     celdaRuntime = new Celda(0);
+    tm = new QTime(0,0,0,0);
+    avanceMin = 0;
+    avanceSeg = 0;
 }
 
 void MainTable::initMenuBar()
@@ -139,11 +142,16 @@ void MainTable::timeRefresh()
 	m_act = m_act -1;
     }
 
-    m = m_act - m_ini;
-    s = s_act - s_ini;
+    m = m_act - m_ini +avanceMin;
+    s = s_act - s_ini +avanceSeg;
     ms = ms_act - ms_ini;
+    //actualizo el tiempo
 
-    QTime *tm = new QTime(0,m,s,ms);
+    qDebug("%d:%d:%d",m,s,ms);
+    qDebug("%d,%d",avanceMin,avanceSeg);
+
+    tm->setHMS(0, m, s, ms);
+    qDebug()<<tm->toString();
     ui->crono->display(tm->toString("mm:ss"));
 }
 
@@ -208,7 +216,7 @@ void MainTable::setTableroEnPantalla()
              ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                         ->itemAtPosition(i%3,j%3))->widget()))->setValue(tmp);
              }else{
-                 ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+             ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                             ->itemAtPosition(i%3,j%3))->widget()))->setValue(0);
              }
              k++;
@@ -288,6 +296,8 @@ void MainTable::nuevaPartida()
 
 void MainTable::iniciarJuego(int n)
 {
+    avanceMin = 0;
+    avanceSeg = 0;
     level->hide();
     activarTeclado();
     setCeldasBlanco();
@@ -403,7 +413,8 @@ void MainTable::guardarPartida()
     Guardar *g = new Guardar();
     setTableroActual();
     //le envio el avance del tablero y el juego resuelto para su posterior solucion
-    g->guardarValores(tableroActual, matriz);
+    //el nombre del jugador y el tiempo que llevaba jugando
+    g->guardarValores(tableroActual, matriz, jugador, ui->lbl_level->text(), tm->toString());
     g->crearArchivo();
 }
 
@@ -411,11 +422,17 @@ void MainTable::guardarPartida()
 void MainTable::cargarPartida()
 {
     Guardar *g = new Guardar();
+    QString nivel;
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
-    g->leerArchivo(tableroActual, matriz);
+    g->leerArchivo(tableroActual, matriz, &jugador, &nivel, tm);
+    avanceMin = tm->minute();
+    avanceSeg = tm->second();
+    //ui->crono->display(tm->toString("mm:ss"));
+    ui->lbl_jugador->setText(jugador);
+    ui->lbl_level->setText(nivel);
     setTableroEnPantalla();
     activarTeclado();
-
+    initCrono();
 }
 
 bool MainTable::checkFila(int row, int column)

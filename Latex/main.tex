@@ -80,6 +80,10 @@
 \centering
 \vspace*{9cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\centering\includegraphics[scale=0.5]{icon640.png}
+
+\centering\includegraphics{i160x130.png}
+
 Sudoku\par % Book title
 \vspace*{1cm}
 {\Huge Jefferson Rivera}\par % Author name
@@ -235,236 +239,74 @@ Selecciona una difiltudad segun su nivel de confianza en este juego .
 
 %------------------------------------------------
 
-\section{Que es Sudoku?}\index{Paragraphs of Text}
+\section{Inicio del juego y Nombre del Jugador}\index{Paragraphs of Text}
 
-"Sudoku es un pasatiempo que se publicó por primera vez a finales de la década de 1970 y se popularizó en Japón en 1986, dándose a conocer en el ámbito internacional en 2005 cuando numerosos periódicos empezaron a publicarlo en su sección de pasatiempos.El objetivo del sudoku es rellenar una cuadrícula de 9 x 9 celdas dividida en subcuadriculas de 3 x 3 (también llamadas "cajas" o "regiones") con las cifras del 1 al 9 partiendo de algunos números ya dispuestos en algunas de las celdas.  Aunque se podrían usar colores, letras, figuras, se conviene en usar números para mayor claridad, lo que importa, es que sean nueve elementos diferenciados, que no se deben repetir en una misma fila, columna o subcuadrícula. Un sudoku está bien planteado si la solución es única. La solución de un sudoku siempre es un cuadrado latino, aunque el recíproco en general no es cierto ya que el sudoku establece la restricción añadida de que no se puede repetir un mismo número en una región." \cite{http://es.wikipedia.org/wiki/Sudoku}
+Una vez seleccionado el nivel de juego cargara una tabla de su sudoku y le pedira que ingrese su nombre. Una vez que lo ingrese arrancara el tiempo.
+Para asignar valores a las casillas en blanco basta con dar click sobre la que desee editar y luego al lado izquiero cuenta con una botonera con los números del 1 al 9, el que seleccione se aplicara a su casilla.
+
+\section{Jugando}\index{Lists!Numbered List}
+
+Para asignar valores a las casillas en blanco basta con dar click sobre la que desee editar, esta casilla se pondra azul, y luego al lado derecho de la pantalla cuenta con una botonera con los números del 1 al 9, el que seleccione se aplicara a su casilla.
+
+\section{Verificar Tablero}\index{Lists!Numbered List}
+
+Cuando ud crea que ha armado un tablero correcto ud podra proceder a verificar que no tenga errores utilizando el boton "verificar" ubicado en el lado derecho sobre el cronometro.
+En caso de que su sudoku tenga errores le saldra una advertencia y le marcara de rojo las casillas que no cumplan con las reglas, caso contrario le indicara que su sudoku esta correcto y terminara el juego.
+
+\section{Guardar y Cargar partidas}\index{Lists!Numbered List}
+
+\subsection{Guardar partidas}\index{Lists!Numbered List}
+
+Si ud esta en media partida pero por alguna razon tiene que dejarla abandonada, ud puede utilizar la opcion de guardar partida, esta opcion se encuentra ubicada en el menu superior del juego -> Partida -> Guardar (o puede hacer uso del atajo rapido ctrl+g).
+
+*imagen*
+
+Estando ya en esa opcion le pedira que indique una ubicacion para guardar su partida, la selecciona y procede a guardar.
+
+\subsection{Cargar partidas}\index{Lists!Numbered List}
+
+Si ud desea continuar alguna partida que por alguna razon dejo abandonada pero la guardo, ud puede utilizar la opcion de cargar partida, esta opcion se encuentra ubicada en el menu superior del juego -> Partida -> Guardar (o puede hacer uso del atajo rapido ctrl+c).
+
+*imagen*
+
+Estando ya en esa opcion le pedira que indique la ubicacion donde guaro su partida, la selecciona y procede a abrirla.
+
+\section{Salir del juego}\index{Lists!Numbered List}
+
+En cualquier momento uds puede salir del juego ya sea usando la la X por defecto para cerrar programas en windows y linux o en el menu superior del juego -> Partida -> Salir.
+
+Ud puede guardar su partida antes de cerrar el juego, si no lo hace esa partida quedara irrecuperable.
 
 
-%------------------------------------------------
 
-\section{Reglas de Juego}\index{Lists}
-
-El sudoku se compone de 3 reglas basadas en el mismo punto, colocar numeros del 1 al 9 sin que se repitan en filas columnas y subcuadriculas.
-
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
-
-\subsection{Filas}\index{Lists!Numbered List}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.5]{ejfila1.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
-
-En la imagen se puede observar que en la primera fila pueden ir los numeros 9 y 3, mientras que en la segunda casilla solo encaja el 7 asi que es un número seguro a llenar
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.5]{ejfila.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
-
-\subsection{Columnas}\index{Lists!Numbered List}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.5]{ejcol.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
-
-En esta imagen se puede observar que en la columna indicada solo puede ir el número 9 asi que es un numero seguro a llenar.
-
-\subsection{Subcuadriculas}\index{Lists!Numbered List}
-
-\begin{figure}[H]
-\centering\includegraphics[scale=0.5]{ejsub.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
-
-En esta imagen observando la subcuadricula se nota que aun faltan 2 numeros por llenar, pero podemos observar que en la primera fila solo quedaun cuadro vacio con lo que aseguramos que ahi va un número 3, lo que nos deja la cuadricula con un espacio, donde cuadra el numero 8.
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{ejsub1.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
 
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER 2
+%	Capitulo 4
 %----------------------------------------------------------------------------------------
 
-\chapter{In-text Elements}
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
 
-\section{Theorems}\index{Theorems}
+\chapter{Estructura de la pantalla de un juego}
 
-This is an example of theorems.
+\section{Partes de la pantallade juego}\index{Paragraphs of Text}
 
-\subsection{Several equations}\index{Theorems!Several Equations}
+*imagen*
 
-\begin{theorem}
-In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{theorem}
 
-\subsection{Single Line}\index{Theorems!Single Line}
-
-\begin{theorem}
-A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{theorem}
-
-%------------------------------------------------
-
-\section{Definitions}\index{Definitions}
-
-This is an example of a definition. A definition could be mathematical or it could define a concept.
-
-\begin{definition}[Definition name]
-Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
-\begin{align}
-& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
-& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
-& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
-\end{align}
-\end{definition}
-
-%------------------------------------------------
-
-\section{Notations}\index{Notations}
-
-\begin{notation}
-Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
 \begin{enumerate}
-\item Bounded support $G$;
-\item Infinitely differentiable;
+\item Tablero del sudoku(Filas, Columnas y subcuadriculas), donde se centra todo el juego.
+\item Logo del de esta implementacion del juego.
+\item Nombre del jugador.
+\item Nivel del tablero.
+\item Botoneras del 1 al 9 con las que se asigna el valor a las casillas.
+\item Boton "verificar", para comprobar si tu sudoku esta correcto.
+\item Cronometro(Tiempo que demora en resolver el sudoku).
+\item Menu superior, donde puede Guardar/Cargar y encontrar informacion sobre el juego.
+
 \end{enumerate}
-a vector space is denoted by $\mathcal{D}(G)$. 
-\end{notation}
 
-%------------------------------------------------
 
-\section{Remarks}\index{Remarks}
-
-This is an example of a remark.
-
-\begin{remark}
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{remark}
-
-%------------------------------------------------
-
-\section{Corollaries}\index{Corollaries}
-
-This is an example of a corollary.
-
-\begin{corollary}[Corollary name]
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{corollary}
-
-%------------------------------------------------
-
-\section{Propositions}\index{Propositions}
-
-This is an example of propositions.
-
-\subsection{Several equations}\index{Propositions!Several Equations}
-
-\begin{proposition}[Proposition name]
-It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{proposition}
-
-\subsection{Single Line}\index{Propositions!Single Line}
-
-\begin{proposition} 
-Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
-\end{proposition}
-
-%------------------------------------------------
-
-\section{Examples}\index{Examples}
-
-This is an example of examples.
-
-\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-\begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-\begin{equation}
-f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-\end{equation}
-The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-\end{example}
-
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-\begin{example}[Example name]
-\lipsum[2]
-\end{example}
-
-%------------------------------------------------
-
-\section{Exercises}\index{Exercises}
-
-This is an example of an exercise.
-
-\begin{exercise}
-This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-
-%------------------------------------------------
-
-\section{Problems}\index{Problems}
-
-\begin{problem}
-What is the average airspeed velocity of an unladen swallow?
-\end{problem}
-
-%------------------------------------------------
-
-\section{Vocabulary}\index{Vocabulary}
-
-Define a word to improve a students' vocabulary.
-
-\begin{vocabulary}[Word]
-Definition of word.
-\end{vocabulary}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 3
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
-
-\chapter{Presenting Information}
-
-\section{Table}\index{Table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-
-%------------------------------------------------
-
-\section{Figure}\index{Figure}
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{ejsub.png}
-\caption{ejmeplo de sudoku}
-\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
