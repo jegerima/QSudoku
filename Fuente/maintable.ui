@@ -191,8 +191,11 @@
    </widget>
    <widget class="QMenu" name="menuAcerca_de">
     <property name="title">
-     <string>Acerca de</string>
+     <string>Ajustes</string>
     </property>
+    <addaction name="actionPreferencias"/>
+    <addaction name="separator"/>
+    <addaction name="actionAcerca_de"/>
    </widget>
    <addaction name="menuPartida"/>
    <addaction name="menuAcerca_de"/>
@@ -230,6 +233,16 @@
   <action name="actionNueva">
    <property name="text">
     <string>Nueva</string>
+   </property>
+  </action>
+  <action name="actionPreferencias">
+   <property name="text">
+    <string>Preferencias</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
    </property>
   </action>
  </widget>

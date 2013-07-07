@@ -13,6 +13,7 @@ nivel::nivel(QWidget *parent) :
 {
     ui->setupUi(this);
     initGui();
+    this->setWindowModality(Qt::ApplicationModal);
 }
 
 void nivel::initGui()
