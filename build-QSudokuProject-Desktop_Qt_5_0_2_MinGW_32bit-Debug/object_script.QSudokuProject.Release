@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\maintable.o
+./release\celda.o
+./release\genmatriz.o
+./release\guardar.o
+./release\simplecrypt.o
+./release\nivel.o
+./release\about.o
+./release\qrc_images.o
+./release\moc_maintable.o
+./release\moc_celda.o
+./release\moc_nivel.o
+./release\moc_about.o
+);

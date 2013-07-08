@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\maintable.o
+./debug\celda.o
+./debug\genmatriz.o
+./debug\guardar.o
+./debug\simplecrypt.o
+./debug\nivel.o
+./debug\about.o
+./debug\qrc_images.o
+./debug\moc_maintable.o
+./debug\moc_celda.o
+./debug\moc_nivel.o
+./debug\moc_about.o
+);

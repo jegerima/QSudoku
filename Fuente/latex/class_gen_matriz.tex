@@ -1,0 +1,111 @@
+\hypertarget{class_gen_matriz}{\section{Gen\-Matriz Class Reference}
+\label{class_gen_matriz}\index{Gen\-Matriz@{Gen\-Matriz}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_gen_matriz_a8fac64f00cae60f47afbf6cf43346832}{\hyperlink{class_gen_matriz_a8fac64f00cae60f47afbf6cf43346832}{Gen\-Matriz} ()}\label{class_gen_matriz_a8fac64f00cae60f47afbf6cf43346832}
+
+\begin{DoxyCompactList}\small\item\em El contructor de la clase \hyperlink{class_gen_matriz}{Gen\-Matriz}, crea un sudoku resuelto a partir de un algoritmo de semilla. \end{DoxyCompactList}\item 
+\hypertarget{class_gen_matriz_ae4e6b5ed243424a06becc3b9296fe520}{void \hyperlink{class_gen_matriz_ae4e6b5ed243424a06becc3b9296fe520}{llenar\-Matriz\-Semilla} ()}\label{class_gen_matriz_ae4e6b5ed243424a06becc3b9296fe520}
+
+\begin{DoxyCompactList}\small\item\em La funcion llenar\-Matriz\-Semilla es usada internamente en el constructor de la clase para setear un sudoku resuelto. \end{DoxyCompactList}\item 
+\hypertarget{class_gen_matriz_a68e793d89185716f36367320262723eb}{void \hyperlink{class_gen_matriz_a68e793d89185716f36367320262723eb}{generar\-Matriz\-Sudoku} ()}\label{class_gen_matriz_a68e793d89185716f36367320262723eb}
+
+\begin{DoxyCompactList}\small\item\em La funcion generar\-Matriz\-Sudoku se encarga de cambiar numeros, filasy columnas para generar sudokus diferentes. \end{DoxyCompactList}\item 
+\hypertarget{class_gen_matriz_ac8b87d3d6f8402ce11b0e8c2e54267f4}{void \hyperlink{class_gen_matriz_ac8b87d3d6f8402ce11b0e8c2e54267f4}{generar\-Arreglos} ()}\label{class_gen_matriz_ac8b87d3d6f8402ce11b0e8c2e54267f4}
+
+\begin{DoxyCompactList}\small\item\em La funcion generar\-Arreglos nos permite guardar la posicion de cada numero de la matriz. \end{DoxyCompactList}\item 
+int \hyperlink{class_gen_matriz_af86ecf150e71673b7ed1e488f5f61efb}{arreglo\-De\-Numeros} (int i, int j)
+\begin{DoxyCompactList}\small\item\em La funcion arreglo\-De\-Numeros retorna un valor de una matriz. \end{DoxyCompactList}\item 
+void \hyperlink{class_gen_matriz_af5686320072f21d88b5fbc85963bc280}{guardar\-Pos\-Num} (int n, int fila, int columna)
+\begin{DoxyCompactList}\small\item\em guardar\-Pos\-Num mantiene la poscicion de cada numero \end{DoxyCompactList}\item 
+void \hyperlink{class_gen_matriz_ae58e92d9d0efc983f96b53a02f9cd8a5}{imprimir\-Matriz} (int matriz\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em imprimir\-Matriz imprime una matriz de 9 x 9 \end{DoxyCompactList}\item 
+void \hyperlink{class_gen_matriz_aa67088279c4f7a0877c6b128db8d0ff5}{colocar\-Numeros} (Q\-List$<$ int $>$ aleatorios)
+\begin{DoxyCompactList}\small\item\em colocar\-Numeros ubica los valores en una nueva poscicion \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gen_matriz_af86ecf150e71673b7ed1e488f5f61efb}{\index{Gen\-Matriz@{Gen\-Matriz}!arreglo\-De\-Numeros@{arreglo\-De\-Numeros}}
+\index{arreglo\-De\-Numeros@{arreglo\-De\-Numeros}!GenMatriz@{Gen\-Matriz}}
+\subsubsection[{arreglo\-De\-Numeros}]{\setlength{\rightskip}{0pt plus 5cm}int Gen\-Matriz\-::arreglo\-De\-Numeros (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_gen_matriz_af86ecf150e71673b7ed1e488f5f61efb}
+
+
+La funcion arreglo\-De\-Numeros retorna un valor de una matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & es la posicion del subindice para la fila \\
+\hline
+{\em j} & es la posicion delsubindice para la columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna un entero con el valor de esa posicion en la matriz 
+\end{DoxyReturn}
+\hypertarget{class_gen_matriz_aa67088279c4f7a0877c6b128db8d0ff5}{\index{Gen\-Matriz@{Gen\-Matriz}!colocar\-Numeros@{colocar\-Numeros}}
+\index{colocar\-Numeros@{colocar\-Numeros}!GenMatriz@{Gen\-Matriz}}
+\subsubsection[{colocar\-Numeros}]{\setlength{\rightskip}{0pt plus 5cm}void Gen\-Matriz\-::colocar\-Numeros (
+\begin{DoxyParamCaption}
+\item[{Q\-List$<$ int $>$}]{aleatorios}
+\end{DoxyParamCaption}
+)}}\label{class_gen_matriz_aa67088279c4f7a0877c6b128db8d0ff5}
+
+
+colocar\-Numeros ubica los valores en una nueva poscicion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aleatorios} & es la nueva poscicion de los numeros \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gen_matriz_af5686320072f21d88b5fbc85963bc280}{\index{Gen\-Matriz@{Gen\-Matriz}!guardar\-Pos\-Num@{guardar\-Pos\-Num}}
+\index{guardar\-Pos\-Num@{guardar\-Pos\-Num}!GenMatriz@{Gen\-Matriz}}
+\subsubsection[{guardar\-Pos\-Num}]{\setlength{\rightskip}{0pt plus 5cm}void Gen\-Matriz\-::guardar\-Pos\-Num (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{fila, }
+\item[{int}]{columna}
+\end{DoxyParamCaption}
+)}}\label{class_gen_matriz_af5686320072f21d88b5fbc85963bc280}
+
+
+guardar\-Pos\-Num mantiene la poscicion de cada numero 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & es el numero \\
+\hline
+{\em fila} & posicion de la fila en la matriz \\
+\hline
+{\em columna} & posicion de la columna de la matriz \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gen_matriz_ae58e92d9d0efc983f96b53a02f9cd8a5}{\index{Gen\-Matriz@{Gen\-Matriz}!imprimir\-Matriz@{imprimir\-Matriz}}
+\index{imprimir\-Matriz@{imprimir\-Matriz}!GenMatriz@{Gen\-Matriz}}
+\subsubsection[{imprimir\-Matriz}]{\setlength{\rightskip}{0pt plus 5cm}void Gen\-Matriz\-::imprimir\-Matriz (
+\begin{DoxyParamCaption}
+\item[{int}]{matriz\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_gen_matriz_ae58e92d9d0efc983f96b53a02f9cd8a5}
+
+
+imprimir\-Matriz imprime una matriz de 9 x 9 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & es la matriz a ser impresa \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{genmatriz_8h}{genmatriz.\-h}\item 
+genmatriz.\-cpp\end{DoxyCompactItemize}

@@ -1,3 +1,12 @@
+/**
+* @file nivel.h
+* @brief Clase encargado de emitir señales segun el nivel de dificultad de tablero
+* @author Jefferson Rivera
+* @author Rúben Carbajal
+* @author César Madrid
+*
+* @date 07/07/2013
+*/
 #ifndef NIVEL_H
 #define NIVEL_H
 

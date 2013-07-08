@@ -1,3 +1,13 @@
+/**
+* @file maintable.h
+* @brief clase principal del juego
+*
+* @author Jefferson Rivera
+* @author Rúben Carbajal
+* @author César Madrid
+*
+* @date 07/07/2013
+*/
 #ifndef MAINTABLE_H
 #define MAINTABLE_H
 
