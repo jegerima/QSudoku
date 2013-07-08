@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.17)  7 JUL 2013 15:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.17)  7 JUL 2013 20:25
 entering extended mode
 **main.tex
 ("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.tex"
@@ -1730,24 +1730,102 @@ File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 225.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc") [11] [12]
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc")
+<./Pictures/inicio.png, id=65, 554.07pt x 420.06938pt>
+File: ./Pictures/inicio.png Graphic file (type png)
+
+<use ./Pictures/inicio.png>
+Package pdftex.def Info: ./Pictures/inicio.png used on input line 234.
+(pdftex.def)             Requested size: 332.44456pt x 252.04358pt.
+
+<./Pictures/niveles.png, id=66, 283.0575pt x 298.86656pt>
+File: ./Pictures/niveles.png Graphic file (type png)
+
+<use ./Pictures/niveles.png>
+Package pdftex.def Info: ./Pictures/niveles.png used on input line 245.
+(pdftex.def)             Requested size: 226.44629pt x 239.09355pt.
+ [11 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/inicio.png>
+]
+<./Pictures/nombre.png, id=70, 552.56438pt x 414.79968pt>
+File: ./Pictures/nombre.png Graphic file (type png)
+
+<use ./Pictures/nombre.png>
+Package pdftex.def Info: ./Pictures/nombre.png used on input line 267.
+(pdftex.def)             Requested size: 331.54118pt x 248.88173pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/niveles.png
+>]
+<./Pictures/ingresarCasilla.png, id=74, 554.07pt x 420.06938pt>
+File: ./Pictures/ingresarCasilla.png Graphic file (type png)
+
+<use ./Pictures/ingresarCasilla.png>
+Package pdftex.def Info: ./Pictures/ingresarCasilla.png used on input line 276.
+
+(pdftex.def)             Requested size: 332.44456pt x 252.04358pt.
+
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+ [13 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/nombre.png>
+ <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/ingresarCasilla
+.png>]
+<./Pictures/Verificar.png, id=79, 551.81157pt x 421.575pt>
+File: ./Pictures/Verificar.png Graphic file (type png)
+
+<use ./Pictures/Verificar.png>
+Package pdftex.def Info: ./Pictures/Verificar.png used on input line 286.
+(pdftex.def)             Requested size: 331.0895pt x 252.94695pt.
+
+<./Pictures/Hints.png, id=80, 554.07pt x 420.06938pt>
+File: ./Pictures/Hints.png Graphic file (type png)
+
+<use ./Pictures/Hints.png>
+Package pdftex.def Info: ./Pictures/Hints.png used on input line 302.
+(pdftex.def)             Requested size: 332.44456pt x 252.04358pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/Verificar.p
+ng>]
+<./Pictures/guardar.png, id=84, 554.07pt x 164.11313pt>
+File: ./Pictures/guardar.png Graphic file (type png)
+
+<use ./Pictures/guardar.png>
+Package pdftex.def Info: ./Pictures/guardar.png used on input line 329.
+(pdftex.def)             Requested size: 332.44456pt x 98.46863pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/Hints.png>]
+ [16 <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/guardar.png
+>]
 Chapter 4.
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 290.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 345.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc") [13
+("C:\Users\Cesar Madrid\Documents\GitHub\QSudoku\Latex\main.ptc")
+<./Pictures/pantallaDeJuego.png, id=91, 553.31718pt x 420.06938pt>
+File: ./Pictures/pantallaDeJuego.png Graphic file (type png)
 
-] [14
+<use ./Pictures/pantallaDeJuego.png>
+Package pdftex.def Info: ./Pictures/pantallaDeJuego.png used on input line 350.
+
+(pdftex.def)             Requested size: 315.39407pt x 239.44203pt.
+ [17
+
+ <C:/Users/Cesar Madrid/Documents/GitHub/QSudoku/Latex/Pictures/pantallaDeJuego
+.png>] [18
 
 ]
 File: ./Pictures/chapter_head_2.pdf Graphic file (type pdf)
 
 <use ./Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 315.
+Package pdftex.def Info: ./Pictures/chapter_head_2.pdf used on input line 375.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
- [15] [16
+ [19] [20
 
 ]
 No file main.ind.
@@ -1764,11 +1842,11 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 26202 strings out of 493921
- 471747 string characters out of 3144855
+ 26242 strings out of 493921
+ 472743 string characters out of 3144855
  964844 words of memory out of 3000000
- 28830 multiletter control sequences out of 15000+200000
- 88729 words of font info for 171 fonts, out of 3000000 for 9000
+ 28860 multiletter control sequences out of 15000+200000
+ 88743 words of font info for 172 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,12n,55p,1108b,2494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users
@@ -1779,9 +1857,9 @@ Here is how much of TeX's memory you used:
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (16 pages, 691406 bytes).
+Output written on main.pdf (20 pages, 922670 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 152 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51775 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 51815 words of extra memory for PDF output out of 61914 (max. 10000000)
 

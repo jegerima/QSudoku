@@ -26,29 +26,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Uso de la aplicacion}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Seleccion de niveles}{11}
+\contentsline {section}{\numberline {3.1}Iniciar nueva partida}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Inicio del juego y Nombre del Jugador}{11}
+\contentsline {section}{\numberline {3.2}Seleccion de niveles}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Jugando}{11}
+\contentsline {section}{\numberline {3.3}Inicio del juego y Nombre del Jugador}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Verificar Tablero}{11}
+\contentsline {section}{\numberline {3.4}Jugando}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Guardar y Cargar partidas}{12}
+\contentsline {section}{\numberline {3.5}Verificar Tablero}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Guardar partidas}{12}
+\contentsline {section}{\numberline {3.6}Hints}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Cargar partidas}{12}
+\contentsline {section}{\numberline {3.7}Guardar y Cargar partidas}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Salir del juego}{12}
+\contentsline {subsection}{\numberline {3.7.1}Guardar partidas}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Estructura de la pantalla de un juego}{13}
+\contentsline {subsection}{\numberline {3.7.2}Cargar partidas}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Partes de la pantallade juego}{13}
+\contentsline {section}{\numberline {3.8}Salir del juego}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{15}
+\contentsline {chapter}{\numberline {4}Estructura de la pantalla de un juego}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{15}
+\contentsline {section}{\numberline {4.1}Partes de la pantallade juego}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{15}
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{19}
 \contentsfinish 
