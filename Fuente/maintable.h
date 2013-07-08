@@ -44,6 +44,8 @@ private:
     int hints;
     int avanceSeg;
     int avanceMin;
+    int calcularPuntaje();
+    int dificultad;
     nivel *level;
     QString jugador;
     QTimer *tiempo;

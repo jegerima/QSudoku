@@ -243,32 +243,32 @@ void MainTable::setTableroInicialSegunNivel(int n)
     if(n==0){
         qDebug("Seteando nivel 1");
         for(int i=0; i<51; i++){
-            fila = rand()%8;
-            col = rand()%8;
+            fila = rand()%9;
+            col = rand()%9;
             tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==1){
         qDebug("Seteando nivel 2");
         for(int i=0; i<43; i++){
-            fila = rand()%8;
-            col = rand()%8;
+            fila = rand()%9;
+            col = rand()%9;
             tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==2){
         qDebug("Seteando nivel 3");
         for(int i=0; i<35; i++){
-            fila = rand()%8;
-            col = rand()%8;
+            fila = rand()%9;
+            col = rand()%9;
              tableroActual[fila][col] = matriz[fila][col];
         }
     }
     if(n==3){
         qDebug("Seteando nivel Dios");
         for(int i=0; i<27; i++){
-            fila = rand()%8;
-            col = rand()%8;
+            fila = rand()%9;
+            col = rand()%9;
              tableroActual[fila][col] = matriz[fila][col];
         }
     }
@@ -331,24 +331,28 @@ void MainTable::iniciarJuego(int n)
         {
             ui->lbl_level->setText("Novato");
             hints = 12;
+            dificultad = 0;
             break;
         }
         case 1:
         {
             ui->lbl_level->setText("Intermedio");
             hints = 8;
+            dificultad = 1;
             break;
         }
         case 2:
         {
             ui->lbl_level->setText("Profesional");
             hints = 4;
+            dificultad = 2;
             break;
         }
         default:
         {
             ui->lbl_level->setText("Leyenda");
             hints = 2;
+            dificultad = 3;
             break;
         }
     }
@@ -358,8 +362,15 @@ void MainTable::iniciarJuego(int n)
 
 void MainTable::salirJuego()
 {
+    QMessageBox msgBox;
+    int punt = calcularPuntaje();
+    QString p = QString::number(punt);
+    msgBox.setText("Su puntaje fue de: "+p);
+    msgBox.exec();
     QApplication::quit();
 }
+
+
 
 void MainTable::on_cmdVerificar_clicked()
 {
@@ -560,6 +571,31 @@ void MainTable::on_cmdHint_clicked()
     {
         QMessageBox::warning(this,tr("QSudoku Message"),tr("No le quedan ayudas disponibles"));
     }
+}
+
+int MainTable::calcularPuntaje()
+{
+    int a, b=0;
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            a = tableroActual[i][j];
+            if(a!=0)
+                b++;
+        }
+    }
+
+    if(dificultad==0)
+        return (b-30)*10;
+    if(dificultad==1)
+        return (b-25)*15;
+    if(dificultad==2)
+        return (b-20)*20;
+    if(dificultad==3)
+        return (b-15)*25;
+    return 0;
+
 }
 
 void MainTable::activarTeclado()
