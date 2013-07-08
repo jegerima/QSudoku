@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,24 +88,144 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Guardar Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_guardar.html" title="The Guardar Es la clase encargada de guardar y cargar archivos. ">Guardar</a> Es la clase encargada de guardar y cargar archivos.  
+ <a href="class_guardar.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="guardar_8h_source.html">guardar.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a265efa37b91672b6040a27f2207192b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a265efa37b91672b6040a27f2207192b7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_guardar.html#a265efa37b91672b6040a27f2207192b7">Guardar</a> ()</td></tr>
-<tr class="memdesc:a265efa37b91672b6040a27f2207192b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_guardar.html">Guardar</a> constructor de la clase guardar para guardar y leer archivos encriptados. <br/></td></tr>
+<tr class="memdesc:a265efa37b91672b6040a27f2207192b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_guardar.html" title="The Guardar Es la clase encargada de guardar y cargar archivos. ">Guardar</a> constructor de la clase guardar para guardar y leer archivos encriptados. <br/></td></tr>
 <tr class="separator:a265efa37b91672b6040a27f2207192b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa602d00edb44609652777954ad2f8c18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa602d00edb44609652777954ad2f8c18"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_guardar.html#aa602d00edb44609652777954ad2f8c18">crearArchivo</a> ()</td></tr>
-<tr class="memdesc:aa602d00edb44609652777954ad2f8c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">crearArchivo abre la ventana default del sistema para explorar archivos <br/></td></tr>
+<tr class="memdesc:aa602d00edb44609652777954ad2f8c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">crearArchivo abre la ventana default del sistema para explorar archivos y obtener la ruta <br/></td></tr>
 <tr class="separator:aa602d00edb44609652777954ad2f8c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a0427431816fd0c1138afb7410856c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2a0427431816fd0c1138afb7410856c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>guardarValores</b> (int m[9][9], int sol[9][9], QString jugador, QString <a class="el" href="classnivel.html">nivel</a>, QString tiempo)</td></tr>
+<tr class="memitem:ab2a0427431816fd0c1138afb7410856c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_guardar.html#ab2a0427431816fd0c1138afb7410856c">guardarValores</a> (int m[9][9], int sol[9][9], QString jugador, QString <a class="el" href="classnivel.html">nivel</a>, QString tiempo)</td></tr>
+<tr class="memdesc:ab2a0427431816fd0c1138afb7410856c"><td class="mdescLeft">&#160;</td><td class="mdescRight">guardarValores concatena todos los datos a ser guardados  <a href="#ab2a0427431816fd0c1138afb7410856c">More...</a><br/></td></tr>
 <tr class="separator:ab2a0427431816fd0c1138afb7410856c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1893652f3dad094f002e8415b20b67e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1893652f3dad094f002e8415b20b67e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>leerArchivo</b> (int m[9][9], int sol[9][9], QString *name, QString *level, QTime *t)</td></tr>
+<tr class="memitem:ad1893652f3dad094f002e8415b20b67e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_guardar.html#ad1893652f3dad094f002e8415b20b67e">leerArchivo</a> (int m[9][9], int sol[9][9], QString *name, QString *level, QTime *t)</td></tr>
+<tr class="memdesc:ad1893652f3dad094f002e8415b20b67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">leerArchivo lee el archivo y usa una expresion regular para separar las distintas candenas  <a href="#ad1893652f3dad094f002e8415b20b67e">More...</a><br/></td></tr>
 <tr class="separator:ad1893652f3dad094f002e8415b20b67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_guardar.html" title="The Guardar Es la clase encargada de guardar y cargar archivos. ">Guardar</a> Es la clase encargada de guardar y cargar archivos. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab2a0427431816fd0c1138afb7410856c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Guardar::guardarValores </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>[9][9], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sol</em>[9][9], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>jugador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>nivel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>tiempo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>guardarValores concatena todos los datos a ser guardados </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>matriz que mantiene el avance del juego </td></tr>
+    <tr><td class="paramname">sol</td><td>matriz con la solucion del juego </td></tr>
+    <tr><td class="paramname">jugador</td><td>nombre del juagador </td></tr>
+    <tr><td class="paramname">nivel</td><td>nivel en el que esta jugando </td></tr>
+    <tr><td class="paramname">tiempo</td><td>tiempo acumulado del reloj </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1893652f3dad094f002e8415b20b67e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Guardar::leerArchivo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>[9][9], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sol</em>[9][9], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTime *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>leerArchivo lee el archivo y usa una expresion regular para separar las distintas candenas </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>setea en esta el avance del juego </td></tr>
+    <tr><td class="paramname">sol</td><td>setea en sol la solucion del juego </td></tr>
+    <tr><td class="paramname">name</td><td>para setear el nombre del jugador </td></tr>
+    <tr><td class="paramname">level</td><td>para setear el nivel del jugador </td></tr>
+    <tr><td class="paramname">t</td><td>para setear el tiempo del juegador </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="guardar_8h_source.html">guardar.h</a></li>
 <li>guardar.cpp</li>
@@ -113,7 +233,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>leerArchivo</b> (int 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 08:31:25 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 09:29:52 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -13,7 +13,9 @@
 
 #include <QPoint>
 #include <QList>
-
+/**
+ * @brief The GenMatriz clase que se encarga de los algoritmos para henerar nuevos tableros de sudoku
+ */
 class GenMatriz
 {
 public:

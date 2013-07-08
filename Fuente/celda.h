@@ -17,6 +17,9 @@
 #include <QFrame>
 #include <QPoint>
 
+/**
+ * @brief The Celda en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku
+ */
 class Celda : public QFrame
 {
     Q_OBJECT
@@ -46,21 +49,61 @@ class Celda : public QFrame
                  */
         void setLite(int valor);
         /**
-                 * @brief reset
-                 */
+          * @brief reset setea los valores de la celda a vacio
+         */
         void reset();
+        /**
+         * @brief check muestra la casilla chequeada de otro color
+         */
         void check();
+        /**
+         * @brief unCheck vulve a poner a la casilla a su estado normal
+         */
         void unCheck();
+        /**
+         * @brief setBackColor setea un fondo para la celda
+         * @param color de fondo
+         */
         void setBackColor(QString color);
+        /**
+         * @brief setBlackBorder setea un borde a la celda
+         */
         void setBlackBorder();
 
         //Funciones
+        /**
+         * @brief getValue devuleve el valor dela celda
+         * @return retorna un int con el valor
+         */
         int getValue();
+        /**
+         * @brief getIndex retorna el indicepara la celda
+         * @return int con el indice
+         */
         int getIndex();
+        /**
+         * @brief getPosibilities
+         * @return
+         */
         int* getPosibilities();
+        /**
+         * @brief isChecked verifica si la celda esta chequeada o marcada
+         * @return verdadero o falso segun sea el caso
+         */
         bool isChecked();
+        /**
+         * @brief hasNum verifica si hay algun numero en la celda
+         * @return  verdadero o falso segun sea el caso
+         */
         bool hasNum();
+        /**
+         * @brief getNumber extrae label de la celda con el numero
+         * @return Label principal de la celda
+         */
         QLabel *getNumber();
+        /**
+         * @brief pos poscicion de la celda en referencia a una matriz
+         */
         QPoint pos;
 
     signals:

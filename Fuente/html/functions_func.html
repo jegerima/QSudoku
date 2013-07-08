@@ -69,6 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
@@ -83,8 +84,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -93,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,8 +114,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>about()
 : <a class="el" href="classabout.html#ab16a8ec628d97aee17f0332e09964f52">about</a>
 </li>
+<li>acercaDe()
+: <a class="el" href="class_main_table.html#a70fc4645efa7708419f7746209adeb7a">MainTable</a>
+</li>
+<li>activarTeclado()
+: <a class="el" href="class_main_table.html#a1e0ed271c24621b716536f18a1e86790">MainTable</a>
+</li>
 <li>addHint()
 : <a class="el" href="class_celda.html#a11857539b9f49484bf5344fbe72288bb">Celda</a>
+</li>
+<li>appReady()
+: <a class="el" href="classnivel.html#a8a46a97c07c0cc03939e26108e9ffb80">nivel</a>
 </li>
 <li>arregloDeNumeros()
 : <a class="el" href="class_gen_matriz.html#af86ecf150e71673b7ed1e488f5f61efb">GenMatriz</a>
@@ -119,8 +133,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>cargarPartida()
+: <a class="el" href="class_main_table.html#aae9be0974d1533c6cfd1ee55cf534b46">MainTable</a>
+</li>
 <li>Celda()
 : <a class="el" href="class_celda.html#a061c79d4a2ac8b4305d8bb989feec1cd">Celda</a>
+</li>
+<li>check()
+: <a class="el" href="class_celda.html#ac93663c46fa34649bf44d3927c7f0ca1">Celda</a>
+</li>
+<li>checkColumna()
+: <a class="el" href="class_main_table.html#a1f4691add57adfe5f9b64ded9753802d">MainTable</a>
+</li>
+<li>checkCuadro()
+: <a class="el" href="class_main_table.html#a0c8d0356ed30eef86ede365835d4683e">MainTable</a>
+</li>
+<li>checkFila()
+: <a class="el" href="class_main_table.html#a0a735a29e6dd362c76720243f7079234">MainTable</a>
 </li>
 <li>colocarNumeros()
 : <a class="el" href="class_gen_matriz.html#aa67088279c4f7a0877c6b128db8d0ff5">GenMatriz</a>
@@ -164,11 +193,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GenMatriz()
 : <a class="el" href="class_gen_matriz.html#a8fac64f00cae60f47afbf6cf43346832">GenMatriz</a>
 </li>
+<li>getCeldaRunTime()
+: <a class="el" href="class_main_table.html#a256cce08eaf6f346f831d83005f7682d">MainTable</a>
+</li>
+<li>getIndex()
+: <a class="el" href="class_celda.html#a7e16d4f745601f63ac8e5178bc0f4e54">Celda</a>
+</li>
+<li>getNumber()
+: <a class="el" href="class_celda.html#a9de72cff68e6b39fb062b4a3d386f627">Celda</a>
+</li>
+<li>getPosibilities()
+: <a class="el" href="class_celda.html#a1018c36394dd882c632a71c7fb12999a">Celda</a>
+</li>
+<li>getValue()
+: <a class="el" href="class_celda.html#aa37c81071e8d384b46661d30e30d9e3e">Celda</a>
+</li>
 <li>Guardar()
 : <a class="el" href="class_guardar.html#a265efa37b91672b6040a27f2207192b7">Guardar</a>
 </li>
+<li>guardarPartida()
+: <a class="el" href="class_main_table.html#acdbfd9b75edc0b2c77edf56b577f00ed">MainTable</a>
+</li>
 <li>guardarPosNum()
 : <a class="el" href="class_gen_matriz.html#af5686320072f21d88b5fbc85963bc280">GenMatriz</a>
+</li>
+<li>guardarValores()
+: <a class="el" href="class_guardar.html#ab2a0427431816fd0c1138afb7410856c">Guardar</a>
 </li>
 </ul>
 
@@ -177,6 +227,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>hasKey()
 : <a class="el" href="class_simple_crypt.html#aa7cab41b041f1fbe1c62e484fea895ce">SimpleCrypt</a>
 </li>
+<li>hasNum()
+: <a class="el" href="class_celda.html#ab6966d037ddd5e0c1bb99aca39647379">Celda</a>
+</li>
 </ul>
 
 
@@ -184,8 +237,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>imprimirMatriz()
 : <a class="el" href="class_gen_matriz.html#ae58e92d9d0efc983f96b53a02f9cd8a5">GenMatriz</a>
 </li>
+<li>iniciarJuego()
+: <a class="el" href="class_main_table.html#a7e0baffddf06ead228a33f014a4aef63">MainTable</a>
+</li>
+<li>initCrono()
+: <a class="el" href="class_main_table.html#a2062d3ec91f518a124cdfde39f88b5bc">MainTable</a>
+</li>
+<li>initGuiCelda()
+: <a class="el" href="class_main_table.html#af7243d220cd940102d4eb24515b308fb">MainTable</a>
+</li>
+<li>initMenuBar()
+: <a class="el" href="class_main_table.html#a557c8122a5531cd91cb139168f7f77ac">MainTable</a>
+</li>
+<li>initTeclado()
+: <a class="el" href="class_main_table.html#a5127d725082ee137e1bc1bfe25d707e8">MainTable</a>
+</li>
 <li>integrityProtectionMode()
 : <a class="el" href="class_simple_crypt.html#a81929610d0fd5667db83603f396ddb66">SimpleCrypt</a>
+</li>
+<li>isChecked()
+: <a class="el" href="class_celda.html#a592dd2bcba1d493d884c90b47fdadf00">Celda</a>
 </li>
 </ul>
 
@@ -194,8 +265,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>lastError()
 : <a class="el" href="class_simple_crypt.html#a123562e29377ab26e3b398b588f596d9">SimpleCrypt</a>
 </li>
+<li>leerArchivo()
+: <a class="el" href="class_guardar.html#ad1893652f3dad094f002e8415b20b67e">Guardar</a>
+</li>
 <li>llenarMatrizSemilla()
 : <a class="el" href="class_gen_matriz.html#ae4e6b5ed243424a06becc3b9296fe520">GenMatriz</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>nuevaPartida()
+: <a class="el" href="class_main_table.html#a9eee831277d1dd818595ec56f9ad3fe9">MainTable</a>
+</li>
+<li>numPressed()
+: <a class="el" href="class_main_table.html#a48c9b0d16bf49c557c2d4d424daa6320">MainTable</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>on_cmdHint_clicked()
+: <a class="el" href="class_main_table.html#a09ae6c5f256a12afafeeda9602579747">MainTable</a>
+</li>
+<li>on_cmdVerificar_clicked()
+: <a class="el" href="class_main_table.html#aab955ede8537f643e3ac7c3b148c63b6">MainTable</a>
 </li>
 </ul>
 
@@ -208,6 +302,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>salirJuego()
+: <a class="el" href="class_main_table.html#aa5e07992f1cacddecc0b447b06ef676e">MainTable</a>
+</li>
+<li>setBackColor()
+: <a class="el" href="class_celda.html#af18a6e990908532034599a49784d4ff5">Celda</a>
+</li>
+<li>setBlackBorder()
+: <a class="el" href="class_celda.html#ac56176d091cbca011a1d93530f179800">Celda</a>
+</li>
+<li>setCeldasBlanco()
+: <a class="el" href="class_main_table.html#ac84930e6f165419f7895dedfb05c9156">MainTable</a>
+</li>
 <li>setCompressionMode()
 : <a class="el" href="class_simple_crypt.html#adc6c6355aa276c0d3516f7ad273f063b">SimpleCrypt</a>
 </li>
@@ -220,6 +326,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>setLite()
 : <a class="el" href="class_celda.html#a2f36ec0296181ee26477fcdf049f2334">Celda</a>
 </li>
+<li>setPistas()
+: <a class="el" href="class_main_table.html#a892e7117f4988c0eb58bab5f5901ef09">MainTable</a>
+</li>
+<li>setTableroActual()
+: <a class="el" href="class_main_table.html#a98cde4888cd2d755dadb0d3ae991df8f">MainTable</a>
+</li>
+<li>setTableroEnPantalla()
+: <a class="el" href="class_main_table.html#a79d14309262e6b67ce1e57a9d491919b">MainTable</a>
+</li>
+<li>setTableroInicialSegunNivel()
+: <a class="el" href="class_main_table.html#a548e2e9d049dd5088bb51b49023c8e5f">MainTable</a>
+</li>
+<li>setTableroInicio()
+: <a class="el" href="class_main_table.html#aac8a8a955c76db4ed9f89ce92a38e994">MainTable</a>
+</li>
 <li>setValue()
 : <a class="el" href="class_celda.html#a26dd4a943c3b516a00c3c3ec56bd56ac">Celda</a>
 </li>
@@ -227,10 +348,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_simple_crypt.html#ac474d12cfa9f93bfecea35891831046d">SimpleCrypt</a>
 </li>
 </ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>timeRefresh()
+: <a class="el" href="class_main_table.html#a3ec4db19cba39957c9d83b1c631b3f77">MainTable</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>unCheck()
+: <a class="el" href="class_celda.html#a8420b9e44aed858bf90bc0ea8c0984fa">Celda</a>
+</li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 08:31:26 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 09:29:53 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

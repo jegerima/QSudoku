@@ -1,6 +1,15 @@
 \hypertarget{class_celda}{\section{Celda Class Reference}
 \label{class_celda}\index{Celda@{Celda}}
 }
+
+
+The \hyperlink{class_celda}{Celda} en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku.  
+
+
+
+
+{\ttfamily \#include $<$celda.\-h$>$}
+
 Inheritance diagram for Celda\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,43 +35,36 @@ void \hyperlink{class_celda_a2f36ec0296181ee26477fcdf049f2334}{set\-Lite} (int v
 \begin{DoxyCompactList}\small\item\em set\-Lite \end{DoxyCompactList}\item 
 \hypertarget{class_celda_a3e523de46ddbdb2d8497ad67c0009f1e}{void \hyperlink{class_celda_a3e523de46ddbdb2d8497ad67c0009f1e}{reset} ()}\label{class_celda_a3e523de46ddbdb2d8497ad67c0009f1e}
 
-\begin{DoxyCompactList}\small\item\em reset \end{DoxyCompactList}\item 
-\hypertarget{class_celda_ac93663c46fa34649bf44d3927c7f0ca1}{void {\bfseries check} ()}\label{class_celda_ac93663c46fa34649bf44d3927c7f0ca1}
+\begin{DoxyCompactList}\small\item\em reset setea los valores de la celda a vacio \end{DoxyCompactList}\item 
+\hypertarget{class_celda_ac93663c46fa34649bf44d3927c7f0ca1}{void \hyperlink{class_celda_ac93663c46fa34649bf44d3927c7f0ca1}{check} ()}\label{class_celda_ac93663c46fa34649bf44d3927c7f0ca1}
 
-\item 
-\hypertarget{class_celda_a8420b9e44aed858bf90bc0ea8c0984fa}{void {\bfseries un\-Check} ()}\label{class_celda_a8420b9e44aed858bf90bc0ea8c0984fa}
+\begin{DoxyCompactList}\small\item\em check muestra la casilla chequeada de otro color \end{DoxyCompactList}\item 
+\hypertarget{class_celda_a8420b9e44aed858bf90bc0ea8c0984fa}{void \hyperlink{class_celda_a8420b9e44aed858bf90bc0ea8c0984fa}{un\-Check} ()}\label{class_celda_a8420b9e44aed858bf90bc0ea8c0984fa}
 
-\item 
-\hypertarget{class_celda_af18a6e990908532034599a49784d4ff5}{void {\bfseries set\-Back\-Color} (Q\-String color)}\label{class_celda_af18a6e990908532034599a49784d4ff5}
+\begin{DoxyCompactList}\small\item\em un\-Check vulve a poner a la casilla a su estado normal \end{DoxyCompactList}\item 
+void \hyperlink{class_celda_af18a6e990908532034599a49784d4ff5}{set\-Back\-Color} (Q\-String color)
+\begin{DoxyCompactList}\small\item\em set\-Back\-Color setea un fondo para la celda \end{DoxyCompactList}\item 
+\hypertarget{class_celda_ac56176d091cbca011a1d93530f179800}{void \hyperlink{class_celda_ac56176d091cbca011a1d93530f179800}{set\-Black\-Border} ()}\label{class_celda_ac56176d091cbca011a1d93530f179800}
 
-\item 
-\hypertarget{class_celda_ac56176d091cbca011a1d93530f179800}{void {\bfseries set\-Black\-Border} ()}\label{class_celda_ac56176d091cbca011a1d93530f179800}
-
-\item 
-\hypertarget{class_celda_aa37c81071e8d384b46661d30e30d9e3e}{int {\bfseries get\-Value} ()}\label{class_celda_aa37c81071e8d384b46661d30e30d9e3e}
-
-\item 
-\hypertarget{class_celda_a7e16d4f745601f63ac8e5178bc0f4e54}{int {\bfseries get\-Index} ()}\label{class_celda_a7e16d4f745601f63ac8e5178bc0f4e54}
-
-\item 
-\hypertarget{class_celda_a1018c36394dd882c632a71c7fb12999a}{int $\ast$ {\bfseries get\-Posibilities} ()}\label{class_celda_a1018c36394dd882c632a71c7fb12999a}
-
-\item 
-\hypertarget{class_celda_a592dd2bcba1d493d884c90b47fdadf00}{bool {\bfseries is\-Checked} ()}\label{class_celda_a592dd2bcba1d493d884c90b47fdadf00}
-
-\item 
-\hypertarget{class_celda_ab6966d037ddd5e0c1bb99aca39647379}{bool {\bfseries has\-Num} ()}\label{class_celda_ab6966d037ddd5e0c1bb99aca39647379}
-
-\item 
-\hypertarget{class_celda_a9de72cff68e6b39fb062b4a3d386f627}{Q\-Label $\ast$ {\bfseries get\-Number} ()}\label{class_celda_a9de72cff68e6b39fb062b4a3d386f627}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em set\-Black\-Border setea un borde a la celda \end{DoxyCompactList}\item 
+int \hyperlink{class_celda_aa37c81071e8d384b46661d30e30d9e3e}{get\-Value} ()
+\begin{DoxyCompactList}\small\item\em get\-Value devuleve el valor dela celda \end{DoxyCompactList}\item 
+int \hyperlink{class_celda_a7e16d4f745601f63ac8e5178bc0f4e54}{get\-Index} ()
+\begin{DoxyCompactList}\small\item\em get\-Index retorna el indicepara la celda \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_celda_a1018c36394dd882c632a71c7fb12999a}{get\-Posibilities} ()
+\begin{DoxyCompactList}\small\item\em get\-Posibilities \end{DoxyCompactList}\item 
+bool \hyperlink{class_celda_a592dd2bcba1d493d884c90b47fdadf00}{is\-Checked} ()
+\begin{DoxyCompactList}\small\item\em is\-Checked verifica si la celda esta chequeada o marcada \end{DoxyCompactList}\item 
+bool \hyperlink{class_celda_ab6966d037ddd5e0c1bb99aca39647379}{has\-Num} ()
+\begin{DoxyCompactList}\small\item\em has\-Num verifica si hay algun numero en la celda \end{DoxyCompactList}\item 
+Q\-Label $\ast$ \hyperlink{class_celda_a9de72cff68e6b39fb062b4a3d386f627}{get\-Number} ()
+\begin{DoxyCompactList}\small\item\em get\-Number extrae label de la celda con el numero \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_celda_ae7a0ff06a1409fc11aee254999108598}{Q\-Point {\bfseries pos}}\label{class_celda_ae7a0ff06a1409fc11aee254999108598}
+\hypertarget{class_celda_ae7a0ff06a1409fc11aee254999108598}{Q\-Point \hyperlink{class_celda_ae7a0ff06a1409fc11aee254999108598}{pos}}\label{class_celda_ae7a0ff06a1409fc11aee254999108598}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em pos poscicion de la celda en referencia a una matriz \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,6 +72,9 @@ void \hyperlink{class_celda_a2f36ec0296181ee26477fcdf049f2334}{set\-Lite} (int v
 
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The \hyperlink{class_celda}{Celda} en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_celda_a061c79d4a2ac8b4305d8bb989feec1cd}{\index{Celda@{Celda}!Celda@{Celda}}
@@ -108,6 +113,106 @@ añade los hints al tablero
 
 \begin{DoxyParams}{Parameters}
 {\em numero} & de hints que seran añadidos \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_celda_a7e16d4f745601f63ac8e5178bc0f4e54}{\index{Celda@{Celda}!get\-Index@{get\-Index}}
+\index{get\-Index@{get\-Index}!Celda@{Celda}}
+\subsubsection[{get\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Celda\-::get\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_a7e16d4f745601f63ac8e5178bc0f4e54}
+
+
+get\-Index retorna el indicepara la celda 
+
+\begin{DoxyReturn}{Returns}
+int con el indice 
+\end{DoxyReturn}
+\hypertarget{class_celda_a9de72cff68e6b39fb062b4a3d386f627}{\index{Celda@{Celda}!get\-Number@{get\-Number}}
+\index{get\-Number@{get\-Number}!Celda@{Celda}}
+\subsubsection[{get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Label $\ast$ Celda\-::get\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_a9de72cff68e6b39fb062b4a3d386f627}
+
+
+get\-Number extrae label de la celda con el numero 
+
+\begin{DoxyReturn}{Returns}
+Label principal de la celda 
+\end{DoxyReturn}
+\hypertarget{class_celda_a1018c36394dd882c632a71c7fb12999a}{\index{Celda@{Celda}!get\-Posibilities@{get\-Posibilities}}
+\index{get\-Posibilities@{get\-Posibilities}!Celda@{Celda}}
+\subsubsection[{get\-Posibilities}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Celda\-::get\-Posibilities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_a1018c36394dd882c632a71c7fb12999a}
+
+
+get\-Posibilities 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_celda_aa37c81071e8d384b46661d30e30d9e3e}{\index{Celda@{Celda}!get\-Value@{get\-Value}}
+\index{get\-Value@{get\-Value}!Celda@{Celda}}
+\subsubsection[{get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Celda\-::get\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_aa37c81071e8d384b46661d30e30d9e3e}
+
+
+get\-Value devuleve el valor dela celda 
+
+\begin{DoxyReturn}{Returns}
+retorna un int con el valor 
+\end{DoxyReturn}
+\hypertarget{class_celda_ab6966d037ddd5e0c1bb99aca39647379}{\index{Celda@{Celda}!has\-Num@{has\-Num}}
+\index{has\-Num@{has\-Num}!Celda@{Celda}}
+\subsubsection[{has\-Num}]{\setlength{\rightskip}{0pt plus 5cm}bool Celda\-::has\-Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_ab6966d037ddd5e0c1bb99aca39647379}
+
+
+has\-Num verifica si hay algun numero en la celda 
+
+\begin{DoxyReturn}{Returns}
+verdadero o falso segun sea el caso 
+\end{DoxyReturn}
+\hypertarget{class_celda_a592dd2bcba1d493d884c90b47fdadf00}{\index{Celda@{Celda}!is\-Checked@{is\-Checked}}
+\index{is\-Checked@{is\-Checked}!Celda@{Celda}}
+\subsubsection[{is\-Checked}]{\setlength{\rightskip}{0pt plus 5cm}bool Celda\-::is\-Checked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celda_a592dd2bcba1d493d884c90b47fdadf00}
+
+
+is\-Checked verifica si la celda esta chequeada o marcada 
+
+\begin{DoxyReturn}{Returns}
+verdadero o falso segun sea el caso 
+\end{DoxyReturn}
+\hypertarget{class_celda_af18a6e990908532034599a49784d4ff5}{\index{Celda@{Celda}!set\-Back\-Color@{set\-Back\-Color}}
+\index{set\-Back\-Color@{set\-Back\-Color}!Celda@{Celda}}
+\subsubsection[{set\-Back\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Celda\-::set\-Back\-Color (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_celda_af18a6e990908532034599a49784d4ff5}
+
+
+set\-Back\-Color setea un fondo para la celda 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & de fondo \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_celda_a2f36ec0296181ee26477fcdf049f2334}{\index{Celda@{Celda}!set\-Lite@{set\-Lite}}

@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Celda Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_celda.html" title="The Celda en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku...">Celda</a> en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku.  
+ <a href="class_celda.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="celda_8h_source.html">celda.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Celda:</div>
 <div class="dyncontent">
@@ -122,43 +127,47 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f36ec0296181ee26477fcdf049f2334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e523de46ddbdb2d8497ad67c0009f1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e523de46ddbdb2d8497ad67c0009f1e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a3e523de46ddbdb2d8497ad67c0009f1e">reset</a> ()</td></tr>
-<tr class="memdesc:a3e523de46ddbdb2d8497ad67c0009f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset <br/></td></tr>
+<tr class="memdesc:a3e523de46ddbdb2d8497ad67c0009f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset setea los valores de la celda a vacio <br/></td></tr>
 <tr class="separator:a3e523de46ddbdb2d8497ad67c0009f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac93663c46fa34649bf44d3927c7f0ca1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac93663c46fa34649bf44d3927c7f0ca1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#ac93663c46fa34649bf44d3927c7f0ca1">check</a> ()</td></tr>
+<tr class="memdesc:ac93663c46fa34649bf44d3927c7f0ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">check muestra la casilla chequeada de otro color <br/></td></tr>
 <tr class="separator:ac93663c46fa34649bf44d3927c7f0ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8420b9e44aed858bf90bc0ea8c0984fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8420b9e44aed858bf90bc0ea8c0984fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unCheck</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a8420b9e44aed858bf90bc0ea8c0984fa">unCheck</a> ()</td></tr>
+<tr class="memdesc:a8420b9e44aed858bf90bc0ea8c0984fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">unCheck vulve a poner a la casilla a su estado normal <br/></td></tr>
 <tr class="separator:a8420b9e44aed858bf90bc0ea8c0984fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af18a6e990908532034599a49784d4ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af18a6e990908532034599a49784d4ff5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBackColor</b> (QString color)</td></tr>
+<tr class="memitem:af18a6e990908532034599a49784d4ff5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#af18a6e990908532034599a49784d4ff5">setBackColor</a> (QString color)</td></tr>
+<tr class="memdesc:af18a6e990908532034599a49784d4ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">setBackColor setea un fondo para la celda  <a href="#af18a6e990908532034599a49784d4ff5">More...</a><br/></td></tr>
 <tr class="separator:af18a6e990908532034599a49784d4ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac56176d091cbca011a1d93530f179800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56176d091cbca011a1d93530f179800"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlackBorder</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#ac56176d091cbca011a1d93530f179800">setBlackBorder</a> ()</td></tr>
+<tr class="memdesc:ac56176d091cbca011a1d93530f179800"><td class="mdescLeft">&#160;</td><td class="mdescRight">setBlackBorder setea un borde a la celda <br/></td></tr>
 <tr class="separator:ac56176d091cbca011a1d93530f179800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa37c81071e8d384b46661d30e30d9e3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa37c81071e8d384b46661d30e30d9e3e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> ()</td></tr>
+<tr class="memitem:aa37c81071e8d384b46661d30e30d9e3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#aa37c81071e8d384b46661d30e30d9e3e">getValue</a> ()</td></tr>
+<tr class="memdesc:aa37c81071e8d384b46661d30e30d9e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">getValue devuleve el valor dela celda  <a href="#aa37c81071e8d384b46661d30e30d9e3e">More...</a><br/></td></tr>
 <tr class="separator:aa37c81071e8d384b46661d30e30d9e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e16d4f745601f63ac8e5178bc0f4e54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e16d4f745601f63ac8e5178bc0f4e54"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> ()</td></tr>
+<tr class="memitem:a7e16d4f745601f63ac8e5178bc0f4e54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a7e16d4f745601f63ac8e5178bc0f4e54">getIndex</a> ()</td></tr>
+<tr class="memdesc:a7e16d4f745601f63ac8e5178bc0f4e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">getIndex retorna el indicepara la celda  <a href="#a7e16d4f745601f63ac8e5178bc0f4e54">More...</a><br/></td></tr>
 <tr class="separator:a7e16d4f745601f63ac8e5178bc0f4e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1018c36394dd882c632a71c7fb12999a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1018c36394dd882c632a71c7fb12999a"></a>
-int *&#160;</td><td class="memItemRight" valign="bottom"><b>getPosibilities</b> ()</td></tr>
+<tr class="memitem:a1018c36394dd882c632a71c7fb12999a"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a1018c36394dd882c632a71c7fb12999a">getPosibilities</a> ()</td></tr>
+<tr class="memdesc:a1018c36394dd882c632a71c7fb12999a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getPosibilities  <a href="#a1018c36394dd882c632a71c7fb12999a">More...</a><br/></td></tr>
 <tr class="separator:a1018c36394dd882c632a71c7fb12999a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592dd2bcba1d493d884c90b47fdadf00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a592dd2bcba1d493d884c90b47fdadf00"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isChecked</b> ()</td></tr>
+<tr class="memitem:a592dd2bcba1d493d884c90b47fdadf00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a592dd2bcba1d493d884c90b47fdadf00">isChecked</a> ()</td></tr>
+<tr class="memdesc:a592dd2bcba1d493d884c90b47fdadf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">isChecked verifica si la celda esta chequeada o marcada  <a href="#a592dd2bcba1d493d884c90b47fdadf00">More...</a><br/></td></tr>
 <tr class="separator:a592dd2bcba1d493d884c90b47fdadf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6966d037ddd5e0c1bb99aca39647379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6966d037ddd5e0c1bb99aca39647379"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasNum</b> ()</td></tr>
+<tr class="memitem:ab6966d037ddd5e0c1bb99aca39647379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#ab6966d037ddd5e0c1bb99aca39647379">hasNum</a> ()</td></tr>
+<tr class="memdesc:ab6966d037ddd5e0c1bb99aca39647379"><td class="mdescLeft">&#160;</td><td class="mdescRight">hasNum verifica si hay algun numero en la celda  <a href="#ab6966d037ddd5e0c1bb99aca39647379">More...</a><br/></td></tr>
 <tr class="separator:ab6966d037ddd5e0c1bb99aca39647379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9de72cff68e6b39fb062b4a3d386f627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9de72cff68e6b39fb062b4a3d386f627"></a>
-QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>getNumber</b> ()</td></tr>
+<tr class="memitem:a9de72cff68e6b39fb062b4a3d386f627"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#a9de72cff68e6b39fb062b4a3d386f627">getNumber</a> ()</td></tr>
+<tr class="memdesc:a9de72cff68e6b39fb062b4a3d386f627"><td class="mdescLeft">&#160;</td><td class="mdescRight">getNumber extrae label de la celda con el numero  <a href="#a9de72cff68e6b39fb062b4a3d386f627">More...</a><br/></td></tr>
 <tr class="separator:a9de72cff68e6b39fb062b4a3d386f627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae7a0ff06a1409fc11aee254999108598"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7a0ff06a1409fc11aee254999108598"></a>
-QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
+QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_celda.html#ae7a0ff06a1409fc11aee254999108598">pos</a></td></tr>
+<tr class="memdesc:ae7a0ff06a1409fc11aee254999108598"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos poscicion de la celda en referencia a una matriz <br/></td></tr>
 <tr class="separator:ae7a0ff06a1409fc11aee254999108598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -167,7 +176,9 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleaseEvent</b> (QMouseEvent *)</td></tr>
 <tr class="separator:ae51d95d1ac700fcbb35e45ebea8be779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_celda.html" title="The Celda en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku...">Celda</a> en esta clase se lleva a cargo la interface de las celdas de nuestro tablero de sudoku. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a061c79d4a2ac8b4305d8bb989feec1cd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -236,6 +247,138 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleaseEvent</b>
 
 </div>
 </div>
+<a class="anchor" id="a7e16d4f745601f63ac8e5178bc0f4e54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Celda::getIndex </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getIndex retorna el indicepara la celda </p>
+<dl class="section return"><dt>Returns</dt><dd>int con el indice </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9de72cff68e6b39fb062b4a3d386f627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLabel * Celda::getNumber </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getNumber extrae label de la celda con el numero </p>
+<dl class="section return"><dt>Returns</dt><dd>Label principal de la celda </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1018c36394dd882c632a71c7fb12999a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * Celda::getPosibilities </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getPosibilities </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa37c81071e8d384b46661d30e30d9e3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Celda::getValue </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getValue devuleve el valor dela celda </p>
+<dl class="section return"><dt>Returns</dt><dd>retorna un int con el valor </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab6966d037ddd5e0c1bb99aca39647379"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Celda::hasNum </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>hasNum verifica si hay algun numero en la celda </p>
+<dl class="section return"><dt>Returns</dt><dd>verdadero o falso segun sea el caso </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a592dd2bcba1d493d884c90b47fdadf00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Celda::isChecked </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>isChecked verifica si la celda esta chequeada o marcada </p>
+<dl class="section return"><dt>Returns</dt><dd>verdadero o falso segun sea el caso </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af18a6e990908532034599a49784d4ff5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Celda::setBackColor </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setBackColor setea un fondo para la celda </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>de fondo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a2f36ec0296181ee26477fcdf049f2334"></a>
 <div class="memitem">
 <div class="memproto">
@@ -291,7 +434,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleaseEvent</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 08:31:25 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 09:29:52 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

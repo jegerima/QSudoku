@@ -1,6 +1,15 @@
 \hypertarget{class_guardar}{\section{Guardar Class Reference}
 \label{class_guardar}\index{Guardar@{Guardar}}
 }
+
+
+The \hyperlink{class_guardar}{Guardar} Es la clase encargada de guardar y cargar archivos.  
+
+
+
+
+{\ttfamily \#include $<$guardar.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,13 +18,73 @@
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_guardar}{Guardar} constructor de la clase guardar para guardar y leer archivos encriptados. \end{DoxyCompactList}\item 
 \hypertarget{class_guardar_aa602d00edb44609652777954ad2f8c18}{void \hyperlink{class_guardar_aa602d00edb44609652777954ad2f8c18}{crear\-Archivo} ()}\label{class_guardar_aa602d00edb44609652777954ad2f8c18}
 
-\begin{DoxyCompactList}\small\item\em crear\-Archivo abre la ventana default del sistema para explorar archivos \end{DoxyCompactList}\item 
-\hypertarget{class_guardar_ab2a0427431816fd0c1138afb7410856c}{void {\bfseries guardar\-Valores} (int m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, Q\-String jugador, Q\-String \hyperlink{classnivel}{nivel}, Q\-String tiempo)}\label{class_guardar_ab2a0427431816fd0c1138afb7410856c}
+\begin{DoxyCompactList}\small\item\em crear\-Archivo abre la ventana default del sistema para explorar archivos y obtener la ruta \end{DoxyCompactList}\item 
+void \hyperlink{class_guardar_ab2a0427431816fd0c1138afb7410856c}{guardar\-Valores} (int m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, Q\-String jugador, Q\-String \hyperlink{classnivel}{nivel}, Q\-String tiempo)
+\begin{DoxyCompactList}\small\item\em guardar\-Valores concatena todos los datos a ser guardados \end{DoxyCompactList}\item 
+void \hyperlink{class_guardar_ad1893652f3dad094f002e8415b20b67e}{leer\-Archivo} (int m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, Q\-String $\ast$name, Q\-String $\ast$level, Q\-Time $\ast$t)
+\begin{DoxyCompactList}\small\item\em leer\-Archivo lee el archivo y usa una expresion regular para separar las distintas candenas \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{class_guardar_ad1893652f3dad094f002e8415b20b67e}{void {\bfseries leer\-Archivo} (int m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, Q\-String $\ast$name, Q\-String $\ast$level, Q\-Time $\ast$t)}\label{class_guardar_ad1893652f3dad094f002e8415b20b67e}
 
-\end{DoxyCompactItemize}
+\subsection{Detailed Description}
+The \hyperlink{class_guardar}{Guardar} Es la clase encargada de guardar y cargar archivos. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_guardar_ab2a0427431816fd0c1138afb7410856c}{\index{Guardar@{Guardar}!guardar\-Valores@{guardar\-Valores}}
+\index{guardar\-Valores@{guardar\-Valores}!Guardar@{Guardar}}
+\subsubsection[{guardar\-Valores}]{\setlength{\rightskip}{0pt plus 5cm}void Guardar\-::guardar\-Valores (
+\begin{DoxyParamCaption}
+\item[{int}]{m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, }
+\item[{int}]{sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, }
+\item[{Q\-String}]{jugador, }
+\item[{Q\-String}]{nivel, }
+\item[{Q\-String}]{tiempo}
+\end{DoxyParamCaption}
+)}}\label{class_guardar_ab2a0427431816fd0c1138afb7410856c}
+
+
+guardar\-Valores concatena todos los datos a ser guardados 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & matriz que mantiene el avance del juego \\
+\hline
+{\em sol} & matriz con la solucion del juego \\
+\hline
+{\em jugador} & nombre del juagador \\
+\hline
+{\em nivel} & nivel en el que esta jugando \\
+\hline
+{\em tiempo} & tiempo acumulado del reloj \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_guardar_ad1893652f3dad094f002e8415b20b67e}{\index{Guardar@{Guardar}!leer\-Archivo@{leer\-Archivo}}
+\index{leer\-Archivo@{leer\-Archivo}!Guardar@{Guardar}}
+\subsubsection[{leer\-Archivo}]{\setlength{\rightskip}{0pt plus 5cm}void Guardar\-::leer\-Archivo (
+\begin{DoxyParamCaption}
+\item[{int}]{m\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, }
+\item[{int}]{sol\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, }
+\item[{Q\-String $\ast$}]{name, }
+\item[{Q\-String $\ast$}]{level, }
+\item[{Q\-Time $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_guardar_ad1893652f3dad094f002e8415b20b67e}
+
+
+leer\-Archivo lee el archivo y usa una expresion regular para separar las distintas candenas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & setea en esta el avance del juego \\
+\hline
+{\em sol} & setea en sol la solucion del juego \\
+\hline
+{\em name} & para setear el nombre del jugador \\
+\hline
+{\em level} & para setear el nivel del jugador \\
+\hline
+{\em t} & para setear el tiempo del juegador \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

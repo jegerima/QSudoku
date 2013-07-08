@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,12 +82,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_main_table-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MainTable Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_main_table.html" title="The MainTable Es la clase principal que matiene el tablero la gui. ">MainTable</a> Es la clase principal que matiene el tablero la gui.  
+ <a href="class_main_table.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="maintable_8h_source.html">maintable.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MainTable:</div>
 <div class="dyncontent">
@@ -97,12 +104,331 @@ Inheritance diagram for MainTable:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a7e0baffddf06ead228a33f014a4aef63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a7e0baffddf06ead228a33f014a4aef63">iniciarJuego</a> (int n)</td></tr>
+<tr class="memdesc:a7e0baffddf06ead228a33f014a4aef63"><td class="mdescLeft">&#160;</td><td class="mdescRight">iniciarJuego arranca el juego, seteando todas sus caracteristicas  <a href="#a7e0baffddf06ead228a33f014a4aef63">More...</a><br/></td></tr>
+<tr class="separator:a7e0baffddf06ead228a33f014a4aef63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab955ede8537f643e3ac7c3b148c63b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab955ede8537f643e3ac7c3b148c63b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#aab955ede8537f643e3ac7c3b148c63b6">on_cmdVerificar_clicked</a> ()</td></tr>
+<tr class="memdesc:aab955ede8537f643e3ac7c3b148c63b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_cmdVerificar_clicked slot del boton verificar, para chequear correcta resolucion del sudoku <br/></td></tr>
+<tr class="separator:aab955ede8537f643e3ac7c3b148c63b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eee831277d1dd818595ec56f9ad3fe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eee831277d1dd818595ec56f9ad3fe9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a9eee831277d1dd818595ec56f9ad3fe9">nuevaPartida</a> ()</td></tr>
+<tr class="memdesc:a9eee831277d1dd818595ec56f9ad3fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">nuevaPartida setea valores previos antes de iniciar el juego <br/></td></tr>
+<tr class="separator:a9eee831277d1dd818595ec56f9ad3fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbfd9b75edc0b2c77edf56b577f00ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdbfd9b75edc0b2c77edf56b577f00ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#acdbfd9b75edc0b2c77edf56b577f00ed">guardarPartida</a> ()</td></tr>
+<tr class="memdesc:acdbfd9b75edc0b2c77edf56b577f00ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">guardarPartida llama a la clase guardar para generar un archivo externo con todos los datos actuales del juego <br/></td></tr>
+<tr class="separator:acdbfd9b75edc0b2c77edf56b577f00ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9be0974d1533c6cfd1ee55cf534b46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae9be0974d1533c6cfd1ee55cf534b46"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#aae9be0974d1533c6cfd1ee55cf534b46">cargarPartida</a> ()</td></tr>
+<tr class="memdesc:aae9be0974d1533c6cfd1ee55cf534b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">cargarPartida llama a la clase <a class="el" href="class_guardar.html" title="The Guardar Es la clase encargada de guardar y cargar archivos. ">Guardar</a> para setear valores desde un archivo y empezar una partida <br/></td></tr>
+<tr class="separator:aae9be0974d1533c6cfd1ee55cf534b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e07992f1cacddecc0b447b06ef676e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5e07992f1cacddecc0b447b06ef676e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#aa5e07992f1cacddecc0b447b06ef676e">salirJuego</a> ()</td></tr>
+<tr class="memdesc:aa5e07992f1cacddecc0b447b06ef676e"><td class="mdescLeft">&#160;</td><td class="mdescRight">salirJuego muestra mensaje de salida puntaje final al que llego <br/></td></tr>
+<tr class="separator:aa5e07992f1cacddecc0b447b06ef676e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec4db19cba39957c9d83b1c631b3f77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ec4db19cba39957c9d83b1c631b3f77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a3ec4db19cba39957c9d83b1c631b3f77">timeRefresh</a> ()</td></tr>
+<tr class="memdesc:a3ec4db19cba39957c9d83b1c631b3f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeRefresh slot del reloj para actualizar tiempo cada 1000 ms <br/></td></tr>
+<tr class="separator:a3ec4db19cba39957c9d83b1c631b3f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256cce08eaf6f346f831d83005f7682d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a256cce08eaf6f346f831d83005f7682d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a256cce08eaf6f346f831d83005f7682d">getCeldaRunTime</a> ()</td></tr>
+<tr class="memdesc:a256cce08eaf6f346f831d83005f7682d"><td class="mdescLeft">&#160;</td><td class="mdescRight">getCeldaRunTime obtiene la celda clicleada en ese instante <br/></td></tr>
+<tr class="separator:a256cce08eaf6f346f831d83005f7682d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c9b0d16bf49c557c2d4d424daa6320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c9b0d16bf49c557c2d4d424daa6320"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a48c9b0d16bf49c557c2d4d424daa6320">numPressed</a> ()</td></tr>
+<tr class="memdesc:a48c9b0d16bf49c557c2d4d424daa6320"><td class="mdescLeft">&#160;</td><td class="mdescRight">numPressed slot para verificar numero presionado en el teclado numerico <br/></td></tr>
+<tr class="separator:a48c9b0d16bf49c557c2d4d424daa6320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fc4645efa7708419f7746209adeb7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70fc4645efa7708419f7746209adeb7a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a70fc4645efa7708419f7746209adeb7a">acercaDe</a> ()</td></tr>
+<tr class="memdesc:a70fc4645efa7708419f7746209adeb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">acercaDe muestra opciones en el menu Acerca de <br/></td></tr>
+<tr class="separator:a70fc4645efa7708419f7746209adeb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ae6c5f256a12afafeeda9602579747"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09ae6c5f256a12afafeeda9602579747"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a09ae6c5f256a12afafeeda9602579747">on_cmdHint_clicked</a> ()</td></tr>
+<tr class="memdesc:a09ae6c5f256a12afafeeda9602579747"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_cmdHint_clicked slot para el boton Hint, permite despejar una casilla <br/></td></tr>
+<tr class="separator:a09ae6c5f256a12afafeeda9602579747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a536fdc279aa0ed4e14cc25ab6f89a74d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a536fdc279aa0ed4e14cc25ab6f89a74d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MainTable</b> (QWidget *parent=0)</td></tr>
 <tr class="separator:a536fdc279aa0ed4e14cc25ab6f89a74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0edc05c64dd375c326b26cd9cf255bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0edc05c64dd375c326b26cd9cf255bb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>calcularPuntaje</b> ()</td></tr>
+<tr class="separator:ae0edc05c64dd375c326b26cd9cf255bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0ed271c24621b716536f18a1e86790"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e0ed271c24621b716536f18a1e86790"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a1e0ed271c24621b716536f18a1e86790">activarTeclado</a> ()</td></tr>
+<tr class="memdesc:a1e0ed271c24621b716536f18a1e86790"><td class="mdescLeft">&#160;</td><td class="mdescRight">activarTeclado desbloquea el teclado numerico, para que pueda ser presionado <br/></td></tr>
+<tr class="separator:a1e0ed271c24621b716536f18a1e86790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7243d220cd940102d4eb24515b308fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7243d220cd940102d4eb24515b308fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#af7243d220cd940102d4eb24515b308fb">initGuiCelda</a> ()</td></tr>
+<tr class="memdesc:af7243d220cd940102d4eb24515b308fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">initGuiCelda inicializa todos los componentes de la GUI <br/></td></tr>
+<tr class="separator:af7243d220cd940102d4eb24515b308fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557c8122a5531cd91cb139168f7f77ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a557c8122a5531cd91cb139168f7f77ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a557c8122a5531cd91cb139168f7f77ac">initMenuBar</a> ()</td></tr>
+<tr class="memdesc:a557c8122a5531cd91cb139168f7f77ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">initMenuBar inicializa los componentes de la barra de menu <br/></td></tr>
+<tr class="separator:a557c8122a5531cd91cb139168f7f77ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2062d3ec91f518a124cdfde39f88b5bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2062d3ec91f518a124cdfde39f88b5bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a2062d3ec91f518a124cdfde39f88b5bc">initCrono</a> ()</td></tr>
+<tr class="memdesc:a2062d3ec91f518a124cdfde39f88b5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">initCrono pone a correr el cronometro desde 0 <br/></td></tr>
+<tr class="separator:a2062d3ec91f518a124cdfde39f88b5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5127d725082ee137e1bc1bfe25d707e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5127d725082ee137e1bc1bfe25d707e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a5127d725082ee137e1bc1bfe25d707e8">initTeclado</a> ()</td></tr>
+<tr class="memdesc:a5127d725082ee137e1bc1bfe25d707e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">initTeclado inicializa el teclado numerico dinamicamente <br/></td></tr>
+<tr class="separator:a5127d725082ee137e1bc1bfe25d707e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad147fcd673d5ee78b74f1c0eed831d72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad147fcd673d5ee78b74f1c0eed831d72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setIcono</b> ()</td></tr>
+<tr class="separator:ad147fcd673d5ee78b74f1c0eed831d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8a8a955c76db4ed9f89ce92a38e994"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac8a8a955c76db4ed9f89ce92a38e994"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#aac8a8a955c76db4ed9f89ce92a38e994">setTableroInicio</a> ()</td></tr>
+<tr class="memdesc:aac8a8a955c76db4ed9f89ce92a38e994"><td class="mdescLeft">&#160;</td><td class="mdescRight">setTableroInicio setea la solucion de un sudoku usando la clase genMAtriz <br/></td></tr>
+<tr class="separator:aac8a8a955c76db4ed9f89ce92a38e994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98cde4888cd2d755dadb0d3ae991df8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98cde4888cd2d755dadb0d3ae991df8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a98cde4888cd2d755dadb0d3ae991df8f">setTableroActual</a> ()</td></tr>
+<tr class="memdesc:a98cde4888cd2d755dadb0d3ae991df8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">setTableroActual setea el avance del tablero jugado <br/></td></tr>
+<tr class="separator:a98cde4888cd2d755dadb0d3ae991df8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d14309262e6b67ce1e57a9d491919b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79d14309262e6b67ce1e57a9d491919b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a79d14309262e6b67ce1e57a9d491919b">setTableroEnPantalla</a> ()</td></tr>
+<tr class="memdesc:a79d14309262e6b67ce1e57a9d491919b"><td class="mdescLeft">&#160;</td><td class="mdescRight">setTableroEnPantalla muestra en pantalla la matriz de juego Actual <br/></td></tr>
+<tr class="separator:a79d14309262e6b67ce1e57a9d491919b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548e2e9d049dd5088bb51b49023c8e5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a548e2e9d049dd5088bb51b49023c8e5f">setTableroInicialSegunNivel</a> (int n)</td></tr>
+<tr class="memdesc:a548e2e9d049dd5088bb51b49023c8e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">setTableroInicialSegunNivel setea el inicio de un juego de acuerdo a un nivel  <a href="#a548e2e9d049dd5088bb51b49023c8e5f">More...</a><br/></td></tr>
+<tr class="separator:a548e2e9d049dd5088bb51b49023c8e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84930e6f165419f7895dedfb05c9156"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac84930e6f165419f7895dedfb05c9156"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#ac84930e6f165419f7895dedfb05c9156">setCeldasBlanco</a> ()</td></tr>
+<tr class="memdesc:ac84930e6f165419f7895dedfb05c9156"><td class="mdescLeft">&#160;</td><td class="mdescRight">setCeldasBlanco setea un fondo blanco para las celdas <br/></td></tr>
+<tr class="separator:ac84930e6f165419f7895dedfb05c9156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892e7117f4988c0eb58bab5f5901ef09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a892e7117f4988c0eb58bab5f5901ef09"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a892e7117f4988c0eb58bab5f5901ef09">setPistas</a> ()</td></tr>
+<tr class="memdesc:a892e7117f4988c0eb58bab5f5901ef09"><td class="mdescLeft">&#160;</td><td class="mdescRight">setPistas verifica el tablero y aigna que pistas se van a mostrar <br/></td></tr>
+<tr class="separator:a892e7117f4988c0eb58bab5f5901ef09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a735a29e6dd362c76720243f7079234"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a0a735a29e6dd362c76720243f7079234">checkFila</a> (int row, int column)</td></tr>
+<tr class="memdesc:a0a735a29e6dd362c76720243f7079234"><td class="mdescLeft">&#160;</td><td class="mdescRight">checkFila verifica que las casillas cumplan con las reglas del sudoku en la fila  <a href="#a0a735a29e6dd362c76720243f7079234">More...</a><br/></td></tr>
+<tr class="separator:a0a735a29e6dd362c76720243f7079234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4691add57adfe5f9b64ded9753802d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a1f4691add57adfe5f9b64ded9753802d">checkColumna</a> (int row, int column)</td></tr>
+<tr class="memdesc:a1f4691add57adfe5f9b64ded9753802d"><td class="mdescLeft">&#160;</td><td class="mdescRight">checkColumna verifica que las casillas cumplan con las reglas del sudoku en la columna  <a href="#a1f4691add57adfe5f9b64ded9753802d">More...</a><br/></td></tr>
+<tr class="separator:a1f4691add57adfe5f9b64ded9753802d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8d0356ed30eef86ede365835d4683e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_table.html#a0c8d0356ed30eef86ede365835d4683e">checkCuadro</a> (int row, int column)</td></tr>
+<tr class="memdesc:a0c8d0356ed30eef86ede365835d4683e"><td class="mdescLeft">&#160;</td><td class="mdescRight">checkCuadro verifica que las casillas cumplan con las reglas del sudoku en el subcuadro  <a href="#a0c8d0356ed30eef86ede365835d4683e">More...</a><br/></td></tr>
+<tr class="separator:a0c8d0356ed30eef86ede365835d4683e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a471388adcebe263e49cfdcb9d7279e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a471388adcebe263e49cfdcb9d7279e91"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>matriz</b> [9][9]</td></tr>
+<tr class="separator:a471388adcebe263e49cfdcb9d7279e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2b76ecea45a50800f06e139cfd28c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a2b76ecea45a50800f06e139cfd28c5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tableroActual</b> [9][9]</td></tr>
+<tr class="separator:a1a2b76ecea45a50800f06e139cfd28c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e7676d2d5d440f4dd4f7cd3236d7e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4e7676d2d5d440f4dd4f7cd3236d7e7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hints</b></td></tr>
+<tr class="separator:ae4e7676d2d5d440f4dd4f7cd3236d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8664e6edd63b8af366a00f9721fa43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e8664e6edd63b8af366a00f9721fa43"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>avanceSeg</b></td></tr>
+<tr class="separator:a8e8664e6edd63b8af366a00f9721fa43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff01ca4fa6181ccf5af8a8fb150b65f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff01ca4fa6181ccf5af8a8fb150b65f4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>avanceMin</b></td></tr>
+<tr class="separator:aff01ca4fa6181ccf5af8a8fb150b65f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676cffede31e492ee1da5ac3317709a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a676cffede31e492ee1da5ac3317709a3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>dificultad</b></td></tr>
+<tr class="separator:a676cffede31e492ee1da5ac3317709a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05087fe0297aa01b53ace2f43a72876"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087fe0297aa01b53ace2f43a72876"></a>
+<a class="el" href="classnivel.html">nivel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>level</b></td></tr>
+<tr class="separator:ab05087fe0297aa01b53ace2f43a72876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cbd155df307aad2b2bd1126ba91884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6cbd155df307aad2b2bd1126ba91884"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>jugador</b></td></tr>
+<tr class="separator:ab6cbd155df307aad2b2bd1126ba91884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3aaa49522c48831b944b35ab4083432"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3aaa49522c48831b944b35ab4083432"></a>
+QTimer *&#160;</td><td class="memItemRight" valign="bottom"><b>tiempo</b></td></tr>
+<tr class="separator:ab3aaa49522c48831b944b35ab4083432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edf1a594e0ce61b6aa596450ea8a20f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5edf1a594e0ce61b6aa596450ea8a20f"></a>
+QTime&#160;</td><td class="memItemRight" valign="bottom"><b>tiempoIni</b></td></tr>
+<tr class="separator:a5edf1a594e0ce61b6aa596450ea8a20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6213aa436103ed4e48fa35db1b5f9ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6213aa436103ed4e48fa35db1b5f9ba"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>teclado</b> [10]</td></tr>
+<tr class="separator:ae6213aa436103ed4e48fa35db1b5f9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b220c1842f5375b9b47d05f67f12d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6b220c1842f5375b9b47d05f67f12d1"></a>
+QTime *&#160;</td><td class="memItemRight" valign="bottom"><b>tm</b></td></tr>
+<tr class="separator:ad6b220c1842f5375b9b47d05f67f12d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b752de417bd44651bdeb98546b41c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54b752de417bd44651bdeb98546b41c4"></a>
+<a class="el" href="class_celda.html">Celda</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>celdaRuntime</b></td></tr>
+<tr class="separator:a54b752de417bd44651bdeb98546b41c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf75de06fbca60ca8e5211c37a6cf9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf75de06fbca60ca8e5211c37a6cf9a"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>pistas</b></td></tr>
+<tr class="separator:a8cf75de06fbca60ca8e5211c37a6cf9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8289e11f2387526a3c7a42c80b974d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8289e11f2387526a3c7a42c80b974d5"></a>
+Ui::MainTable *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
+<tr class="separator:aa8289e11f2387526a3c7a42c80b974d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_main_table.html" title="The MainTable Es la clase principal que matiene el tablero la gui. ">MainTable</a> Es la clase principal que matiene el tablero la gui. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1f4691add57adfe5f9b64ded9753802d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainTable::checkColumna </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checkColumna verifica que las casillas cumplan con las reglas del sudoku en la columna </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>es el de la casilla con el que va a verificar </td></tr>
+    <tr><td class="paramname">column</td><td>es la columna donde va a verificar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c8d0356ed30eef86ede365835d4683e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainTable::checkCuadro </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checkCuadro verifica que las casillas cumplan con las reglas del sudoku en el subcuadro </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>es la fila donde va a verificar </td></tr>
+    <tr><td class="paramname">column</td><td>es la columna donde va a verificar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a735a29e6dd362c76720243f7079234"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainTable::checkFila </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checkFila verifica que las casillas cumplan con las reglas del sudoku en la fila </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>es la fila donde va a verificar </td></tr>
+    <tr><td class="paramname">column</td><td>es el de la casilla con el que va a verificar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e0baffddf06ead228a33f014a4aef63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainTable::iniciarJuego </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>iniciarJuego arranca el juego, seteando todas sus caracteristicas </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>nivel en elque esta jugando </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a548e2e9d049dd5088bb51b49023c8e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainTable::setTableroInicialSegunNivel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setTableroInicialSegunNivel setea el inicio de un juego de acuerdo a un nivel </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>nivel del juego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="maintable_8h_source.html">maintable.h</a></li>
 <li>maintable.cpp</li>
@@ -110,7 +436,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 08:31:25 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 09:29:52 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

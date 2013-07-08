@@ -1,18 +1,258 @@
 \hypertarget{class_main_table}{\section{Main\-Table Class Reference}
 \label{class_main_table}\index{Main\-Table@{Main\-Table}}
 }
+
+
+The \hyperlink{class_main_table}{Main\-Table} Es la clase principal que matiene el tablero la gui.  
+
+
+
+
+{\ttfamily \#include $<$maintable.\-h$>$}
+
 Inheritance diagram for Main\-Table\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_main_table}
 \end{center}
 \end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_table_a7e0baffddf06ead228a33f014a4aef63}{iniciar\-Juego} (int n)
+\begin{DoxyCompactList}\small\item\em iniciar\-Juego arranca el juego, seteando todas sus caracteristicas \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_aab955ede8537f643e3ac7c3b148c63b6}{void \hyperlink{class_main_table_aab955ede8537f643e3ac7c3b148c63b6}{on\-\_\-cmd\-Verificar\-\_\-clicked} ()}\label{class_main_table_aab955ede8537f643e3ac7c3b148c63b6}
+
+\begin{DoxyCompactList}\small\item\em on\-\_\-cmd\-Verificar\-\_\-clicked slot del boton verificar, para chequear correcta resolucion del sudoku \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a9eee831277d1dd818595ec56f9ad3fe9}{void \hyperlink{class_main_table_a9eee831277d1dd818595ec56f9ad3fe9}{nueva\-Partida} ()}\label{class_main_table_a9eee831277d1dd818595ec56f9ad3fe9}
+
+\begin{DoxyCompactList}\small\item\em nueva\-Partida setea valores previos antes de iniciar el juego \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_acdbfd9b75edc0b2c77edf56b577f00ed}{void \hyperlink{class_main_table_acdbfd9b75edc0b2c77edf56b577f00ed}{guardar\-Partida} ()}\label{class_main_table_acdbfd9b75edc0b2c77edf56b577f00ed}
+
+\begin{DoxyCompactList}\small\item\em guardar\-Partida llama a la clase guardar para generar un archivo externo con todos los datos actuales del juego \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_aae9be0974d1533c6cfd1ee55cf534b46}{void \hyperlink{class_main_table_aae9be0974d1533c6cfd1ee55cf534b46}{cargar\-Partida} ()}\label{class_main_table_aae9be0974d1533c6cfd1ee55cf534b46}
+
+\begin{DoxyCompactList}\small\item\em cargar\-Partida llama a la clase \hyperlink{class_guardar}{Guardar} para setear valores desde un archivo y empezar una partida \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_aa5e07992f1cacddecc0b447b06ef676e}{void \hyperlink{class_main_table_aa5e07992f1cacddecc0b447b06ef676e}{salir\-Juego} ()}\label{class_main_table_aa5e07992f1cacddecc0b447b06ef676e}
+
+\begin{DoxyCompactList}\small\item\em salir\-Juego muestra mensaje de salida puntaje final al que llego \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a3ec4db19cba39957c9d83b1c631b3f77}{void \hyperlink{class_main_table_a3ec4db19cba39957c9d83b1c631b3f77}{time\-Refresh} ()}\label{class_main_table_a3ec4db19cba39957c9d83b1c631b3f77}
+
+\begin{DoxyCompactList}\small\item\em time\-Refresh slot del reloj para actualizar tiempo cada 1000 ms \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a256cce08eaf6f346f831d83005f7682d}{void \hyperlink{class_main_table_a256cce08eaf6f346f831d83005f7682d}{get\-Celda\-Run\-Time} ()}\label{class_main_table_a256cce08eaf6f346f831d83005f7682d}
+
+\begin{DoxyCompactList}\small\item\em get\-Celda\-Run\-Time obtiene la celda clicleada en ese instante \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a48c9b0d16bf49c557c2d4d424daa6320}{void \hyperlink{class_main_table_a48c9b0d16bf49c557c2d4d424daa6320}{num\-Pressed} ()}\label{class_main_table_a48c9b0d16bf49c557c2d4d424daa6320}
+
+\begin{DoxyCompactList}\small\item\em num\-Pressed slot para verificar numero presionado en el teclado numerico \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a70fc4645efa7708419f7746209adeb7a}{void \hyperlink{class_main_table_a70fc4645efa7708419f7746209adeb7a}{acerca\-De} ()}\label{class_main_table_a70fc4645efa7708419f7746209adeb7a}
+
+\begin{DoxyCompactList}\small\item\em acerca\-De muestra opciones en el menu Acerca de \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a09ae6c5f256a12afafeeda9602579747}{void \hyperlink{class_main_table_a09ae6c5f256a12afafeeda9602579747}{on\-\_\-cmd\-Hint\-\_\-clicked} ()}\label{class_main_table_a09ae6c5f256a12afafeeda9602579747}
+
+\begin{DoxyCompactList}\small\item\em on\-\_\-cmd\-Hint\-\_\-clicked slot para el boton Hint, permite despejar una casilla \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_main_table_a536fdc279aa0ed4e14cc25ab6f89a74d}{{\bfseries Main\-Table} (Q\-Widget $\ast$parent=0)}\label{class_main_table_a536fdc279aa0ed4e14cc25ab6f89a74d}
 
+\item 
+\hypertarget{class_main_table_ae0edc05c64dd375c326b26cd9cf255bb}{int {\bfseries calcular\-Puntaje} ()}\label{class_main_table_ae0edc05c64dd375c326b26cd9cf255bb}
+
+\item 
+\hypertarget{class_main_table_a1e0ed271c24621b716536f18a1e86790}{void \hyperlink{class_main_table_a1e0ed271c24621b716536f18a1e86790}{activar\-Teclado} ()}\label{class_main_table_a1e0ed271c24621b716536f18a1e86790}
+
+\begin{DoxyCompactList}\small\item\em activar\-Teclado desbloquea el teclado numerico, para que pueda ser presionado \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_af7243d220cd940102d4eb24515b308fb}{void \hyperlink{class_main_table_af7243d220cd940102d4eb24515b308fb}{init\-Gui\-Celda} ()}\label{class_main_table_af7243d220cd940102d4eb24515b308fb}
+
+\begin{DoxyCompactList}\small\item\em init\-Gui\-Celda inicializa todos los componentes de la G\-U\-I \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a557c8122a5531cd91cb139168f7f77ac}{void \hyperlink{class_main_table_a557c8122a5531cd91cb139168f7f77ac}{init\-Menu\-Bar} ()}\label{class_main_table_a557c8122a5531cd91cb139168f7f77ac}
+
+\begin{DoxyCompactList}\small\item\em init\-Menu\-Bar inicializa los componentes de la barra de menu \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a2062d3ec91f518a124cdfde39f88b5bc}{void \hyperlink{class_main_table_a2062d3ec91f518a124cdfde39f88b5bc}{init\-Crono} ()}\label{class_main_table_a2062d3ec91f518a124cdfde39f88b5bc}
+
+\begin{DoxyCompactList}\small\item\em init\-Crono pone a correr el cronometro desde 0 \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a5127d725082ee137e1bc1bfe25d707e8}{void \hyperlink{class_main_table_a5127d725082ee137e1bc1bfe25d707e8}{init\-Teclado} ()}\label{class_main_table_a5127d725082ee137e1bc1bfe25d707e8}
+
+\begin{DoxyCompactList}\small\item\em init\-Teclado inicializa el teclado numerico dinamicamente \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_ad147fcd673d5ee78b74f1c0eed831d72}{void {\bfseries set\-Icono} ()}\label{class_main_table_ad147fcd673d5ee78b74f1c0eed831d72}
+
+\item 
+\hypertarget{class_main_table_aac8a8a955c76db4ed9f89ce92a38e994}{void \hyperlink{class_main_table_aac8a8a955c76db4ed9f89ce92a38e994}{set\-Tablero\-Inicio} ()}\label{class_main_table_aac8a8a955c76db4ed9f89ce92a38e994}
+
+\begin{DoxyCompactList}\small\item\em set\-Tablero\-Inicio setea la solucion de un sudoku usando la clase gen\-M\-Atriz \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a98cde4888cd2d755dadb0d3ae991df8f}{void \hyperlink{class_main_table_a98cde4888cd2d755dadb0d3ae991df8f}{set\-Tablero\-Actual} ()}\label{class_main_table_a98cde4888cd2d755dadb0d3ae991df8f}
+
+\begin{DoxyCompactList}\small\item\em set\-Tablero\-Actual setea el avance del tablero jugado \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a79d14309262e6b67ce1e57a9d491919b}{void \hyperlink{class_main_table_a79d14309262e6b67ce1e57a9d491919b}{set\-Tablero\-En\-Pantalla} ()}\label{class_main_table_a79d14309262e6b67ce1e57a9d491919b}
+
+\begin{DoxyCompactList}\small\item\em set\-Tablero\-En\-Pantalla muestra en pantalla la matriz de juego Actual \end{DoxyCompactList}\item 
+void \hyperlink{class_main_table_a548e2e9d049dd5088bb51b49023c8e5f}{set\-Tablero\-Inicial\-Segun\-Nivel} (int n)
+\begin{DoxyCompactList}\small\item\em set\-Tablero\-Inicial\-Segun\-Nivel setea el inicio de un juego de acuerdo a un nivel \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_ac84930e6f165419f7895dedfb05c9156}{void \hyperlink{class_main_table_ac84930e6f165419f7895dedfb05c9156}{set\-Celdas\-Blanco} ()}\label{class_main_table_ac84930e6f165419f7895dedfb05c9156}
+
+\begin{DoxyCompactList}\small\item\em set\-Celdas\-Blanco setea un fondo blanco para las celdas \end{DoxyCompactList}\item 
+\hypertarget{class_main_table_a892e7117f4988c0eb58bab5f5901ef09}{void \hyperlink{class_main_table_a892e7117f4988c0eb58bab5f5901ef09}{set\-Pistas} ()}\label{class_main_table_a892e7117f4988c0eb58bab5f5901ef09}
+
+\begin{DoxyCompactList}\small\item\em set\-Pistas verifica el tablero y aigna que pistas se van a mostrar \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_table_a0a735a29e6dd362c76720243f7079234}{check\-Fila} (int row, int column)
+\begin{DoxyCompactList}\small\item\em check\-Fila verifica que las casillas cumplan con las reglas del sudoku en la fila \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_table_a1f4691add57adfe5f9b64ded9753802d}{check\-Columna} (int row, int column)
+\begin{DoxyCompactList}\small\item\em check\-Columna verifica que las casillas cumplan con las reglas del sudoku en la columna \end{DoxyCompactList}\item 
+bool \hyperlink{class_main_table_a0c8d0356ed30eef86ede365835d4683e}{check\-Cuadro} (int row, int column)
+\begin{DoxyCompactList}\small\item\em check\-Cuadro verifica que las casillas cumplan con las reglas del sudoku en el subcuadro \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_main_table_a471388adcebe263e49cfdcb9d7279e91}{int {\bfseries matriz} \mbox{[}9\mbox{]}\mbox{[}9\mbox{]}}\label{class_main_table_a471388adcebe263e49cfdcb9d7279e91}
+
+\item 
+\hypertarget{class_main_table_a1a2b76ecea45a50800f06e139cfd28c5}{int {\bfseries tablero\-Actual} \mbox{[}9\mbox{]}\mbox{[}9\mbox{]}}\label{class_main_table_a1a2b76ecea45a50800f06e139cfd28c5}
+
+\item 
+\hypertarget{class_main_table_ae4e7676d2d5d440f4dd4f7cd3236d7e7}{int {\bfseries hints}}\label{class_main_table_ae4e7676d2d5d440f4dd4f7cd3236d7e7}
+
+\item 
+\hypertarget{class_main_table_a8e8664e6edd63b8af366a00f9721fa43}{int {\bfseries avance\-Seg}}\label{class_main_table_a8e8664e6edd63b8af366a00f9721fa43}
+
+\item 
+\hypertarget{class_main_table_aff01ca4fa6181ccf5af8a8fb150b65f4}{int {\bfseries avance\-Min}}\label{class_main_table_aff01ca4fa6181ccf5af8a8fb150b65f4}
+
+\item 
+\hypertarget{class_main_table_a676cffede31e492ee1da5ac3317709a3}{int {\bfseries dificultad}}\label{class_main_table_a676cffede31e492ee1da5ac3317709a3}
+
+\item 
+\hypertarget{class_main_table_ab05087fe0297aa01b53ace2f43a72876}{\hyperlink{classnivel}{nivel} $\ast$ {\bfseries level}}\label{class_main_table_ab05087fe0297aa01b53ace2f43a72876}
+
+\item 
+\hypertarget{class_main_table_ab6cbd155df307aad2b2bd1126ba91884}{Q\-String {\bfseries jugador}}\label{class_main_table_ab6cbd155df307aad2b2bd1126ba91884}
+
+\item 
+\hypertarget{class_main_table_ab3aaa49522c48831b944b35ab4083432}{Q\-Timer $\ast$ {\bfseries tiempo}}\label{class_main_table_ab3aaa49522c48831b944b35ab4083432}
+
+\item 
+\hypertarget{class_main_table_a5edf1a594e0ce61b6aa596450ea8a20f}{Q\-Time {\bfseries tiempo\-Ini}}\label{class_main_table_a5edf1a594e0ce61b6aa596450ea8a20f}
+
+\item 
+\hypertarget{class_main_table_ae6213aa436103ed4e48fa35db1b5f9ba}{Q\-Push\-Button $\ast$ {\bfseries teclado} \mbox{[}10\mbox{]}}\label{class_main_table_ae6213aa436103ed4e48fa35db1b5f9ba}
+
+\item 
+\hypertarget{class_main_table_ad6b220c1842f5375b9b47d05f67f12d1}{Q\-Time $\ast$ {\bfseries tm}}\label{class_main_table_ad6b220c1842f5375b9b47d05f67f12d1}
+
+\item 
+\hypertarget{class_main_table_a54b752de417bd44651bdeb98546b41c4}{\hyperlink{class_celda}{Celda} $\ast$ {\bfseries celda\-Runtime}}\label{class_main_table_a54b752de417bd44651bdeb98546b41c4}
+
+\item 
+\hypertarget{class_main_table_a8cf75de06fbca60ca8e5211c37a6cf9a}{Q\-String\-List {\bfseries pistas}}\label{class_main_table_a8cf75de06fbca60ca8e5211c37a6cf9a}
+
+\item 
+\hypertarget{class_main_table_aa8289e11f2387526a3c7a42c80b974d5}{Ui\-::\-Main\-Table $\ast$ {\bfseries ui}}\label{class_main_table_aa8289e11f2387526a3c7a42c80b974d5}
+
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_main_table}{Main\-Table} Es la clase principal que matiene el tablero la gui. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_table_a1f4691add57adfe5f9b64ded9753802d}{\index{Main\-Table@{Main\-Table}!check\-Columna@{check\-Columna}}
+\index{check\-Columna@{check\-Columna}!MainTable@{Main\-Table}}
+\subsubsection[{check\-Columna}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Table\-::check\-Columna (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}}\label{class_main_table_a1f4691add57adfe5f9b64ded9753802d}
+
+
+check\-Columna verifica que las casillas cumplan con las reglas del sudoku en la columna 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & es el de la casilla con el que va a verificar \\
+\hline
+{\em column} & es la columna donde va a verificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_main_table_a0c8d0356ed30eef86ede365835d4683e}{\index{Main\-Table@{Main\-Table}!check\-Cuadro@{check\-Cuadro}}
+\index{check\-Cuadro@{check\-Cuadro}!MainTable@{Main\-Table}}
+\subsubsection[{check\-Cuadro}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Table\-::check\-Cuadro (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}}\label{class_main_table_a0c8d0356ed30eef86ede365835d4683e}
+
+
+check\-Cuadro verifica que las casillas cumplan con las reglas del sudoku en el subcuadro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & es la fila donde va a verificar \\
+\hline
+{\em column} & es la columna donde va a verificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_main_table_a0a735a29e6dd362c76720243f7079234}{\index{Main\-Table@{Main\-Table}!check\-Fila@{check\-Fila}}
+\index{check\-Fila@{check\-Fila}!MainTable@{Main\-Table}}
+\subsubsection[{check\-Fila}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-Table\-::check\-Fila (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}}\label{class_main_table_a0a735a29e6dd362c76720243f7079234}
+
+
+check\-Fila verifica que las casillas cumplan con las reglas del sudoku en la fila 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & es la fila donde va a verificar \\
+\hline
+{\em column} & es el de la casilla con el que va a verificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_main_table_a7e0baffddf06ead228a33f014a4aef63}{\index{Main\-Table@{Main\-Table}!iniciar\-Juego@{iniciar\-Juego}}
+\index{iniciar\-Juego@{iniciar\-Juego}!MainTable@{Main\-Table}}
+\subsubsection[{iniciar\-Juego}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Table\-::iniciar\-Juego (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_table_a7e0baffddf06ead228a33f014a4aef63}
+
+
+iniciar\-Juego arranca el juego, seteando todas sus caracteristicas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nivel en elque esta jugando \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_table_a548e2e9d049dd5088bb51b49023c8e5f}{\index{Main\-Table@{Main\-Table}!set\-Tablero\-Inicial\-Segun\-Nivel@{set\-Tablero\-Inicial\-Segun\-Nivel}}
+\index{set\-Tablero\-Inicial\-Segun\-Nivel@{set\-Tablero\-Inicial\-Segun\-Nivel}!MainTable@{Main\-Table}}
+\subsubsection[{set\-Tablero\-Inicial\-Segun\-Nivel}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Table\-::set\-Tablero\-Inicial\-Segun\-Nivel (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_main_table_a548e2e9d049dd5088bb51b49023c8e5f}
+
+
+set\-Tablero\-Inicial\-Segun\-Nivel setea el inicio de un juego de acuerdo a un nivel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nivel del juego \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

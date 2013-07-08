@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,38 +88,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QPoint&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_gen_matriz.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gen_matriz.html">GenMatriz</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_gen_matriz.html#a8fac64f00cae60f47afbf6cf43346832" title="El contructor de la clase GenMatriz, crea un sudoku resuelto a partir de un algoritmo de semilla...">GenMatriz</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ae4e6b5ed243424a06becc3b9296fe520" title="La funcion llenarMatrizSemilla es usada internamente en el constructor de la clase para setear un sud...">llenarMatrizSemilla</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#a68e793d89185716f36367320262723eb" title="La funcion generarMatrizSudoku se encarga de cambiar numeros, filasy columnas para generar sudokus di...">generarMatrizSudoku</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ac8b87d3d6f8402ce11b0e8c2e54267f4" title="La funcion generarArreglos nos permite guardar la posicion de cada numero de la matriz. ">generarArreglos</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_gen_matriz.html#af86ecf150e71673b7ed1e488f5f61efb" title="La funcion arregloDeNumeros retorna un valor de una matriz. ">arregloDeNumeros</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#af5686320072f21d88b5fbc85963bc280" title="guardarPosNum mantiene la poscicion de cada numero ">guardarPosNum</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> fila, <span class="keywordtype">int</span> columna);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ae58e92d9d0efc983f96b53a02f9cd8a5" title="imprimirMatriz imprime una matriz de 9 x 9 ">imprimirMatriz</a>(<span class="keywordtype">int</span> matriz[9][9]);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#aa67088279c4f7a0877c6b128db8d0ff5" title="colocarNumeros ubica los valores en una nueva poscicion ">colocarNumeros</a>(QList&lt;int&gt; aleatorios);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> matrizSeed[9][9];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> matriz[9][9];</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QList&lt;QPoint&gt; num1;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    QList&lt;QPoint&gt; num2;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QList&lt;QPoint&gt; num3;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QList&lt;QPoint&gt; num4;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QList&lt;QPoint&gt; num5;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QList&lt;QPoint&gt; num6;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QList&lt;QPoint&gt; num7;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QList&lt;QPoint&gt; num8;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    QList&lt;QPoint&gt; num9;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // GENMATRIZ_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_gen_matriz.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gen_matriz.html" title="The GenMatriz clase que se encarga de los algoritmos para henerar nuevos tableros de sudoku...">GenMatriz</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_gen_matriz.html#a8fac64f00cae60f47afbf6cf43346832" title="El contructor de la clase GenMatriz, crea un sudoku resuelto a partir de un algoritmo de semilla...">GenMatriz</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ae4e6b5ed243424a06becc3b9296fe520" title="La funcion llenarMatrizSemilla es usada internamente en el constructor de la clase para setear un sud...">llenarMatrizSemilla</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#a68e793d89185716f36367320262723eb" title="La funcion generarMatrizSudoku se encarga de cambiar numeros, filasy columnas para generar sudokus di...">generarMatrizSudoku</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ac8b87d3d6f8402ce11b0e8c2e54267f4" title="La funcion generarArreglos nos permite guardar la posicion de cada numero de la matriz. ">generarArreglos</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_gen_matriz.html#af86ecf150e71673b7ed1e488f5f61efb" title="La funcion arregloDeNumeros retorna un valor de una matriz. ">arregloDeNumeros</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#af5686320072f21d88b5fbc85963bc280" title="guardarPosNum mantiene la poscicion de cada numero ">guardarPosNum</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> fila, <span class="keywordtype">int</span> columna);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#ae58e92d9d0efc983f96b53a02f9cd8a5" title="imprimirMatriz imprime una matriz de 9 x 9 ">imprimirMatriz</a>(<span class="keywordtype">int</span> matriz[9][9]);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gen_matriz.html#aa67088279c4f7a0877c6b128db8d0ff5" title="colocarNumeros ubica los valores en una nueva poscicion ">colocarNumeros</a>(QList&lt;int&gt; aleatorios);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> matrizSeed[9][9];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> matriz[9][9];</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QList&lt;QPoint&gt; num1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QList&lt;QPoint&gt; num2;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QList&lt;QPoint&gt; num3;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QList&lt;QPoint&gt; num4;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QList&lt;QPoint&gt; num5;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QList&lt;QPoint&gt; num6;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    QList&lt;QPoint&gt; num7;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QList&lt;QPoint&gt; num8;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QList&lt;QPoint&gt; num9;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif // GENMATRIZ_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 08:31:24 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 09:29:51 for QSudoku by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
