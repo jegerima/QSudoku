@@ -64,12 +64,8 @@ void MainTable::initGuiCelda()
             {
                 for(int m = 0; m < 3; m++)
                 {
-<<<<<<< HEAD
                     Celda *cas = new Celda(0, QPoint(fil, col)); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
-=======
-                    Celda *cas = new Celda(0); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
                     cas->setValue(0);
->>>>>>> 0e6d86395bd79ba8a4820fc51ed650af36c70d7c
                     connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
                     cuadro->addWidget(cas,l,m);
@@ -184,11 +180,9 @@ void MainTable::setTableroInicio()
 
     }
     ui->cmdVerificar->setEnabled(true);
-<<<<<<< HEAD
-=======
     ui->cmdHint->setEnabled(true);
     //setTableroAJugar();
->>>>>>> 0e6d86395bd79ba8a4820fc51ed650af36c70d7c
+
 }
 
 
@@ -479,6 +473,8 @@ void MainTable::cargarPartida()
     QString nivel;
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
     g->leerArchivo(tableroActual, matriz, &jugador, &nivel, tm);
+    if(jugador==NULL)
+        return;
     avanceMin = tm->minute();
     avanceSeg = tm->second();
     //ui->crono->display(tm->toString("mm:ss"));

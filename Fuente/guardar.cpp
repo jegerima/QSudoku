@@ -120,6 +120,7 @@ void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QStrin
     file.close();
     }
     else{
+        name = NULL;
         qDebug("no se abrio el archivo");
     }
 
