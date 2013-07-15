@@ -37,7 +37,7 @@ public:
      * @param nivel nivel en el que esta jugando
      * @param tiempo tiempo acumulado del reloj
      */
-    void guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo);
+    void guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo,int inicio[9][9],int hints);
     /**
      * @brief leerArchivo lee el archivo y usa una expresion regular para separar las distintas candenas
      * @param m setea en esta el avance del juego
@@ -46,7 +46,7 @@ public:
      * @param level para setear el nivel del jugador
      * @param t para setear el tiempo del juegador
      */
-    void leerArchivo(int m[9][9], int sol[9][9], QString *name, QString *level, QTime *t);
+    void leerArchivo(int m[9][9], int sol[9][9], QString *name, QString *level, QTime *t,int inicio [9][9],int *hint);
 
 private:
     /**

@@ -88,6 +88,7 @@ private:
 
     //Atributos
     int matriz[9][9];
+    int tableroInicial[9][9];
     int tableroActual[9][9];
     int hints;
     int avanceSeg;

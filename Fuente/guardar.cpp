@@ -38,7 +38,7 @@ void Guardar::crearArchivo()
 }
 
 //guardo los valores como String, para su posterior encriptacion
-void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo)
+void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QString nivel, QString tiempo,int inicio[9][9],int hints)
 {int tmp=0;
     //guardo el avance
     for(int i = 0; i < 9; i++)
@@ -59,6 +59,7 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QStrin
             cadenaAGuardar = cadenaAGuardar + QString::number(tmp);
         }
     }
+
     //concateno el nombre del jugador
     cadenaAGuardar.append("-");
     cadenaAGuardar = cadenaAGuardar + jugador;
@@ -68,12 +69,26 @@ void Guardar::guardarValores(int m[9][9], int sol[9][9], QString jugador, QStrin
     //concateno el tiempo de juego
     cadenaAGuardar.append("-");
     cadenaAGuardar = cadenaAGuardar + tiempo;
+
+    cadenaAGuardar.append("-");
+    //concateno en el tablero inicial
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            tmp = inicio[i][j];
+            cadenaAGuardar = cadenaAGuardar + QString::number(tmp);
+        }
+    }
+    cadenaAGuardar.append("-");
+    //número de hints restantes
+    cadenaAGuardar = cadenaAGuardar + QString::number(hints);;
     qDebug() << cadenaAGuardar;
 }
 
 
 //m es el tablero actual y sol es la solucion
-void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QString *level, QTime *t)
+void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QString *level, QTime *t,int inicio[9][9],int *hint)
 {
     int k=0;
     QString nombreArchivo = QFileDialog::getOpenFileName(NULL, "Carga archivo", QDir::homePath(), "*.su");
@@ -92,8 +107,10 @@ void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QStrin
     qDebug() << actualYsolucion;
     QString actual = actualYsolucion[0];
     QString solucion = actualYsolucion[1];
+    QString inicial = actualYsolucion[5];
     QString nombre = actualYsolucion[2];
     QString nivel = actualYsolucion[3];
+    *hint = (actualYsolucion[6]).toInt();
     *level = nivel;
     *name = nombre;
     QRegExp rxh(":");
@@ -103,20 +120,22 @@ void Guardar::leerArchivo(int matrix[9][9], int sol[9][9], QString *name, QStrin
     QString m = HMS[1];
     QString s = HMS[2];
     t->setHMS(h.toInt(), m.toInt(), s.toInt());
-    QChar tmp, tmp1;
+    QChar tmp, tmp1,tmp2;
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)
         {
             tmp = actual[k];
             tmp1 = solucion[k];
+            tmp2 = inicial[k];
             matrix[i][j] = tmp.digitValue();
             sol[i][j] = tmp1.digitValue();
+            inicio[i][j] = tmp2.digitValue();
             k++;
         }
     }
 
-    qDebug() <<"actual: "<< actualYsolucion[0] <<"solucion: "<< actualYsolucion[1];
+    qDebug() <<"actual: "<< actualYsolucion[0] <<"solucion: "<< actualYsolucion[1]<<"inicial: "<< actualYsolucion[5]<<"hints: "<< hint;
     file.close();
     }
     else{

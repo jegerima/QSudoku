@@ -66,8 +66,8 @@ void MainTable::initGuiCelda()
                 {
                     Celda *cas = new Celda(0, QPoint(fil, col)); //Parametro del constructor ==> ((j*3)+m+(i*27)+(l*9))
                     cas->setValue(0);
-                    connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     connect(cas,SIGNAL(clicked()),this,SLOT(getCeldaRunTime()));
+                    connect(cas,SIGNAL(clicked()),cas, SLOT(setEmpty()));
                     cuadro->addWidget(cas,l,m);
                     //qDebug()<< fil<< col;
                     col++;
@@ -225,6 +225,9 @@ void MainTable::setTableroEnPantalla()
              if(tmp!=0){
              ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                         ->itemAtPosition(i%3,j%3))->widget()))->setValue(tmp);
+                 if(tableroInicial[i][j]!=0)
+                     ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
+                                ->itemAtPosition(i%3,j%3))->widget()))->setDisabled(true);
              }else{
              ((Celda*)(((QLayoutItem*)((QGridLayout*)ui->tablero->itemAtPosition(i/3,j/3))
                             ->itemAtPosition(i%3,j%3))->widget()))->setValue(0);
@@ -239,6 +242,9 @@ void MainTable::setTableroEnPantalla()
 void MainTable::setTableroInicialSegunNivel(int n)
 {
     int fila=0, col=0;
+    for(int i=0;i<9;i++)
+        for(int j=0;j<9;j++)
+            tableroInicial[i][j]=0;
 
     if(n==0){
         qDebug("Seteando nivel 1");
@@ -246,6 +252,7 @@ void MainTable::setTableroInicialSegunNivel(int n)
             fila = rand()%9;
             col = rand()%9;
             tableroActual[fila][col] = matriz[fila][col];
+            tableroInicial[fila][col] = matriz[fila][col];
         }
     }
     if(n==1){
@@ -254,6 +261,7 @@ void MainTable::setTableroInicialSegunNivel(int n)
             fila = rand()%9;
             col = rand()%9;
             tableroActual[fila][col] = matriz[fila][col];
+            tableroInicial[fila][col] = matriz[fila][col];
         }
     }
     if(n==2){
@@ -262,6 +270,7 @@ void MainTable::setTableroInicialSegunNivel(int n)
             fila = rand()%9;
             col = rand()%9;
              tableroActual[fila][col] = matriz[fila][col];
+             tableroInicial[fila][col] = matriz[fila][col];
         }
     }
     if(n==3){
@@ -270,6 +279,7 @@ void MainTable::setTableroInicialSegunNivel(int n)
             fila = rand()%9;
             col = rand()%9;
              tableroActual[fila][col] = matriz[fila][col];
+             tableroInicial[fila][col] = matriz[fila][col];
         }
     }
 }
@@ -446,6 +456,16 @@ void MainTable::setPistas()
             pistas[tmp-1] = QString("0");
         }
     }
+    //validacion pistas cuadro
+    int l =(((col/3)+1)+(fila/3)*3);
+    for(int i=(((l-1)/3)*3);i<((((l-1)/3)*3)+3);i++){
+        for(int j=(((l-1)%3)*3);j<((((l-1)%3)*3)+3);j++){
+            tmp = tableroActual[i][j];
+            if(tmp!=0)
+                pistas[tmp-1] = QString("0");
+        }
+    }
+
     //le estamos dando maximo 5 pistas para que pueda colocar
     int k=0;
     for(int j=0; j<9; j++){
@@ -473,7 +493,9 @@ void MainTable::guardarPartida()
     setTableroActual();
     //le envio el avance del tablero y el juego resuelto para su posterior solucion
     //el nombre del jugador y el tiempo que llevaba jugando
-    g->guardarValores(tableroActual, matriz, jugador, ui->lbl_level->text(), tm->toString());
+
+
+    g->guardarValores(tableroActual, matriz, jugador, ui->lbl_level->text(), tm->toString(),tableroInicial,hints);
     g->crearArchivo();
 }
 
@@ -483,7 +505,7 @@ void MainTable::cargarPartida()
     Guardar *g = new Guardar();
     QString nivel;
     //le envio para que me setee los valores de como acabo el juego y la solucion del mismo
-    g->leerArchivo(tableroActual, matriz, &jugador, &nivel, tm);
+    g->leerArchivo(tableroActual, matriz, &jugador, &nivel, tm,tableroInicial,&hints);
     if(jugador==NULL)
         return;
     avanceMin = tm->minute();
@@ -491,6 +513,9 @@ void MainTable::cargarPartida()
     //ui->crono->display(tm->toString("mm:ss"));
     ui->lbl_jugador->setText(jugador);
     ui->lbl_level->setText(nivel);
+    ui->cmdHint->setEnabled(true);
+    ui->cmdHint->setText(QString("Hints("+QString::number(hints)+")"));
+    setCeldasBlanco();
     setTableroEnPantalla();
     activarTeclado();
     initCrono();

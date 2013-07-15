@@ -106,6 +106,8 @@ class Celda : public QFrame
          */
         QPoint pos;
 
+
+
     signals:
         void clicked();
 
